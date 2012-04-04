@@ -1,0 +1,10 @@
+GLELP
+2012 Anders Malm, andersmn@gmail.com
+
+A small and simple helper for setting up and using OpenGL Extensions on Windows.
+
+
+LICENSE
+
+GLELP is released under the Apache 2.0 license except as otherwise noted.
+http://www.apache.org/licenses/LICENSE-2.0
