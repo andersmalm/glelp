@@ -13,6 +13,9 @@ using deprecated functions!
 
 SIMPLE INSTRUCTIONS
 
+There is more information in glelp.h documentation. Below is a small and
+simple example.
+
 	if(!glelp::initExtensionLoader())
 		return -1;
 
