@@ -3,6 +3,33 @@ GLELP
 
 A small and simple helper for setting up and using OpenGL Extensions on Windows.
 
+GLELP is released with prebuilt extension information. If you wanna build
+your own there is a ruby program, generator/generate.rb which can generate
+new ones. Before running the generator you need to get the glext.h and wglext.h
+files from http://www.opengl.org and put them in the generator folder.
+
+GLELP doesn't let you access any deprecated extensions, learn to live without
+using deprecated functions!
+
+SIMPLE INSTRUCTIONS
+
+	if(!glelp::initExtensionLoader())
+		return -1;
+
+	glelp::init_GL_ARB_vertex_program();
+	glelp::init_GL_ARB_vertex_buffer_object();
+	glelp::init_GL_ARB_shader_objects();
+	glelp::init_GL_ARB_shading_language_100();
+	glelp::init_GL_ARB_vertex_shader();
+	glelp::init_GL_ARB_framebuffer_object();
+
+	if( 0 != glelp::getStatus())
+		return -1;
+
+	// use glelp:getMissingExtension(int i) to get missing extensions
+
+	glelp::closeExtensionLoader();
+
 
 LICENSE
 
