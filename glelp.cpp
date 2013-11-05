@@ -9,8 +9,6 @@ namespace glelp
 {
 	bool initExtensionLoader()
 	{
-		init_WGL_ARB_extensions_string();
-
 		glelpInternal::initExtensionsStrings();
 
 		glelpInternal::getGLVersion();
@@ -23,13 +21,4 @@ namespace glelp
 		glelpInternal::deleteExtensionsStrings();
 	}
 
-	int getStatus()
-	{
-		return glelpInternal::getNumMissingExtensions();
-	}
-
-	const char* getMissingExtension(int i)
-	{
-		return glelpInternal::getMissingExtensionsString(i);
-	}
 }

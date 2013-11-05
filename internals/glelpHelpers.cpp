@@ -5,6 +5,17 @@
 
 #include "glelpHelpers.h"
 
+#include <Windows.h>
+#define GL_GLEXT_PROTOTYPES
+#include "glcorearb.h"
+
+
+
+//const char * WINAPI wglGetExtensionsStringARB (HDC hdc);
+typedef const char * (WINAPI * PFNWGLGETEXTENSIONSSTRINGARBPROC) (HDC hdc);
+PFNWGLGETEXTENSIONSSTRINGARBPROC wglGetExtensionsStringARB;
+
+
 namespace glelpInternal
 {
 	int numGLExtensions = 0;
@@ -13,15 +24,15 @@ namespace glelpInternal
 	int numWGLExtensions = 0;
 	char **availableWGLExtensions = NULL;
 
-	int numMissingExtensions = 0;
-	char** missingExtensions;
-
 	int glMajor;
 	int glMinor;
 
 	bool initExtensionsStrings()
 	{
 		// OpenGL extensions
+
+		// Needed on windows
+		wglGetExtensionsStringARB = (PFNWGLGETEXTENSIONSSTRINGARBPROC)wglGetProcAddress("wglGetExtensionsStringARB");
 
 		const unsigned char *extString = glGetString(GL_EXTENSIONS);
 		char *p = (char *)extString;
@@ -92,8 +103,6 @@ namespace glelpInternal
 		numWGLExtensions = n;
 		numTotal += n;
 
-		missingExtensions = new char*[NUM_EXTENSIONS];
-
 		return true;
 	}
 
@@ -139,17 +148,6 @@ namespace glelpInternal
 				return true;
 		}
 
-		// check if it's yet missing
-		for(int i = 0; i < numMissingExtensions; i++)
-			if(0 == strcmp(missingExtensions[i], extension))
-				return false;
-
-		int el = strlen(extension) + 1;
-		missingExtensions[numMissingExtensions] = new char[el];
-		memcpy(missingExtensions[numMissingExtensions], extension, el);
-
-		numMissingExtensions++;
-
 		return false;
 	}
 
@@ -173,16 +171,4 @@ namespace glelpInternal
 		return true;
 	}
 
-	int getNumMissingExtensions()
-	{
-		return numMissingExtensions;
-	}
-
-	const char* getMissingExtensionsString(int i)
-	{
-		if(i < 0 || numMissingExtensions > i)
-			return NULL;
-
-		return missingExtensions[i];
-	}
 }
