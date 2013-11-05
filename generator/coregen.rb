@@ -19,7 +19,7 @@ def parsefile(infile, outcpp, outh)
 	
 	outfilecpp.puts "// GLELP, This file is generated"
 	outfilecpp.puts "#include \"#{outh}\""
-	outfilecpp.puts "#include \"glelpHelpers.h\""
+	outfilecpp.puts "#include \"../glelp.h\""
 	outfilecpp.puts ""
 	
 	outfileh.puts "#ifndef _#{(outh.split ".")[0].upcase}_H_"
@@ -66,7 +66,7 @@ def parsefile(infile, outcpp, outh)
 				if isVersion
 
 					vs = vn[1].split("_")
-					implementation.push "	if(!glelpInternal::checkVersion(" + vs[1] + ", " + vs[2] + ")) return false;"
+					implementation.push "	if(!glelp::checkVersion(" + vs[1] + ", " + vs[2] + ")) return false;"
 					implementation.push ""
 
 					if !previous.eql? ""
@@ -77,7 +77,7 @@ def parsefile(infile, outcpp, outh)
 					previous = currentFunc;
 				
 				else
-					implementation.push "	if(!glelpInternal::checkAvailable(\"" + current + "\")) return false;"
+					implementation.push "	if(!glelp::checkAvailable(\"" + current + "\")) return false;"
 
 				end
 

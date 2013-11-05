@@ -1,6 +1,6 @@
 // GLELP, This file is generated
 #include "glelp_glcorearb.h"
-#include "glelpHelpers.h"
+#include "../glelp.h"
 
 
 //init_1_0
@@ -833,7 +833,7 @@ PFNGLTEXPAGECOMMITMENTARBPROC glTexPageCommitmentARB;
 //init_GL_KHR_texture_compression_astc_ldr
 bool glelp::init_1_0()
 {
-	if(!glelpInternal::checkVersion(1, 0)) return false;
+	if(!glelp::checkVersion(1, 0)) return false;
 
 	glCullFace = (PFNGLCULLFACEPROC)wglGetProcAddress("glCullFace");
 	glFrontFace = (PFNGLFRONTFACEPROC)wglGetProcAddress("glFrontFace");
@@ -889,7 +889,7 @@ bool glelp::init_1_0()
 
 bool glelp::init_1_1()
 {
-	if(!glelpInternal::checkVersion(1, 1)) return false;
+	if(!glelp::checkVersion(1, 1)) return false;
 
 	if(!init_1_0()) return false;
 
@@ -913,7 +913,7 @@ bool glelp::init_1_1()
 
 bool glelp::init_1_2()
 {
-	if(!glelpInternal::checkVersion(1, 2)) return false;
+	if(!glelp::checkVersion(1, 2)) return false;
 
 	if(!init_1_1()) return false;
 
@@ -927,7 +927,7 @@ bool glelp::init_1_2()
 
 bool glelp::init_1_3()
 {
-	if(!glelpInternal::checkVersion(1, 3)) return false;
+	if(!glelp::checkVersion(1, 3)) return false;
 
 	if(!init_1_2()) return false;
 
@@ -946,7 +946,7 @@ bool glelp::init_1_3()
 
 bool glelp::init_1_4()
 {
-	if(!glelpInternal::checkVersion(1, 4)) return false;
+	if(!glelp::checkVersion(1, 4)) return false;
 
 	if(!init_1_3()) return false;
 
@@ -965,7 +965,7 @@ bool glelp::init_1_4()
 
 bool glelp::init_1_5()
 {
-	if(!glelpInternal::checkVersion(1, 5)) return false;
+	if(!glelp::checkVersion(1, 5)) return false;
 
 	if(!init_1_4()) return false;
 
@@ -994,7 +994,7 @@ bool glelp::init_1_5()
 
 bool glelp::init_2_0()
 {
-	if(!glelpInternal::checkVersion(2, 0)) return false;
+	if(!glelp::checkVersion(2, 0)) return false;
 
 	if(!init_1_5()) return false;
 
@@ -1097,7 +1097,7 @@ bool glelp::init_2_0()
 
 bool glelp::init_2_1()
 {
-	if(!glelpInternal::checkVersion(2, 1)) return false;
+	if(!glelp::checkVersion(2, 1)) return false;
 
 	if(!init_2_0()) return false;
 
@@ -1113,7 +1113,7 @@ bool glelp::init_2_1()
 
 bool glelp::init_3_0()
 {
-	if(!glelpInternal::checkVersion(3, 0)) return false;
+	if(!glelp::checkVersion(3, 0)) return false;
 
 	if(!init_2_1()) return false;
 
@@ -1207,7 +1207,7 @@ bool glelp::init_3_0()
 
 bool glelp::init_3_1()
 {
-	if(!glelpInternal::checkVersion(3, 1)) return false;
+	if(!glelp::checkVersion(3, 1)) return false;
 
 	if(!init_3_0()) return false;
 
@@ -1229,7 +1229,7 @@ bool glelp::init_3_1()
 
 bool glelp::init_3_2()
 {
-	if(!glelpInternal::checkVersion(3, 2)) return false;
+	if(!glelp::checkVersion(3, 2)) return false;
 
 	if(!init_3_1()) return false;
 
@@ -1258,7 +1258,7 @@ bool glelp::init_3_2()
 
 bool glelp::init_3_3()
 {
-	if(!glelpInternal::checkVersion(3, 3)) return false;
+	if(!glelp::checkVersion(3, 3)) return false;
 
 	if(!init_3_2()) return false;
 
@@ -1296,7 +1296,7 @@ bool glelp::init_3_3()
 
 bool glelp::init_4_0()
 {
-	if(!glelpInternal::checkVersion(4, 0)) return false;
+	if(!glelp::checkVersion(4, 0)) return false;
 
 	if(!init_3_3()) return false;
 
@@ -1352,7 +1352,7 @@ bool glelp::init_4_0()
 
 bool glelp::init_4_1()
 {
-	if(!glelpInternal::checkVersion(4, 1)) return false;
+	if(!glelp::checkVersion(4, 1)) return false;
 
 	if(!init_4_0()) return false;
 
@@ -1450,7 +1450,7 @@ bool glelp::init_4_1()
 
 bool glelp::init_4_2()
 {
-	if(!glelpInternal::checkVersion(4, 2)) return false;
+	if(!glelp::checkVersion(4, 2)) return false;
 
 	if(!init_4_1()) return false;
 
@@ -1472,7 +1472,7 @@ bool glelp::init_4_2()
 
 bool glelp::init_4_3()
 {
-	if(!glelpInternal::checkVersion(4, 3)) return false;
+	if(!glelp::checkVersion(4, 3)) return false;
 
 	if(!init_4_2()) return false;
 
@@ -1525,7 +1525,7 @@ bool glelp::init_4_3()
 
 bool glelp::init_4_4()
 {
-	if(!glelpInternal::checkVersion(4, 4)) return false;
+	if(!glelp::checkVersion(4, 4)) return false;
 
 	if(!init_4_3()) return false;
 
@@ -1544,35 +1544,35 @@ bool glelp::init_4_4()
 
 bool glelp::init_GL_ARB_ES2_compatibility()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_ES2_compatibility")) return false;
+	if(!glelp::checkAvailable("GL_ARB_ES2_compatibility")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_ES3_compatibility()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_ES3_compatibility")) return false;
+	if(!glelp::checkAvailable("GL_ARB_ES3_compatibility")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_arrays_of_arrays()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_arrays_of_arrays")) return false;
+	if(!glelp::checkAvailable("GL_ARB_arrays_of_arrays")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_base_instance()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_base_instance")) return false;
+	if(!glelp::checkAvailable("GL_ARB_base_instance")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_bindless_texture()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_bindless_texture")) return false;
+	if(!glelp::checkAvailable("GL_ARB_bindless_texture")) return false;
 	glGetTextureHandleARB = (PFNGLGETTEXTUREHANDLEARBPROC)wglGetProcAddress("glGetTextureHandleARB");
 	glGetTextureSamplerHandleARB = (PFNGLGETTEXTURESAMPLERHANDLEARBPROC)wglGetProcAddress("glGetTextureSamplerHandleARB");
 	glMakeTextureHandleResidentARB = (PFNGLMAKETEXTUREHANDLERESIDENTARBPROC)wglGetProcAddress("glMakeTextureHandleResidentARB");
@@ -1595,21 +1595,21 @@ bool glelp::init_GL_ARB_bindless_texture()
 
 bool glelp::init_GL_ARB_blend_func_extended()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_blend_func_extended")) return false;
+	if(!glelp::checkAvailable("GL_ARB_blend_func_extended")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_buffer_storage()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_buffer_storage")) return false;
+	if(!glelp::checkAvailable("GL_ARB_buffer_storage")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_cl_event()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_cl_event")) return false;
+	if(!glelp::checkAvailable("GL_ARB_cl_event")) return false;
 	glCreateSyncFromCLeventARB = (PFNGLCREATESYNCFROMCLEVENTARBPROC)wglGetProcAddress("glCreateSyncFromCLeventARB");
 
 	return true;
@@ -1617,35 +1617,35 @@ bool glelp::init_GL_ARB_cl_event()
 
 bool glelp::init_GL_ARB_clear_buffer_object()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_clear_buffer_object")) return false;
+	if(!glelp::checkAvailable("GL_ARB_clear_buffer_object")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_clear_texture()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_clear_texture")) return false;
+	if(!glelp::checkAvailable("GL_ARB_clear_texture")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_compressed_texture_pixel_storage()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_compressed_texture_pixel_storage")) return false;
+	if(!glelp::checkAvailable("GL_ARB_compressed_texture_pixel_storage")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_compute_shader()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_compute_shader")) return false;
+	if(!glelp::checkAvailable("GL_ARB_compute_shader")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_compute_variable_group_size()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_compute_variable_group_size")) return false;
+	if(!glelp::checkAvailable("GL_ARB_compute_variable_group_size")) return false;
 	glDispatchComputeGroupSizeARB = (PFNGLDISPATCHCOMPUTEGROUPSIZEARBPROC)wglGetProcAddress("glDispatchComputeGroupSizeARB");
 
 	return true;
@@ -1653,28 +1653,28 @@ bool glelp::init_GL_ARB_compute_variable_group_size()
 
 bool glelp::init_GL_ARB_conservative_depth()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_conservative_depth")) return false;
+	if(!glelp::checkAvailable("GL_ARB_conservative_depth")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_copy_buffer()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_copy_buffer")) return false;
+	if(!glelp::checkAvailable("GL_ARB_copy_buffer")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_copy_image()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_copy_image")) return false;
+	if(!glelp::checkAvailable("GL_ARB_copy_image")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_debug_output()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_debug_output")) return false;
+	if(!glelp::checkAvailable("GL_ARB_debug_output")) return false;
 	glDebugMessageControlARB = (PFNGLDEBUGMESSAGECONTROLARBPROC)wglGetProcAddress("glDebugMessageControlARB");
 	glDebugMessageInsertARB = (PFNGLDEBUGMESSAGEINSERTARBPROC)wglGetProcAddress("glDebugMessageInsertARB");
 	glDebugMessageCallbackARB = (PFNGLDEBUGMESSAGECALLBACKARBPROC)wglGetProcAddress("glDebugMessageCallbackARB");
@@ -1685,21 +1685,21 @@ bool glelp::init_GL_ARB_debug_output()
 
 bool glelp::init_GL_ARB_depth_buffer_float()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_depth_buffer_float")) return false;
+	if(!glelp::checkAvailable("GL_ARB_depth_buffer_float")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_depth_clamp()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_depth_clamp")) return false;
+	if(!glelp::checkAvailable("GL_ARB_depth_clamp")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_draw_buffers_blend()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_draw_buffers_blend")) return false;
+	if(!glelp::checkAvailable("GL_ARB_draw_buffers_blend")) return false;
 	glBlendEquationiARB = (PFNGLBLENDEQUATIONIARBPROC)wglGetProcAddress("glBlendEquationiARB");
 	glBlendEquationSeparateiARB = (PFNGLBLENDEQUATIONSEPARATEIARBPROC)wglGetProcAddress("glBlendEquationSeparateiARB");
 	glBlendFunciARB = (PFNGLBLENDFUNCIARBPROC)wglGetProcAddress("glBlendFunciARB");
@@ -1710,112 +1710,112 @@ bool glelp::init_GL_ARB_draw_buffers_blend()
 
 bool glelp::init_GL_ARB_draw_elements_base_vertex()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_draw_elements_base_vertex")) return false;
+	if(!glelp::checkAvailable("GL_ARB_draw_elements_base_vertex")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_draw_indirect()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_draw_indirect")) return false;
+	if(!glelp::checkAvailable("GL_ARB_draw_indirect")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_enhanced_layouts()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_enhanced_layouts")) return false;
+	if(!glelp::checkAvailable("GL_ARB_enhanced_layouts")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_explicit_attrib_location()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_explicit_attrib_location")) return false;
+	if(!glelp::checkAvailable("GL_ARB_explicit_attrib_location")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_explicit_uniform_location()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_explicit_uniform_location")) return false;
+	if(!glelp::checkAvailable("GL_ARB_explicit_uniform_location")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_fragment_coord_conventions()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_fragment_coord_conventions")) return false;
+	if(!glelp::checkAvailable("GL_ARB_fragment_coord_conventions")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_fragment_layer_viewport()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_fragment_layer_viewport")) return false;
+	if(!glelp::checkAvailable("GL_ARB_fragment_layer_viewport")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_framebuffer_no_attachments()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_framebuffer_no_attachments")) return false;
+	if(!glelp::checkAvailable("GL_ARB_framebuffer_no_attachments")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_framebuffer_object()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_framebuffer_object")) return false;
+	if(!glelp::checkAvailable("GL_ARB_framebuffer_object")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_framebuffer_sRGB()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_framebuffer_sRGB")) return false;
+	if(!glelp::checkAvailable("GL_ARB_framebuffer_sRGB")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_get_program_binary()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_get_program_binary")) return false;
+	if(!glelp::checkAvailable("GL_ARB_get_program_binary")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_gpu_shader5()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_gpu_shader5")) return false;
+	if(!glelp::checkAvailable("GL_ARB_gpu_shader5")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_gpu_shader_fp64()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_gpu_shader_fp64")) return false;
+	if(!glelp::checkAvailable("GL_ARB_gpu_shader_fp64")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_half_float_vertex()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_half_float_vertex")) return false;
+	if(!glelp::checkAvailable("GL_ARB_half_float_vertex")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_imaging()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_imaging")) return false;
+	if(!glelp::checkAvailable("GL_ARB_imaging")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_indirect_parameters()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_indirect_parameters")) return false;
+	if(!glelp::checkAvailable("GL_ARB_indirect_parameters")) return false;
 	glMultiDrawArraysIndirectCountARB = (PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC)wglGetProcAddress("glMultiDrawArraysIndirectCountARB");
 	glMultiDrawElementsIndirectCountARB = (PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC)wglGetProcAddress("glMultiDrawElementsIndirectCountARB");
 
@@ -1824,91 +1824,91 @@ bool glelp::init_GL_ARB_indirect_parameters()
 
 bool glelp::init_GL_ARB_internalformat_query()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_internalformat_query")) return false;
+	if(!glelp::checkAvailable("GL_ARB_internalformat_query")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_internalformat_query2()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_internalformat_query2")) return false;
+	if(!glelp::checkAvailable("GL_ARB_internalformat_query2")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_invalidate_subdata()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_invalidate_subdata")) return false;
+	if(!glelp::checkAvailable("GL_ARB_invalidate_subdata")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_map_buffer_alignment()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_map_buffer_alignment")) return false;
+	if(!glelp::checkAvailable("GL_ARB_map_buffer_alignment")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_map_buffer_range()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_map_buffer_range")) return false;
+	if(!glelp::checkAvailable("GL_ARB_map_buffer_range")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_multi_bind()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_multi_bind")) return false;
+	if(!glelp::checkAvailable("GL_ARB_multi_bind")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_multi_draw_indirect()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_multi_draw_indirect")) return false;
+	if(!glelp::checkAvailable("GL_ARB_multi_draw_indirect")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_occlusion_query2()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_occlusion_query2")) return false;
+	if(!glelp::checkAvailable("GL_ARB_occlusion_query2")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_program_interface_query()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_program_interface_query")) return false;
+	if(!glelp::checkAvailable("GL_ARB_program_interface_query")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_provoking_vertex()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_provoking_vertex")) return false;
+	if(!glelp::checkAvailable("GL_ARB_provoking_vertex")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_query_buffer_object()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_query_buffer_object")) return false;
+	if(!glelp::checkAvailable("GL_ARB_query_buffer_object")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_robust_buffer_access_behavior()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_robust_buffer_access_behavior")) return false;
+	if(!glelp::checkAvailable("GL_ARB_robust_buffer_access_behavior")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_robustness()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_robustness")) return false;
+	if(!glelp::checkAvailable("GL_ARB_robustness")) return false;
 	glGetGraphicsResetStatusARB = (PFNGLGETGRAPHICSRESETSTATUSARBPROC)wglGetProcAddress("glGetGraphicsResetStatusARB");
 	glGetnTexImageARB = (PFNGLGETNTEXIMAGEARBPROC)wglGetProcAddress("glGetnTexImageARB");
 	glReadnPixelsARB = (PFNGLREADNPIXELSARBPROC)wglGetProcAddress("glReadnPixelsARB");
@@ -1923,14 +1923,14 @@ bool glelp::init_GL_ARB_robustness()
 
 bool glelp::init_GL_ARB_robustness_isolation()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_robustness_isolation")) return false;
+	if(!glelp::checkAvailable("GL_ARB_robustness_isolation")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_sample_shading()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_sample_shading")) return false;
+	if(!glelp::checkAvailable("GL_ARB_sample_shading")) return false;
 	glMinSampleShadingARB = (PFNGLMINSAMPLESHADINGARBPROC)wglGetProcAddress("glMinSampleShadingARB");
 
 	return true;
@@ -1938,112 +1938,112 @@ bool glelp::init_GL_ARB_sample_shading()
 
 bool glelp::init_GL_ARB_sampler_objects()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_sampler_objects")) return false;
+	if(!glelp::checkAvailable("GL_ARB_sampler_objects")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_seamless_cube_map()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_seamless_cube_map")) return false;
+	if(!glelp::checkAvailable("GL_ARB_seamless_cube_map")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_seamless_cubemap_per_texture()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_seamless_cubemap_per_texture")) return false;
+	if(!glelp::checkAvailable("GL_ARB_seamless_cubemap_per_texture")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_separate_shader_objects()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_separate_shader_objects")) return false;
+	if(!glelp::checkAvailable("GL_ARB_separate_shader_objects")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shader_atomic_counters()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shader_atomic_counters")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shader_atomic_counters")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shader_bit_encoding()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shader_bit_encoding")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shader_bit_encoding")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shader_draw_parameters()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shader_draw_parameters")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shader_draw_parameters")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shader_group_vote()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shader_group_vote")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shader_group_vote")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shader_image_load_store()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shader_image_load_store")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shader_image_load_store")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shader_image_size()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shader_image_size")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shader_image_size")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shader_precision()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shader_precision")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shader_precision")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shader_stencil_export()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shader_stencil_export")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shader_stencil_export")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shader_storage_buffer_object()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shader_storage_buffer_object")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shader_storage_buffer_object")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shader_subroutine()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shader_subroutine")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shader_subroutine")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shading_language_420pack()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shading_language_420pack")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shading_language_420pack")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_shading_language_include()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shading_language_include")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shading_language_include")) return false;
 	glNamedStringARB = (PFNGLNAMEDSTRINGARBPROC)wglGetProcAddress("glNamedStringARB");
 	glDeleteNamedStringARB = (PFNGLDELETENAMEDSTRINGARBPROC)wglGetProcAddress("glDeleteNamedStringARB");
 	glCompileShaderIncludeARB = (PFNGLCOMPILESHADERINCLUDEARBPROC)wglGetProcAddress("glCompileShaderIncludeARB");
@@ -2056,14 +2056,14 @@ bool glelp::init_GL_ARB_shading_language_include()
 
 bool glelp::init_GL_ARB_shading_language_packing()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_shading_language_packing")) return false;
+	if(!glelp::checkAvailable("GL_ARB_shading_language_packing")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_sparse_texture()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_sparse_texture")) return false;
+	if(!glelp::checkAvailable("GL_ARB_sparse_texture")) return false;
 	glTexPageCommitmentARB = (PFNGLTEXPAGECOMMITMENTARBPROC)wglGetProcAddress("glTexPageCommitmentARB");
 
 	return true;
@@ -2071,245 +2071,245 @@ bool glelp::init_GL_ARB_sparse_texture()
 
 bool glelp::init_GL_ARB_stencil_texturing()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_stencil_texturing")) return false;
+	if(!glelp::checkAvailable("GL_ARB_stencil_texturing")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_sync()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_sync")) return false;
+	if(!glelp::checkAvailable("GL_ARB_sync")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_tessellation_shader()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_tessellation_shader")) return false;
+	if(!glelp::checkAvailable("GL_ARB_tessellation_shader")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_buffer_object_rgb32()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_buffer_object_rgb32")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_buffer_object_rgb32")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_buffer_range()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_buffer_range")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_buffer_range")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_compression_bptc()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_compression_bptc")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_compression_bptc")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_compression_rgtc()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_compression_rgtc")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_compression_rgtc")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_cube_map_array()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_cube_map_array")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_cube_map_array")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_gather()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_gather")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_gather")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_mirror_clamp_to_edge()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_mirror_clamp_to_edge")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_mirror_clamp_to_edge")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_multisample()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_multisample")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_multisample")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_query_levels()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_query_levels")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_query_levels")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_query_lod()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_query_lod")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_query_lod")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_rg()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_rg")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_rg")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_rgb10_a2ui()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_rgb10_a2ui")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_rgb10_a2ui")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_stencil8()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_stencil8")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_stencil8")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_storage()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_storage")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_storage")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_storage_multisample()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_storage_multisample")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_storage_multisample")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_swizzle()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_swizzle")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_swizzle")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_texture_view()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_texture_view")) return false;
+	if(!glelp::checkAvailable("GL_ARB_texture_view")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_timer_query()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_timer_query")) return false;
+	if(!glelp::checkAvailable("GL_ARB_timer_query")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_transform_feedback2()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_transform_feedback2")) return false;
+	if(!glelp::checkAvailable("GL_ARB_transform_feedback2")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_transform_feedback3()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_transform_feedback3")) return false;
+	if(!glelp::checkAvailable("GL_ARB_transform_feedback3")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_transform_feedback_instanced()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_transform_feedback_instanced")) return false;
+	if(!glelp::checkAvailable("GL_ARB_transform_feedback_instanced")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_uniform_buffer_object()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_uniform_buffer_object")) return false;
+	if(!glelp::checkAvailable("GL_ARB_uniform_buffer_object")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_vertex_array_bgra()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_vertex_array_bgra")) return false;
+	if(!glelp::checkAvailable("GL_ARB_vertex_array_bgra")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_vertex_array_object()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_vertex_array_object")) return false;
+	if(!glelp::checkAvailable("GL_ARB_vertex_array_object")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_vertex_attrib_64bit()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_vertex_attrib_64bit")) return false;
+	if(!glelp::checkAvailable("GL_ARB_vertex_attrib_64bit")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_vertex_attrib_binding()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_vertex_attrib_binding")) return false;
+	if(!glelp::checkAvailable("GL_ARB_vertex_attrib_binding")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_vertex_type_10f_11f_11f_rev()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_vertex_type_10f_11f_11f_rev")) return false;
+	if(!glelp::checkAvailable("GL_ARB_vertex_type_10f_11f_11f_rev")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_vertex_type_2_10_10_10_rev()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_vertex_type_2_10_10_10_rev")) return false;
+	if(!glelp::checkAvailable("GL_ARB_vertex_type_2_10_10_10_rev")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_ARB_viewport_array()
 {
-	if(!glelpInternal::checkAvailable("GL_ARB_viewport_array")) return false;
+	if(!glelp::checkAvailable("GL_ARB_viewport_array")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_KHR_debug()
 {
-	if(!glelpInternal::checkAvailable("GL_KHR_debug")) return false;
+	if(!glelp::checkAvailable("GL_KHR_debug")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_KHR_texture_compression_astc_hdr()
 {
-	if(!glelpInternal::checkAvailable("GL_KHR_texture_compression_astc_hdr")) return false;
+	if(!glelp::checkAvailable("GL_KHR_texture_compression_astc_hdr")) return false;
 
 	return true;
 }
 
 bool glelp::init_GL_KHR_texture_compression_astc_ldr()
 {
-	if(!glelpInternal::checkAvailable("GL_KHR_texture_compression_astc_ldr")) return false;
+	if(!glelp::checkAvailable("GL_KHR_texture_compression_astc_ldr")) return false;
 
 	return true;
 }

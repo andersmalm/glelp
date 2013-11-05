@@ -1,8 +1,7 @@
-GLELP
+GLELP ( opnGL Extensions heLPer )
 2013 Anders Malm, andersmn@gmail.com
 
-
-Completly changed it to only handle the glcorearb stuff
+Not for all extensions.. only the gl core arb ones!
 
 In the generator folder there is a ruby script called coregen.rb.
 This script have, together with glelp/internals/glcorearb.h created
@@ -17,18 +16,14 @@ you are on your way!
 
 To do something with this, just:
 
-	// read version and download all the extensions you will need
-	if(!glelp::initExtensionLoader())
-		return;
-
 	// Here, load everything needed for a OpenGL 4.4 context if possible.
 	if(!glelp::init_4_4())
 		return;
 
-	// Clear up internal data, don't try to load more extensions now!
-	glelp::closeExtensionLoader();
+	if(!glelp::init_GL_ARB_bindless_texture())
+		return;
 
-	// If you managed to get here you have all the GL 4.4 things available!
+	// Now you are good to go!
 
 LICENSE
 

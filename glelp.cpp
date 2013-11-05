@@ -7,18 +7,70 @@
 
 namespace glelp
 {
-	bool initExtensionLoader()
+
+	typedef const char * (WINAPI * PFNWGLGETEXTENSIONSSTRINGARBPROC) (HDC hdc);
+	PFNWGLGETEXTENSIONSSTRINGARBPROC wglGetExtensionsStringARB;
+
+	bool findExtension(const char* extension, char* extensions)
 	{
-		glelpInternal::initExtensionsStrings();
+		char *current = extensions;
+		while(true)
+		{
+			while((*extensions) != ' ')
+			{
+				if((*extensions) == 0)
+					return false;
+				extensions++;
+			}
 
-		glelpInternal::getGLVersion();
+			(*extensions) = 0;
 
-		return true;
+			if(0 == strcmp(current, extension))
+				return true;
+
+			extensions++;
+			current = extensions;
+		}
 	}
 
-	void closeExtensionLoader()
+	bool checkAvailable(const char* extension)
 	{
-		glelpInternal::deleteExtensionsStrings();
+		// Needed on windows
+		wglGetExtensionsStringARB = (PFNWGLGETEXTENSIONSSTRINGARBPROC)wglGetProcAddress("wglGetExtensionsStringARB");
+
+		if(findExtension(extension, (char*)glGetString(GL_EXTENSIONS )))
+			return true;
+
+		/* Too check for Windows extensions
+		if(findExtension(extension, (char*)wglGetExtensionsStringARB( wglGetCurrentDC() ) ))
+			return true;
+		*/
+
+		return false;
+	}
+
+	/*
+	* Checks if the asked for version is less or equal then the version
+	* provided by the driver
+	*/
+	bool checkVersion(char major, char minor)
+	{
+		const GLubyte* version = glGetString(GL_VERSION);
+		int GLmajor = version[0] - '0';
+		int GLminor = version[2] - '0';
+
+		if(major > GLmajor)
+			return false;
+
+		if(minor > GLminor)
+		{
+			if( major < GLmajor)
+				return true;
+			else
+				return false;
+		}
+
+		return true;
 	}
 
 }
