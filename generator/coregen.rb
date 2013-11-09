@@ -1,10 +1,23 @@
 
 $NonExtension = Array["__glcorearb_h_", "WIN32_LEAN_AND_MEAN", "APIENTRY", "APIENTRYP", "GLAPI", "GLEXT_64_TYPES_DEFINED"]
 
+
+$Legacy = Array["glCullFace", "glFrontFace", "glHint", "glLineWidth", "glPointSize", "glPolygonMode", "glScissor",
+				"glTexParameterf", "glTexParameterfv", "glTexParameteri", "glTexParameteriv", "glTexImage1D", "glTexImage2D",
+				"glDrawBuffer", "glClear" , "glClearColor", "glClearStencil", "glClearDepth", "glStencilMask", "glColorMask", "glDepthMask",
+				"glDisable", "glEnable", "glFinish", "glFlush", "glBlendFunc", "glLogicOp", "glStencilFunc", "glStencilOp",
+				"glDepthFunc", "glPixelStoref", "glPixelStorei", "glReadBuffer", "glReadPixels", "glGetBooleanv", "glGetDoublev", "glGetError",
+				"glGetFloatv", "glGetIntegerv", "glGetString", "glGetTexImage", "glGetTexParameterfv", "glGetTexParameteriv",
+				"glGetTexLevelParameterfv", "glGetTexLevelParameteriv", "glIsEnabled", "glDepthRange", "glViewport", "glDrawArrays",
+				"glDrawElements", "glGetPointerv", "glPolygonOffset", "glCopyTexImage1D", "glCopyTexImage2D", "glCopyTexSubImage1D",
+				"glCopyTexSubImage2D", "glTexSubImage1D", "glTexSubImage2D", "glBindTexture", "glDeleteTextures", "glGenTextures", "glIsTexture"]
+
+
 def parsefile(infile, outcpp, outh)
 
 	implementation = Array.new
 	definitions = Array.new
+	defExtern = Array.new
 
 	current = ""
 	previous = ""
@@ -62,6 +75,9 @@ def parsefile(infile, outcpp, outh)
 				definitions.push ""
 				definitions.push "//" + currentFunc
 
+				defExtern.push ""
+				defExtern.push "//" + currentFunc
+
 				# SMALL HACK TO MAKE SURE THAT PREVIOUS VERSION WAS LOADED
 				if isVersion
 
@@ -117,13 +133,16 @@ def parsefile(infile, outcpp, outh)
 				procname = "PFN"+extname.upcase+"PROC"
 
 				# BUILDS THE CORRECT CALL
-				#glGetSubroutineUniformLocation = (PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC)wglGetProcAddress("glGetSubroutineUniformLocation");
-				implementation.push "	" + extname + " = (" + procname + ")wglGetProcAddress(\"" + extname + "\");"
+
+				if($Legacy.include? extname)
+					implementation.push "	" + extname + " = (" + procname + ")GetProcAddress(GetModuleHandle(TEXT(\"opengl32.dll\")), \"" + extname + "\");"
+				else
+					implementation.push "	" + extname + " = (" + procname + ")wglGetProcAddress(\"" + extname + "\");"
+				end
 
 				definitions.push procname + " " + extname + ";"
 
-				#$definitions.push line[6..-1]
-
+				defExtern.push "extern " + procname + " " + extname + ";";
 			end
 		end
 	end
@@ -131,17 +150,16 @@ def parsefile(infile, outcpp, outh)
 	outfileh.puts ""
 	outfileh.puts "}"
 	outfileh.puts ""
-
-	outfilecpp.puts definitions
-	outfilecpp.puts implementation
-
+	outfileh.puts defExtern
 	outfileh.puts ""
 	outfileh.puts "#endif // _#{(outh.split ".")[0].upcase}_H_"
 
+	outfilecpp.puts definitions
+	outfilecpp.puts implementation
+	
 	file.close
 	outfilecpp.close
 
 end
 
 parsefile("glcorearb.h", "glelp_glcorearb.cpp", "glelp_glcorearb.h")
-#parsefile("wglext.h", "glelp_wglext.cpp", "glelp_wglext.h")

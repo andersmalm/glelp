@@ -6,7 +6,6 @@
 #ifndef _GLELP_H_
 #define _GLELP_H_
 
-#define GL_GLEXT_PROTOTYPES
 #include "internals\glelp_glcorearb.h"
 
 namespace glelp
