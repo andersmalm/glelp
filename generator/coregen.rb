@@ -13,6 +13,8 @@ $Legacy = Array["glCullFace", "glFrontFace", "glHint", "glLineWidth", "glPointSi
 				"glCopyTexSubImage2D", "glTexSubImage1D", "glTexSubImage2D", "glBindTexture", "glDeleteTextures", "glGenTextures", "glIsTexture"]
 
 
+$defineList = Array.new
+
 def parsefile(infile, outcpp, outh)
 
 	implementation = Array.new
@@ -23,6 +25,7 @@ def parsefile(infile, outcpp, outh)
 	previous = ""
 	isVersion = false
 	currentFunc = ""
+	currentDefine = ""
 
 	path = "../internals/"
 
@@ -41,7 +44,11 @@ def parsefile(infile, outcpp, outh)
 	outfileh.puts "#include \"glcorearb.h\""
 	outfileh.puts ""
 	outfileh.puts "namespace glelp"
-	outfileh.puts "{"	
+	outfileh.puts "{"
+	outfileh.puts "	bool initExtensions();"
+
+	implementation.push "bool glelp::initExtensions()"
+	implementation.push "{"
 
 	while (line = file.gets)
 		
@@ -56,27 +63,43 @@ def parsefile(infile, outcpp, outh)
 				isVersion = false
 				current = ext
 
+				#if ext.match(/^GL_VERSION_/)
+
+				#	isVersion = true
+
+				#	vn = ext.split("VERSION")
+				#	currentFunc =  "init" + vn[1]
+				#else
+				#	currentFunc = "init_" + ext
+				#end
+
 				if ext.match(/^GL_VERSION_/)
 
 					isVersion = true
 
 					vn = ext.split("VERSION")
-					currentFunc =  "init" + vn[1]
+					currentDefine =  "define_core" + vn[1]
 				else
-					currentFunc = "init_" + ext
+					currentDefine = "define_" + ext
 				end
 
-				implementation.push "bool glelp::" + currentFunc + "()"
-				implementation.push "{"	
+				implementation.push "#ifdef " + currentDefine
 
-				outfileh.puts "	bool " + currentFunc + "();"
+				$defineList.push "#define " + currentDefine + " 1"
+
+				#implementation.push "bool glelp::" + currentFunc + "()"
+				#implementation.push "{"	
+
+				#outfileh.puts "	bool " + currentFunc + "();"
 
 				# currentFunc
 				definitions.push ""
 				definitions.push "//" + currentFunc
+				definitions.push "#ifdef " + currentDefine
 
 				defExtern.push ""
 				defExtern.push "//" + currentFunc
+				defExtern.push "#ifdef " + currentDefine
 
 				# SMALL HACK TO MAKE SURE THAT PREVIOUS VERSION WAS LOADED
 				if isVersion
@@ -110,9 +133,18 @@ def parsefile(infile, outcpp, outh)
 				if ((str[2].eql? current) || (str[2].eql? "WGL_WGLEXT_PROTOTYPES"))
 
 					implementation.push ""
-					implementation.push "	return true;"
-					implementation.push "}"
+					implementation.push "#endif"
+					#implementation.push "s	return true;"
+					#implementation.push "}"
 					implementation.push ""
+
+					definitions.push ""
+					definitions.push "#endif"
+					definitions.push ""
+
+					defExtern.push ""
+					defExtern.push "#endif"
+					defExtern.push ""
 				
 					current = ""
 				end
@@ -148,6 +180,9 @@ def parsefile(infile, outcpp, outh)
 			end
 		end
 	end
+
+	implementation.push "	return true;"
+	implementation.push "}"
 
 	outfileh.puts ""
 	outfileh.puts "}"
@@ -195,6 +230,11 @@ def parsefileWindowsHeader(infile, outcpp, outh)
 	outfileh.puts "namespace glelp"
 	outfileh.puts "{"	
 
+	outfileh.puts "	bool initWindowsExtensions();"
+
+	implementation.push "bool glelp::initWindowsExtensions()"
+	implementation.push "{"
+
 	while (line = file.gets)
 		
 		if line.match(/^#ifndef/)
@@ -206,20 +246,25 @@ def parsefileWindowsHeader(infile, outcpp, outh)
 			if(!$NonExtension.include? ext)
 				
 				current = ext
+				currentDefine = "define_" + ext
 
 				currentFunc = "init_" + ext
 				
-				implementation.push "bool glelp::" + currentFunc + "()"
-				implementation.push "{"	
+				implementation.push "#ifdef " + currentDefine
+				#implementation.push "bool glelp::" + currentFunc + "()"
+				#implementation.push "{"	
 
-				outfileh.puts "	bool " + currentFunc + "();"
+				#outfileh.puts "	bool " + currentFunc + "();"
+				$defineList.push "#define " + currentDefine + " 1"
 
 				# currentFunc
 				definitions.push ""
 				definitions.push "//" + currentFunc
+				definitions.push "#ifdef " + currentDefine
 
 				defExtern.push ""
 				defExtern.push "//" + currentFunc
+				defExtern.push "#ifdef " + currentDefine
 
 				implementation.push "	if(!glelp::checkAvailable(\"" + current + "\")) return false;"
 			end
@@ -234,9 +279,18 @@ def parsefileWindowsHeader(infile, outcpp, outh)
 				if ((str[2].eql? current) || (str[2].eql? "WGL_WGLEXT_PROTOTYPES"))
 
 					implementation.push ""
-					implementation.push "	return true;"
-					implementation.push "}"
+					implementation.push "#endif"
+					#implementation.push "	return true;"
+					#implementation.push "}"
 					implementation.push ""
+
+					definitions.push ""
+					definitions.push "#endif"
+					definitions.push ""
+
+					defExtern.push ""
+					defExtern.push "#endif"
+					defExtern.push ""
 				
 					current = ""
 				end
@@ -277,6 +331,9 @@ def parsefileWindowsHeader(infile, outcpp, outh)
 			end
 		end
 	end
+ 
+	implementation.push "	return true;"
+	implementation.push "}"
 
 	outfileh.puts ""
 	outfileh.puts "}"
@@ -297,3 +354,12 @@ end
 parsefile("glcorearb.h", "glelp_glcorearb.cpp", "glelp_glcorearb.h")
 
 parsefileWindowsHeader("wglext.h", "glelp_wglext.cpp", "glelp_wglext.h")
+
+defineFile = File.new("../glelp_defines.example.h", "w")
+defineFile.puts "#ifndef _GLELP_DEFINES_H_"
+defineFile.puts "#define _GLELP_DEFINES_H_"
+defineFile.puts ""
+defineFile.puts $defineList
+defineFile.puts ""
+defineFile.puts "#endif // _GLELP_DEFINES_H_"
+defineFile.close

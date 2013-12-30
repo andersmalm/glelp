@@ -3,7 +3,8 @@
 #include "../glelp.h"
 
 
-//init_1_0
+//
+#ifdef define_core_1_0
 PFNGLCULLFACEPROC glCullFace;
 PFNGLFRONTFACEPROC glFrontFace;
 PFNGLHINTPROC glHint;
@@ -53,7 +54,11 @@ PFNGLISENABLEDPROC glIsEnabled;
 PFNGLDEPTHRANGEPROC glDepthRange;
 PFNGLVIEWPORTPROC glViewport;
 
-//init_1_1
+#endif
+
+
+//
+#ifdef define_core_1_1
 PFNGLDRAWARRAYSPROC glDrawArrays;
 PFNGLDRAWELEMENTSPROC glDrawElements;
 PFNGLGETPOINTERVPROC glGetPointerv;
@@ -69,13 +74,21 @@ PFNGLDELETETEXTURESPROC glDeleteTextures;
 PFNGLGENTEXTURESPROC glGenTextures;
 PFNGLISTEXTUREPROC glIsTexture;
 
-//init_1_2
+#endif
+
+
+//
+#ifdef define_core_1_2
 PFNGLDRAWRANGEELEMENTSPROC glDrawRangeElements;
 PFNGLTEXIMAGE3DPROC glTexImage3D;
 PFNGLTEXSUBIMAGE3DPROC glTexSubImage3D;
 PFNGLCOPYTEXSUBIMAGE3DPROC glCopyTexSubImage3D;
 
-//init_1_3
+#endif
+
+
+//
+#ifdef define_core_1_3
 PFNGLACTIVETEXTUREPROC glActiveTexture;
 PFNGLSAMPLECOVERAGEPROC glSampleCoverage;
 PFNGLCOMPRESSEDTEXIMAGE3DPROC glCompressedTexImage3D;
@@ -86,7 +99,11 @@ PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC glCompressedTexSubImage2D;
 PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC glCompressedTexSubImage1D;
 PFNGLGETCOMPRESSEDTEXIMAGEPROC glGetCompressedTexImage;
 
-//init_1_4
+#endif
+
+
+//
+#ifdef define_core_1_4
 PFNGLBLENDFUNCSEPARATEPROC glBlendFuncSeparate;
 PFNGLMULTIDRAWARRAYSPROC glMultiDrawArrays;
 PFNGLMULTIDRAWELEMENTSPROC glMultiDrawElements;
@@ -97,7 +114,11 @@ PFNGLPOINTPARAMETERIVPROC glPointParameteriv;
 PFNGLBLENDCOLORPROC glBlendColor;
 PFNGLBLENDEQUATIONPROC glBlendEquation;
 
-//init_1_5
+#endif
+
+
+//
+#ifdef define_core_1_5
 PFNGLGENQUERIESPROC glGenQueries;
 PFNGLDELETEQUERIESPROC glDeleteQueries;
 PFNGLISQUERYPROC glIsQuery;
@@ -118,7 +139,11 @@ PFNGLUNMAPBUFFERPROC glUnmapBuffer;
 PFNGLGETBUFFERPARAMETERIVPROC glGetBufferParameteriv;
 PFNGLGETBUFFERPOINTERVPROC glGetBufferPointerv;
 
-//init_2_0
+#endif
+
+
+//
+#ifdef define_core_2_0
 PFNGLBLENDEQUATIONSEPARATEPROC glBlendEquationSeparate;
 PFNGLDRAWBUFFERSPROC glDrawBuffers;
 PFNGLSTENCILOPSEPARATEPROC glStencilOpSeparate;
@@ -213,7 +238,11 @@ PFNGLVERTEXATTRIB4UIVPROC glVertexAttrib4uiv;
 PFNGLVERTEXATTRIB4USVPROC glVertexAttrib4usv;
 PFNGLVERTEXATTRIBPOINTERPROC glVertexAttribPointer;
 
-//init_2_1
+#endif
+
+
+//
+#ifdef define_core_2_1
 PFNGLUNIFORMMATRIX2X3FVPROC glUniformMatrix2x3fv;
 PFNGLUNIFORMMATRIX3X2FVPROC glUniformMatrix3x2fv;
 PFNGLUNIFORMMATRIX2X4FVPROC glUniformMatrix2x4fv;
@@ -221,7 +250,11 @@ PFNGLUNIFORMMATRIX4X2FVPROC glUniformMatrix4x2fv;
 PFNGLUNIFORMMATRIX3X4FVPROC glUniformMatrix3x4fv;
 PFNGLUNIFORMMATRIX4X3FVPROC glUniformMatrix4x3fv;
 
-//init_3_0
+#endif
+
+
+//
+#ifdef define_core_3_0
 PFNGLCOLORMASKIPROC glColorMaski;
 PFNGLGETBOOLEANI_VPROC glGetBooleani_v;
 PFNGLGETINTEGERI_VPROC glGetIntegeri_v;
@@ -307,7 +340,11 @@ PFNGLDELETEVERTEXARRAYSPROC glDeleteVertexArrays;
 PFNGLGENVERTEXARRAYSPROC glGenVertexArrays;
 PFNGLISVERTEXARRAYPROC glIsVertexArray;
 
-//init_3_1
+#endif
+
+
+//
+#ifdef define_core_3_1
 PFNGLDRAWARRAYSINSTANCEDPROC glDrawArraysInstanced;
 PFNGLDRAWELEMENTSINSTANCEDPROC glDrawElementsInstanced;
 PFNGLTEXBUFFERPROC glTexBuffer;
@@ -321,7 +358,11 @@ PFNGLGETACTIVEUNIFORMBLOCKIVPROC glGetActiveUniformBlockiv;
 PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC glGetActiveUniformBlockName;
 PFNGLUNIFORMBLOCKBINDINGPROC glUniformBlockBinding;
 
-//init_3_2
+#endif
+
+
+//
+#ifdef define_core_3_2
 PFNGLDRAWELEMENTSBASEVERTEXPROC glDrawElementsBaseVertex;
 PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC glDrawRangeElementsBaseVertex;
 PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC glDrawElementsInstancedBaseVertex;
@@ -342,7 +383,11 @@ PFNGLTEXIMAGE3DMULTISAMPLEPROC glTexImage3DMultisample;
 PFNGLGETMULTISAMPLEFVPROC glGetMultisamplefv;
 PFNGLSAMPLEMASKIPROC glSampleMaski;
 
-//init_3_3
+#endif
+
+
+//
+#ifdef define_core_3_3
 PFNGLBINDFRAGDATALOCATIONINDEXEDPROC glBindFragDataLocationIndexed;
 PFNGLGETFRAGDATAINDEXPROC glGetFragDataIndex;
 PFNGLGENSAMPLERSPROC glGenSamplers;
@@ -372,7 +417,11 @@ PFNGLVERTEXATTRIBP3UIVPROC glVertexAttribP3uiv;
 PFNGLVERTEXATTRIBP4UIPROC glVertexAttribP4ui;
 PFNGLVERTEXATTRIBP4UIVPROC glVertexAttribP4uiv;
 
-//init_4_0
+#endif
+
+
+//
+#ifdef define_core_4_0
 PFNGLMINSAMPLESHADINGPROC glMinSampleShading;
 PFNGLBLENDEQUATIONIPROC glBlendEquationi;
 PFNGLBLENDEQUATIONSEPARATEIPROC glBlendEquationSeparatei;
@@ -420,7 +469,11 @@ PFNGLBEGINQUERYINDEXEDPROC glBeginQueryIndexed;
 PFNGLENDQUERYINDEXEDPROC glEndQueryIndexed;
 PFNGLGETQUERYINDEXEDIVPROC glGetQueryIndexediv;
 
-//init_4_1
+#endif
+
+
+//
+#ifdef define_core_4_1
 PFNGLRELEASESHADERCOMPILERPROC glReleaseShaderCompiler;
 PFNGLSHADERBINARYPROC glShaderBinary;
 PFNGLGETSHADERPRECISIONFORMATPROC glGetShaderPrecisionFormat;
@@ -510,7 +563,11 @@ PFNGLDEPTHRANGEINDEXEDPROC glDepthRangeIndexed;
 PFNGLGETFLOATI_VPROC glGetFloati_v;
 PFNGLGETDOUBLEI_VPROC glGetDoublei_v;
 
-//init_4_2
+#endif
+
+
+//
+#ifdef define_core_4_2
 PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC glDrawArraysInstancedBaseInstance;
 PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC glDrawElementsInstancedBaseInstance;
 PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC glDrawElementsInstancedBaseVertexBaseInstance;
@@ -524,7 +581,11 @@ PFNGLTEXSTORAGE3DPROC glTexStorage3D;
 PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC glDrawTransformFeedbackInstanced;
 PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC glDrawTransformFeedbackStreamInstanced;
 
-//init_4_3
+#endif
+
+
+//
+#ifdef define_core_4_3
 PFNGLCLEARBUFFERDATAPROC glClearBufferData;
 PFNGLCLEARBUFFERSUBDATAPROC glClearBufferSubData;
 PFNGLDISPATCHCOMPUTEPROC glDispatchCompute;
@@ -569,7 +630,11 @@ PFNGLGETOBJECTLABELPROC glGetObjectLabel;
 PFNGLOBJECTPTRLABELPROC glObjectPtrLabel;
 PFNGLGETOBJECTPTRLABELPROC glGetObjectPtrLabel;
 
-//init_4_4
+#endif
+
+
+//
+#ifdef define_core_4_4
 PFNGLBUFFERSTORAGEPROC glBufferStorage;
 PFNGLCLEARTEXIMAGEPROC glClearTexImage;
 PFNGLCLEARTEXSUBIMAGEPROC glClearTexSubImage;
@@ -580,15 +645,35 @@ PFNGLBINDSAMPLERSPROC glBindSamplers;
 PFNGLBINDIMAGETEXTURESPROC glBindImageTextures;
 PFNGLBINDVERTEXBUFFERSPROC glBindVertexBuffers;
 
-//init_GL_ARB_ES2_compatibility
+#endif
 
-//init_GL_ARB_ES3_compatibility
 
-//init_GL_ARB_arrays_of_arrays
+//
+#ifdef define_GL_ARB_ES2_compatibility
 
-//init_GL_ARB_base_instance
+#endif
 
-//init_GL_ARB_bindless_texture
+
+//
+#ifdef define_GL_ARB_ES3_compatibility
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_arrays_of_arrays
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_base_instance
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_bindless_texture
 PFNGLGETTEXTUREHANDLEARBPROC glGetTextureHandleARB;
 PFNGLGETTEXTURESAMPLERHANDLEARBPROC glGetTextureSamplerHandleARB;
 PFNGLMAKETEXTUREHANDLERESIDENTARBPROC glMakeTextureHandleResidentARB;
@@ -606,105 +691,281 @@ PFNGLVERTEXATTRIBL1UI64ARBPROC glVertexAttribL1ui64ARB;
 PFNGLVERTEXATTRIBL1UI64VARBPROC glVertexAttribL1ui64vARB;
 PFNGLGETVERTEXATTRIBLUI64VARBPROC glGetVertexAttribLui64vARB;
 
-//init_GL_ARB_blend_func_extended
+#endif
 
-//init_GL_ARB_buffer_storage
 
-//init_GL_ARB_cl_event
+//
+#ifdef define_GL_ARB_blend_func_extended
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_buffer_storage
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_cl_event
 PFNGLCREATESYNCFROMCLEVENTARBPROC glCreateSyncFromCLeventARB;
 
-//init_GL_ARB_clear_buffer_object
+#endif
 
-//init_GL_ARB_clear_texture
 
-//init_GL_ARB_compressed_texture_pixel_storage
+//
+#ifdef define_GL_ARB_clear_buffer_object
 
-//init_GL_ARB_compute_shader
+#endif
 
-//init_GL_ARB_compute_variable_group_size
+
+//
+#ifdef define_GL_ARB_clear_texture
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_compressed_texture_pixel_storage
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_compute_shader
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_compute_variable_group_size
 PFNGLDISPATCHCOMPUTEGROUPSIZEARBPROC glDispatchComputeGroupSizeARB;
 
-//init_GL_ARB_conservative_depth
+#endif
 
-//init_GL_ARB_copy_buffer
 
-//init_GL_ARB_copy_image
+//
+#ifdef define_GL_ARB_conservative_depth
 
-//init_GL_ARB_debug_output
+#endif
+
+
+//
+#ifdef define_GL_ARB_copy_buffer
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_copy_image
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_debug_output
 PFNGLDEBUGMESSAGECONTROLARBPROC glDebugMessageControlARB;
 PFNGLDEBUGMESSAGEINSERTARBPROC glDebugMessageInsertARB;
 PFNGLDEBUGMESSAGECALLBACKARBPROC glDebugMessageCallbackARB;
 PFNGLGETDEBUGMESSAGELOGARBPROC glGetDebugMessageLogARB;
 
-//init_GL_ARB_depth_buffer_float
+#endif
 
-//init_GL_ARB_depth_clamp
 
-//init_GL_ARB_draw_buffers_blend
+//
+#ifdef define_GL_ARB_depth_buffer_float
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_depth_clamp
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_draw_buffers_blend
 PFNGLBLENDEQUATIONIARBPROC glBlendEquationiARB;
 PFNGLBLENDEQUATIONSEPARATEIARBPROC glBlendEquationSeparateiARB;
 PFNGLBLENDFUNCIARBPROC glBlendFunciARB;
 PFNGLBLENDFUNCSEPARATEIARBPROC glBlendFuncSeparateiARB;
 
-//init_GL_ARB_draw_elements_base_vertex
+#endif
 
-//init_GL_ARB_draw_indirect
 
-//init_GL_ARB_enhanced_layouts
+//
+#ifdef define_GL_ARB_draw_elements_base_vertex
 
-//init_GL_ARB_explicit_attrib_location
+#endif
 
-//init_GL_ARB_explicit_uniform_location
 
-//init_GL_ARB_fragment_coord_conventions
+//
+#ifdef define_GL_ARB_draw_indirect
 
-//init_GL_ARB_fragment_layer_viewport
+#endif
 
-//init_GL_ARB_framebuffer_no_attachments
 
-//init_GL_ARB_framebuffer_object
+//
+#ifdef define_GL_ARB_enhanced_layouts
 
-//init_GL_ARB_framebuffer_sRGB
+#endif
 
-//init_GL_ARB_get_program_binary
 
-//init_GL_ARB_gpu_shader5
+//
+#ifdef define_GL_ARB_explicit_attrib_location
 
-//init_GL_ARB_gpu_shader_fp64
+#endif
 
-//init_GL_ARB_half_float_vertex
 
-//init_GL_ARB_imaging
+//
+#ifdef define_GL_ARB_explicit_uniform_location
 
-//init_GL_ARB_indirect_parameters
+#endif
+
+
+//
+#ifdef define_GL_ARB_fragment_coord_conventions
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_fragment_layer_viewport
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_framebuffer_no_attachments
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_framebuffer_object
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_framebuffer_sRGB
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_get_program_binary
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_gpu_shader5
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_gpu_shader_fp64
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_half_float_vertex
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_imaging
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_indirect_parameters
 PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC glMultiDrawArraysIndirectCountARB;
 PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC glMultiDrawElementsIndirectCountARB;
 
-//init_GL_ARB_internalformat_query
+#endif
 
-//init_GL_ARB_internalformat_query2
 
-//init_GL_ARB_invalidate_subdata
+//
+#ifdef define_GL_ARB_internalformat_query
 
-//init_GL_ARB_map_buffer_alignment
+#endif
 
-//init_GL_ARB_map_buffer_range
 
-//init_GL_ARB_multi_bind
+//
+#ifdef define_GL_ARB_internalformat_query2
 
-//init_GL_ARB_multi_draw_indirect
+#endif
 
-//init_GL_ARB_occlusion_query2
 
-//init_GL_ARB_program_interface_query
+//
+#ifdef define_GL_ARB_invalidate_subdata
 
-//init_GL_ARB_provoking_vertex
+#endif
 
-//init_GL_ARB_query_buffer_object
 
-//init_GL_ARB_robust_buffer_access_behavior
+//
+#ifdef define_GL_ARB_map_buffer_alignment
 
-//init_GL_ARB_robustness
+#endif
+
+
+//
+#ifdef define_GL_ARB_map_buffer_range
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_multi_bind
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_multi_draw_indirect
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_occlusion_query2
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_program_interface_query
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_provoking_vertex
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_query_buffer_object
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_robust_buffer_access_behavior
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_robustness
 PFNGLGETGRAPHICSRESETSTATUSARBPROC glGetGraphicsResetStatusARB;
 PFNGLGETNTEXIMAGEARBPROC glGetnTexImageARB;
 PFNGLREADNPIXELSARBPROC glReadnPixelsARB;
@@ -714,42 +975,114 @@ PFNGLGETNUNIFORMIVARBPROC glGetnUniformivARB;
 PFNGLGETNUNIFORMUIVARBPROC glGetnUniformuivARB;
 PFNGLGETNUNIFORMDVARBPROC glGetnUniformdvARB;
 
-//init_GL_ARB_robustness_isolation
+#endif
 
-//init_GL_ARB_sample_shading
+
+//
+#ifdef define_GL_ARB_robustness_isolation
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_sample_shading
 PFNGLMINSAMPLESHADINGARBPROC glMinSampleShadingARB;
 
-//init_GL_ARB_sampler_objects
+#endif
 
-//init_GL_ARB_seamless_cube_map
 
-//init_GL_ARB_seamless_cubemap_per_texture
+//
+#ifdef define_GL_ARB_sampler_objects
 
-//init_GL_ARB_separate_shader_objects
+#endif
 
-//init_GL_ARB_shader_atomic_counters
 
-//init_GL_ARB_shader_bit_encoding
+//
+#ifdef define_GL_ARB_seamless_cube_map
 
-//init_GL_ARB_shader_draw_parameters
+#endif
 
-//init_GL_ARB_shader_group_vote
 
-//init_GL_ARB_shader_image_load_store
+//
+#ifdef define_GL_ARB_seamless_cubemap_per_texture
 
-//init_GL_ARB_shader_image_size
+#endif
 
-//init_GL_ARB_shader_precision
 
-//init_GL_ARB_shader_stencil_export
+//
+#ifdef define_GL_ARB_separate_shader_objects
 
-//init_GL_ARB_shader_storage_buffer_object
+#endif
 
-//init_GL_ARB_shader_subroutine
 
-//init_GL_ARB_shading_language_420pack
+//
+#ifdef define_GL_ARB_shader_atomic_counters
 
-//init_GL_ARB_shading_language_include
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_bit_encoding
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_draw_parameters
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_group_vote
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_image_load_store
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_image_size
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_precision
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_stencil_export
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_storage_buffer_object
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_subroutine
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shading_language_420pack
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shading_language_include
 PFNGLNAMEDSTRINGARBPROC glNamedStringARB;
 PFNGLDELETENAMEDSTRINGARBPROC glDeleteNamedStringARB;
 PFNGLCOMPILESHADERINCLUDEARBPROC glCompileShaderIncludeARB;
@@ -757,83 +1090,235 @@ PFNGLISNAMEDSTRINGARBPROC glIsNamedStringARB;
 PFNGLGETNAMEDSTRINGARBPROC glGetNamedStringARB;
 PFNGLGETNAMEDSTRINGIVARBPROC glGetNamedStringivARB;
 
-//init_GL_ARB_shading_language_packing
+#endif
 
-//init_GL_ARB_sparse_texture
+
+//
+#ifdef define_GL_ARB_shading_language_packing
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_sparse_texture
 PFNGLTEXPAGECOMMITMENTARBPROC glTexPageCommitmentARB;
 
-//init_GL_ARB_stencil_texturing
+#endif
 
-//init_GL_ARB_sync
 
-//init_GL_ARB_tessellation_shader
+//
+#ifdef define_GL_ARB_stencil_texturing
 
-//init_GL_ARB_texture_buffer_object_rgb32
+#endif
 
-//init_GL_ARB_texture_buffer_range
 
-//init_GL_ARB_texture_compression_bptc
+//
+#ifdef define_GL_ARB_sync
 
-//init_GL_ARB_texture_compression_rgtc
+#endif
 
-//init_GL_ARB_texture_cube_map_array
 
-//init_GL_ARB_texture_gather
+//
+#ifdef define_GL_ARB_tessellation_shader
 
-//init_GL_ARB_texture_mirror_clamp_to_edge
+#endif
 
-//init_GL_ARB_texture_multisample
 
-//init_GL_ARB_texture_query_levels
+//
+#ifdef define_GL_ARB_texture_buffer_object_rgb32
 
-//init_GL_ARB_texture_query_lod
+#endif
 
-//init_GL_ARB_texture_rg
 
-//init_GL_ARB_texture_rgb10_a2ui
+//
+#ifdef define_GL_ARB_texture_buffer_range
 
-//init_GL_ARB_texture_stencil8
+#endif
 
-//init_GL_ARB_texture_storage
 
-//init_GL_ARB_texture_storage_multisample
+//
+#ifdef define_GL_ARB_texture_compression_bptc
 
-//init_GL_ARB_texture_swizzle
+#endif
 
-//init_GL_ARB_texture_view
 
-//init_GL_ARB_timer_query
+//
+#ifdef define_GL_ARB_texture_compression_rgtc
 
-//init_GL_ARB_transform_feedback2
+#endif
 
-//init_GL_ARB_transform_feedback3
 
-//init_GL_ARB_transform_feedback_instanced
+//
+#ifdef define_GL_ARB_texture_cube_map_array
 
-//init_GL_ARB_uniform_buffer_object
+#endif
 
-//init_GL_ARB_vertex_array_bgra
 
-//init_GL_ARB_vertex_array_object
+//
+#ifdef define_GL_ARB_texture_gather
 
-//init_GL_ARB_vertex_attrib_64bit
+#endif
 
-//init_GL_ARB_vertex_attrib_binding
 
-//init_GL_ARB_vertex_type_10f_11f_11f_rev
+//
+#ifdef define_GL_ARB_texture_mirror_clamp_to_edge
 
-//init_GL_ARB_vertex_type_2_10_10_10_rev
+#endif
 
-//init_GL_ARB_viewport_array
 
-//init_GL_KHR_debug
+//
+#ifdef define_GL_ARB_texture_multisample
 
-//init_GL_KHR_texture_compression_astc_hdr
+#endif
 
-//init_GL_KHR_texture_compression_astc_ldr
 
-bool glelp::init_1_0()
+//
+#ifdef define_GL_ARB_texture_query_levels
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_query_lod
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_rg
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_rgb10_a2ui
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_stencil8
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_storage
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_storage_multisample
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_swizzle
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_view
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_timer_query
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_transform_feedback2
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_transform_feedback3
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_transform_feedback_instanced
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_uniform_buffer_object
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_array_bgra
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_array_object
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_attrib_64bit
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_attrib_binding
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_type_10f_11f_11f_rev
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_type_2_10_10_10_rev
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_viewport_array
+
+#endif
+
+
+//
+#ifdef define_GL_KHR_debug
+
+#endif
+
+
+//
+#ifdef define_GL_KHR_texture_compression_astc_hdr
+
+#endif
+
+
+//
+#ifdef define_GL_KHR_texture_compression_astc_ldr
+
+#endif
+
+
+bool glelp::initExtensions()
 {
+#ifdef define_core_1_0
 
 	glCullFace = (PFNGLCULLFACEPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glCullFace");
 	glFrontFace = (PFNGLFRONTFACEPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glFrontFace");
@@ -884,14 +1369,10 @@ bool glelp::init_1_0()
 	glDepthRange = (PFNGLDEPTHRANGEPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glDepthRange");
 	glViewport = (PFNGLVIEWPORTPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glViewport");
 
-	return true;
-}
+#endif
 
-bool glelp::init_1_1()
-{
+#ifdef define_core_1_1
 	if(!glelp::checkVersion(1, 1)) return false;
-
-	if(!init_1_0()) return false;
 
 	glDrawArrays = (PFNGLDRAWARRAYSPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glDrawArrays");
 	glDrawElements = (PFNGLDRAWELEMENTSPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glDrawElements");
@@ -908,28 +1389,20 @@ bool glelp::init_1_1()
 	glGenTextures = (PFNGLGENTEXTURESPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glGenTextures");
 	glIsTexture = (PFNGLISTEXTUREPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glIsTexture");
 
-	return true;
-}
+#endif
 
-bool glelp::init_1_2()
-{
+#ifdef define_core_1_2
 	if(!glelp::checkVersion(1, 2)) return false;
-
-	if(!init_1_1()) return false;
 
 	glDrawRangeElements = (PFNGLDRAWRANGEELEMENTSPROC)wglGetProcAddress("glDrawRangeElements");
 	glTexImage3D = (PFNGLTEXIMAGE3DPROC)wglGetProcAddress("glTexImage3D");
 	glTexSubImage3D = (PFNGLTEXSUBIMAGE3DPROC)wglGetProcAddress("glTexSubImage3D");
 	glCopyTexSubImage3D = (PFNGLCOPYTEXSUBIMAGE3DPROC)wglGetProcAddress("glCopyTexSubImage3D");
 
-	return true;
-}
+#endif
 
-bool glelp::init_1_3()
-{
+#ifdef define_core_1_3
 	if(!glelp::checkVersion(1, 3)) return false;
-
-	if(!init_1_2()) return false;
 
 	glActiveTexture = (PFNGLACTIVETEXTUREPROC)wglGetProcAddress("glActiveTexture");
 	glSampleCoverage = (PFNGLSAMPLECOVERAGEPROC)wglGetProcAddress("glSampleCoverage");
@@ -941,14 +1414,10 @@ bool glelp::init_1_3()
 	glCompressedTexSubImage1D = (PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC)wglGetProcAddress("glCompressedTexSubImage1D");
 	glGetCompressedTexImage = (PFNGLGETCOMPRESSEDTEXIMAGEPROC)wglGetProcAddress("glGetCompressedTexImage");
 
-	return true;
-}
+#endif
 
-bool glelp::init_1_4()
-{
+#ifdef define_core_1_4
 	if(!glelp::checkVersion(1, 4)) return false;
-
-	if(!init_1_3()) return false;
 
 	glBlendFuncSeparate = (PFNGLBLENDFUNCSEPARATEPROC)wglGetProcAddress("glBlendFuncSeparate");
 	glMultiDrawArrays = (PFNGLMULTIDRAWARRAYSPROC)wglGetProcAddress("glMultiDrawArrays");
@@ -960,14 +1429,10 @@ bool glelp::init_1_4()
 	glBlendColor = (PFNGLBLENDCOLORPROC)wglGetProcAddress("glBlendColor");
 	glBlendEquation = (PFNGLBLENDEQUATIONPROC)wglGetProcAddress("glBlendEquation");
 
-	return true;
-}
+#endif
 
-bool glelp::init_1_5()
-{
+#ifdef define_core_1_5
 	if(!glelp::checkVersion(1, 5)) return false;
-
-	if(!init_1_4()) return false;
 
 	glGenQueries = (PFNGLGENQUERIESPROC)wglGetProcAddress("glGenQueries");
 	glDeleteQueries = (PFNGLDELETEQUERIESPROC)wglGetProcAddress("glDeleteQueries");
@@ -989,14 +1454,10 @@ bool glelp::init_1_5()
 	glGetBufferParameteriv = (PFNGLGETBUFFERPARAMETERIVPROC)wglGetProcAddress("glGetBufferParameteriv");
 	glGetBufferPointerv = (PFNGLGETBUFFERPOINTERVPROC)wglGetProcAddress("glGetBufferPointerv");
 
-	return true;
-}
+#endif
 
-bool glelp::init_2_0()
-{
+#ifdef define_core_2_0
 	if(!glelp::checkVersion(2, 0)) return false;
-
-	if(!init_1_5()) return false;
 
 	glBlendEquationSeparate = (PFNGLBLENDEQUATIONSEPARATEPROC)wglGetProcAddress("glBlendEquationSeparate");
 	glDrawBuffers = (PFNGLDRAWBUFFERSPROC)wglGetProcAddress("glDrawBuffers");
@@ -1092,14 +1553,10 @@ bool glelp::init_2_0()
 	glVertexAttrib4usv = (PFNGLVERTEXATTRIB4USVPROC)wglGetProcAddress("glVertexAttrib4usv");
 	glVertexAttribPointer = (PFNGLVERTEXATTRIBPOINTERPROC)wglGetProcAddress("glVertexAttribPointer");
 
-	return true;
-}
+#endif
 
-bool glelp::init_2_1()
-{
+#ifdef define_core_2_1
 	if(!glelp::checkVersion(2, 1)) return false;
-
-	if(!init_2_0()) return false;
 
 	glUniformMatrix2x3fv = (PFNGLUNIFORMMATRIX2X3FVPROC)wglGetProcAddress("glUniformMatrix2x3fv");
 	glUniformMatrix3x2fv = (PFNGLUNIFORMMATRIX3X2FVPROC)wglGetProcAddress("glUniformMatrix3x2fv");
@@ -1108,14 +1565,10 @@ bool glelp::init_2_1()
 	glUniformMatrix3x4fv = (PFNGLUNIFORMMATRIX3X4FVPROC)wglGetProcAddress("glUniformMatrix3x4fv");
 	glUniformMatrix4x3fv = (PFNGLUNIFORMMATRIX4X3FVPROC)wglGetProcAddress("glUniformMatrix4x3fv");
 
-	return true;
-}
+#endif
 
-bool glelp::init_3_0()
-{
+#ifdef define_core_3_0
 	if(!glelp::checkVersion(3, 0)) return false;
-
-	if(!init_2_1()) return false;
 
 	glColorMaski = (PFNGLCOLORMASKIPROC)wglGetProcAddress("glColorMaski");
 	glGetBooleani_v = (PFNGLGETBOOLEANI_VPROC)wglGetProcAddress("glGetBooleani_v");
@@ -1202,14 +1655,10 @@ bool glelp::init_3_0()
 	glGenVertexArrays = (PFNGLGENVERTEXARRAYSPROC)wglGetProcAddress("glGenVertexArrays");
 	glIsVertexArray = (PFNGLISVERTEXARRAYPROC)wglGetProcAddress("glIsVertexArray");
 
-	return true;
-}
+#endif
 
-bool glelp::init_3_1()
-{
+#ifdef define_core_3_1
 	if(!glelp::checkVersion(3, 1)) return false;
-
-	if(!init_3_0()) return false;
 
 	glDrawArraysInstanced = (PFNGLDRAWARRAYSINSTANCEDPROC)wglGetProcAddress("glDrawArraysInstanced");
 	glDrawElementsInstanced = (PFNGLDRAWELEMENTSINSTANCEDPROC)wglGetProcAddress("glDrawElementsInstanced");
@@ -1224,14 +1673,10 @@ bool glelp::init_3_1()
 	glGetActiveUniformBlockName = (PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC)wglGetProcAddress("glGetActiveUniformBlockName");
 	glUniformBlockBinding = (PFNGLUNIFORMBLOCKBINDINGPROC)wglGetProcAddress("glUniformBlockBinding");
 
-	return true;
-}
+#endif
 
-bool glelp::init_3_2()
-{
+#ifdef define_core_3_2
 	if(!glelp::checkVersion(3, 2)) return false;
-
-	if(!init_3_1()) return false;
 
 	glDrawElementsBaseVertex = (PFNGLDRAWELEMENTSBASEVERTEXPROC)wglGetProcAddress("glDrawElementsBaseVertex");
 	glDrawRangeElementsBaseVertex = (PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC)wglGetProcAddress("glDrawRangeElementsBaseVertex");
@@ -1253,14 +1698,10 @@ bool glelp::init_3_2()
 	glGetMultisamplefv = (PFNGLGETMULTISAMPLEFVPROC)wglGetProcAddress("glGetMultisamplefv");
 	glSampleMaski = (PFNGLSAMPLEMASKIPROC)wglGetProcAddress("glSampleMaski");
 
-	return true;
-}
+#endif
 
-bool glelp::init_3_3()
-{
+#ifdef define_core_3_3
 	if(!glelp::checkVersion(3, 3)) return false;
-
-	if(!init_3_2()) return false;
 
 	glBindFragDataLocationIndexed = (PFNGLBINDFRAGDATALOCATIONINDEXEDPROC)wglGetProcAddress("glBindFragDataLocationIndexed");
 	glGetFragDataIndex = (PFNGLGETFRAGDATAINDEXPROC)wglGetProcAddress("glGetFragDataIndex");
@@ -1291,14 +1732,10 @@ bool glelp::init_3_3()
 	glVertexAttribP4ui = (PFNGLVERTEXATTRIBP4UIPROC)wglGetProcAddress("glVertexAttribP4ui");
 	glVertexAttribP4uiv = (PFNGLVERTEXATTRIBP4UIVPROC)wglGetProcAddress("glVertexAttribP4uiv");
 
-	return true;
-}
+#endif
 
-bool glelp::init_4_0()
-{
+#ifdef define_core_4_0
 	if(!glelp::checkVersion(4, 0)) return false;
-
-	if(!init_3_3()) return false;
 
 	glMinSampleShading = (PFNGLMINSAMPLESHADINGPROC)wglGetProcAddress("glMinSampleShading");
 	glBlendEquationi = (PFNGLBLENDEQUATIONIPROC)wglGetProcAddress("glBlendEquationi");
@@ -1347,14 +1784,10 @@ bool glelp::init_4_0()
 	glEndQueryIndexed = (PFNGLENDQUERYINDEXEDPROC)wglGetProcAddress("glEndQueryIndexed");
 	glGetQueryIndexediv = (PFNGLGETQUERYINDEXEDIVPROC)wglGetProcAddress("glGetQueryIndexediv");
 
-	return true;
-}
+#endif
 
-bool glelp::init_4_1()
-{
+#ifdef define_core_4_1
 	if(!glelp::checkVersion(4, 1)) return false;
-
-	if(!init_4_0()) return false;
 
 	glReleaseShaderCompiler = (PFNGLRELEASESHADERCOMPILERPROC)wglGetProcAddress("glReleaseShaderCompiler");
 	glShaderBinary = (PFNGLSHADERBINARYPROC)wglGetProcAddress("glShaderBinary");
@@ -1445,14 +1878,10 @@ bool glelp::init_4_1()
 	glGetFloati_v = (PFNGLGETFLOATI_VPROC)wglGetProcAddress("glGetFloati_v");
 	glGetDoublei_v = (PFNGLGETDOUBLEI_VPROC)wglGetProcAddress("glGetDoublei_v");
 
-	return true;
-}
+#endif
 
-bool glelp::init_4_2()
-{
+#ifdef define_core_4_2
 	if(!glelp::checkVersion(4, 2)) return false;
-
-	if(!init_4_1()) return false;
 
 	glDrawArraysInstancedBaseInstance = (PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC)wglGetProcAddress("glDrawArraysInstancedBaseInstance");
 	glDrawElementsInstancedBaseInstance = (PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC)wglGetProcAddress("glDrawElementsInstancedBaseInstance");
@@ -1467,14 +1896,10 @@ bool glelp::init_4_2()
 	glDrawTransformFeedbackInstanced = (PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC)wglGetProcAddress("glDrawTransformFeedbackInstanced");
 	glDrawTransformFeedbackStreamInstanced = (PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC)wglGetProcAddress("glDrawTransformFeedbackStreamInstanced");
 
-	return true;
-}
+#endif
 
-bool glelp::init_4_3()
-{
+#ifdef define_core_4_3
 	if(!glelp::checkVersion(4, 3)) return false;
-
-	if(!init_4_2()) return false;
 
 	glClearBufferData = (PFNGLCLEARBUFFERDATAPROC)wglGetProcAddress("glClearBufferData");
 	glClearBufferSubData = (PFNGLCLEARBUFFERSUBDATAPROC)wglGetProcAddress("glClearBufferSubData");
@@ -1520,14 +1945,10 @@ bool glelp::init_4_3()
 	glObjectPtrLabel = (PFNGLOBJECTPTRLABELPROC)wglGetProcAddress("glObjectPtrLabel");
 	glGetObjectPtrLabel = (PFNGLGETOBJECTPTRLABELPROC)wglGetProcAddress("glGetObjectPtrLabel");
 
-	return true;
-}
+#endif
 
-bool glelp::init_4_4()
-{
+#ifdef define_core_4_4
 	if(!glelp::checkVersion(4, 4)) return false;
-
-	if(!init_4_3()) return false;
 
 	glBufferStorage = (PFNGLBUFFERSTORAGEPROC)wglGetProcAddress("glBufferStorage");
 	glClearTexImage = (PFNGLCLEARTEXIMAGEPROC)wglGetProcAddress("glClearTexImage");
@@ -1539,39 +1960,29 @@ bool glelp::init_4_4()
 	glBindImageTextures = (PFNGLBINDIMAGETEXTURESPROC)wglGetProcAddress("glBindImageTextures");
 	glBindVertexBuffers = (PFNGLBINDVERTEXBUFFERSPROC)wglGetProcAddress("glBindVertexBuffers");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_ES2_compatibility()
-{
+#ifdef define_GL_ARB_ES2_compatibility
 	if(!glelp::checkAvailable("GL_ARB_ES2_compatibility")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_ES3_compatibility()
-{
+#ifdef define_GL_ARB_ES3_compatibility
 	if(!glelp::checkAvailable("GL_ARB_ES3_compatibility")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_arrays_of_arrays()
-{
+#ifdef define_GL_ARB_arrays_of_arrays
 	if(!glelp::checkAvailable("GL_ARB_arrays_of_arrays")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_base_instance()
-{
+#ifdef define_GL_ARB_base_instance
 	if(!glelp::checkAvailable("GL_ARB_base_instance")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_bindless_texture()
-{
+#ifdef define_GL_ARB_bindless_texture
 	if(!glelp::checkAvailable("GL_ARB_bindless_texture")) return false;
 	glGetTextureHandleARB = (PFNGLGETTEXTUREHANDLEARBPROC)wglGetProcAddress("glGetTextureHandleARB");
 	glGetTextureSamplerHandleARB = (PFNGLGETTEXTURESAMPLERHANDLEARBPROC)wglGetProcAddress("glGetTextureSamplerHandleARB");
@@ -1590,324 +2001,236 @@ bool glelp::init_GL_ARB_bindless_texture()
 	glVertexAttribL1ui64vARB = (PFNGLVERTEXATTRIBL1UI64VARBPROC)wglGetProcAddress("glVertexAttribL1ui64vARB");
 	glGetVertexAttribLui64vARB = (PFNGLGETVERTEXATTRIBLUI64VARBPROC)wglGetProcAddress("glGetVertexAttribLui64vARB");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_blend_func_extended()
-{
+#ifdef define_GL_ARB_blend_func_extended
 	if(!glelp::checkAvailable("GL_ARB_blend_func_extended")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_buffer_storage()
-{
+#ifdef define_GL_ARB_buffer_storage
 	if(!glelp::checkAvailable("GL_ARB_buffer_storage")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_cl_event()
-{
+#ifdef define_GL_ARB_cl_event
 	if(!glelp::checkAvailable("GL_ARB_cl_event")) return false;
 	glCreateSyncFromCLeventARB = (PFNGLCREATESYNCFROMCLEVENTARBPROC)wglGetProcAddress("glCreateSyncFromCLeventARB");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_clear_buffer_object()
-{
+#ifdef define_GL_ARB_clear_buffer_object
 	if(!glelp::checkAvailable("GL_ARB_clear_buffer_object")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_clear_texture()
-{
+#ifdef define_GL_ARB_clear_texture
 	if(!glelp::checkAvailable("GL_ARB_clear_texture")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_compressed_texture_pixel_storage()
-{
+#ifdef define_GL_ARB_compressed_texture_pixel_storage
 	if(!glelp::checkAvailable("GL_ARB_compressed_texture_pixel_storage")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_compute_shader()
-{
+#ifdef define_GL_ARB_compute_shader
 	if(!glelp::checkAvailable("GL_ARB_compute_shader")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_compute_variable_group_size()
-{
+#ifdef define_GL_ARB_compute_variable_group_size
 	if(!glelp::checkAvailable("GL_ARB_compute_variable_group_size")) return false;
 	glDispatchComputeGroupSizeARB = (PFNGLDISPATCHCOMPUTEGROUPSIZEARBPROC)wglGetProcAddress("glDispatchComputeGroupSizeARB");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_conservative_depth()
-{
+#ifdef define_GL_ARB_conservative_depth
 	if(!glelp::checkAvailable("GL_ARB_conservative_depth")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_copy_buffer()
-{
+#ifdef define_GL_ARB_copy_buffer
 	if(!glelp::checkAvailable("GL_ARB_copy_buffer")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_copy_image()
-{
+#ifdef define_GL_ARB_copy_image
 	if(!glelp::checkAvailable("GL_ARB_copy_image")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_debug_output()
-{
+#ifdef define_GL_ARB_debug_output
 	if(!glelp::checkAvailable("GL_ARB_debug_output")) return false;
 	glDebugMessageControlARB = (PFNGLDEBUGMESSAGECONTROLARBPROC)wglGetProcAddress("glDebugMessageControlARB");
 	glDebugMessageInsertARB = (PFNGLDEBUGMESSAGEINSERTARBPROC)wglGetProcAddress("glDebugMessageInsertARB");
 	glDebugMessageCallbackARB = (PFNGLDEBUGMESSAGECALLBACKARBPROC)wglGetProcAddress("glDebugMessageCallbackARB");
 	glGetDebugMessageLogARB = (PFNGLGETDEBUGMESSAGELOGARBPROC)wglGetProcAddress("glGetDebugMessageLogARB");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_depth_buffer_float()
-{
+#ifdef define_GL_ARB_depth_buffer_float
 	if(!glelp::checkAvailable("GL_ARB_depth_buffer_float")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_depth_clamp()
-{
+#ifdef define_GL_ARB_depth_clamp
 	if(!glelp::checkAvailable("GL_ARB_depth_clamp")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_draw_buffers_blend()
-{
+#ifdef define_GL_ARB_draw_buffers_blend
 	if(!glelp::checkAvailable("GL_ARB_draw_buffers_blend")) return false;
 	glBlendEquationiARB = (PFNGLBLENDEQUATIONIARBPROC)wglGetProcAddress("glBlendEquationiARB");
 	glBlendEquationSeparateiARB = (PFNGLBLENDEQUATIONSEPARATEIARBPROC)wglGetProcAddress("glBlendEquationSeparateiARB");
 	glBlendFunciARB = (PFNGLBLENDFUNCIARBPROC)wglGetProcAddress("glBlendFunciARB");
 	glBlendFuncSeparateiARB = (PFNGLBLENDFUNCSEPARATEIARBPROC)wglGetProcAddress("glBlendFuncSeparateiARB");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_draw_elements_base_vertex()
-{
+#ifdef define_GL_ARB_draw_elements_base_vertex
 	if(!glelp::checkAvailable("GL_ARB_draw_elements_base_vertex")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_draw_indirect()
-{
+#ifdef define_GL_ARB_draw_indirect
 	if(!glelp::checkAvailable("GL_ARB_draw_indirect")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_enhanced_layouts()
-{
+#ifdef define_GL_ARB_enhanced_layouts
 	if(!glelp::checkAvailable("GL_ARB_enhanced_layouts")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_explicit_attrib_location()
-{
+#ifdef define_GL_ARB_explicit_attrib_location
 	if(!glelp::checkAvailable("GL_ARB_explicit_attrib_location")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_explicit_uniform_location()
-{
+#ifdef define_GL_ARB_explicit_uniform_location
 	if(!glelp::checkAvailable("GL_ARB_explicit_uniform_location")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_fragment_coord_conventions()
-{
+#ifdef define_GL_ARB_fragment_coord_conventions
 	if(!glelp::checkAvailable("GL_ARB_fragment_coord_conventions")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_fragment_layer_viewport()
-{
+#ifdef define_GL_ARB_fragment_layer_viewport
 	if(!glelp::checkAvailable("GL_ARB_fragment_layer_viewport")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_framebuffer_no_attachments()
-{
+#ifdef define_GL_ARB_framebuffer_no_attachments
 	if(!glelp::checkAvailable("GL_ARB_framebuffer_no_attachments")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_framebuffer_object()
-{
+#ifdef define_GL_ARB_framebuffer_object
 	if(!glelp::checkAvailable("GL_ARB_framebuffer_object")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_framebuffer_sRGB()
-{
+#ifdef define_GL_ARB_framebuffer_sRGB
 	if(!glelp::checkAvailable("GL_ARB_framebuffer_sRGB")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_get_program_binary()
-{
+#ifdef define_GL_ARB_get_program_binary
 	if(!glelp::checkAvailable("GL_ARB_get_program_binary")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_gpu_shader5()
-{
+#ifdef define_GL_ARB_gpu_shader5
 	if(!glelp::checkAvailable("GL_ARB_gpu_shader5")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_gpu_shader_fp64()
-{
+#ifdef define_GL_ARB_gpu_shader_fp64
 	if(!glelp::checkAvailable("GL_ARB_gpu_shader_fp64")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_half_float_vertex()
-{
+#ifdef define_GL_ARB_half_float_vertex
 	if(!glelp::checkAvailable("GL_ARB_half_float_vertex")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_imaging()
-{
+#ifdef define_GL_ARB_imaging
 	if(!glelp::checkAvailable("GL_ARB_imaging")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_indirect_parameters()
-{
+#ifdef define_GL_ARB_indirect_parameters
 	if(!glelp::checkAvailable("GL_ARB_indirect_parameters")) return false;
 	glMultiDrawArraysIndirectCountARB = (PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC)wglGetProcAddress("glMultiDrawArraysIndirectCountARB");
 	glMultiDrawElementsIndirectCountARB = (PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC)wglGetProcAddress("glMultiDrawElementsIndirectCountARB");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_internalformat_query()
-{
+#ifdef define_GL_ARB_internalformat_query
 	if(!glelp::checkAvailable("GL_ARB_internalformat_query")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_internalformat_query2()
-{
+#ifdef define_GL_ARB_internalformat_query2
 	if(!glelp::checkAvailable("GL_ARB_internalformat_query2")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_invalidate_subdata()
-{
+#ifdef define_GL_ARB_invalidate_subdata
 	if(!glelp::checkAvailable("GL_ARB_invalidate_subdata")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_map_buffer_alignment()
-{
+#ifdef define_GL_ARB_map_buffer_alignment
 	if(!glelp::checkAvailable("GL_ARB_map_buffer_alignment")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_map_buffer_range()
-{
+#ifdef define_GL_ARB_map_buffer_range
 	if(!glelp::checkAvailable("GL_ARB_map_buffer_range")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_multi_bind()
-{
+#ifdef define_GL_ARB_multi_bind
 	if(!glelp::checkAvailable("GL_ARB_multi_bind")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_multi_draw_indirect()
-{
+#ifdef define_GL_ARB_multi_draw_indirect
 	if(!glelp::checkAvailable("GL_ARB_multi_draw_indirect")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_occlusion_query2()
-{
+#ifdef define_GL_ARB_occlusion_query2
 	if(!glelp::checkAvailable("GL_ARB_occlusion_query2")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_program_interface_query()
-{
+#ifdef define_GL_ARB_program_interface_query
 	if(!glelp::checkAvailable("GL_ARB_program_interface_query")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_provoking_vertex()
-{
+#ifdef define_GL_ARB_provoking_vertex
 	if(!glelp::checkAvailable("GL_ARB_provoking_vertex")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_query_buffer_object()
-{
+#ifdef define_GL_ARB_query_buffer_object
 	if(!glelp::checkAvailable("GL_ARB_query_buffer_object")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_robust_buffer_access_behavior()
-{
+#ifdef define_GL_ARB_robust_buffer_access_behavior
 	if(!glelp::checkAvailable("GL_ARB_robust_buffer_access_behavior")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_robustness()
-{
+#ifdef define_GL_ARB_robustness
 	if(!glelp::checkAvailable("GL_ARB_robustness")) return false;
 	glGetGraphicsResetStatusARB = (PFNGLGETGRAPHICSRESETSTATUSARBPROC)wglGetProcAddress("glGetGraphicsResetStatusARB");
 	glGetnTexImageARB = (PFNGLGETNTEXIMAGEARBPROC)wglGetProcAddress("glGetnTexImageARB");
@@ -1918,131 +2241,95 @@ bool glelp::init_GL_ARB_robustness()
 	glGetnUniformuivARB = (PFNGLGETNUNIFORMUIVARBPROC)wglGetProcAddress("glGetnUniformuivARB");
 	glGetnUniformdvARB = (PFNGLGETNUNIFORMDVARBPROC)wglGetProcAddress("glGetnUniformdvARB");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_robustness_isolation()
-{
+#ifdef define_GL_ARB_robustness_isolation
 	if(!glelp::checkAvailable("GL_ARB_robustness_isolation")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_sample_shading()
-{
+#ifdef define_GL_ARB_sample_shading
 	if(!glelp::checkAvailable("GL_ARB_sample_shading")) return false;
 	glMinSampleShadingARB = (PFNGLMINSAMPLESHADINGARBPROC)wglGetProcAddress("glMinSampleShadingARB");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_sampler_objects()
-{
+#ifdef define_GL_ARB_sampler_objects
 	if(!glelp::checkAvailable("GL_ARB_sampler_objects")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_seamless_cube_map()
-{
+#ifdef define_GL_ARB_seamless_cube_map
 	if(!glelp::checkAvailable("GL_ARB_seamless_cube_map")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_seamless_cubemap_per_texture()
-{
+#ifdef define_GL_ARB_seamless_cubemap_per_texture
 	if(!glelp::checkAvailable("GL_ARB_seamless_cubemap_per_texture")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_separate_shader_objects()
-{
+#ifdef define_GL_ARB_separate_shader_objects
 	if(!glelp::checkAvailable("GL_ARB_separate_shader_objects")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shader_atomic_counters()
-{
+#ifdef define_GL_ARB_shader_atomic_counters
 	if(!glelp::checkAvailable("GL_ARB_shader_atomic_counters")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shader_bit_encoding()
-{
+#ifdef define_GL_ARB_shader_bit_encoding
 	if(!glelp::checkAvailable("GL_ARB_shader_bit_encoding")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shader_draw_parameters()
-{
+#ifdef define_GL_ARB_shader_draw_parameters
 	if(!glelp::checkAvailable("GL_ARB_shader_draw_parameters")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shader_group_vote()
-{
+#ifdef define_GL_ARB_shader_group_vote
 	if(!glelp::checkAvailable("GL_ARB_shader_group_vote")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shader_image_load_store()
-{
+#ifdef define_GL_ARB_shader_image_load_store
 	if(!glelp::checkAvailable("GL_ARB_shader_image_load_store")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shader_image_size()
-{
+#ifdef define_GL_ARB_shader_image_size
 	if(!glelp::checkAvailable("GL_ARB_shader_image_size")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shader_precision()
-{
+#ifdef define_GL_ARB_shader_precision
 	if(!glelp::checkAvailable("GL_ARB_shader_precision")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shader_stencil_export()
-{
+#ifdef define_GL_ARB_shader_stencil_export
 	if(!glelp::checkAvailable("GL_ARB_shader_stencil_export")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shader_storage_buffer_object()
-{
+#ifdef define_GL_ARB_shader_storage_buffer_object
 	if(!glelp::checkAvailable("GL_ARB_shader_storage_buffer_object")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shader_subroutine()
-{
+#ifdef define_GL_ARB_shader_subroutine
 	if(!glelp::checkAvailable("GL_ARB_shader_subroutine")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shading_language_420pack()
-{
+#ifdef define_GL_ARB_shading_language_420pack
 	if(!glelp::checkAvailable("GL_ARB_shading_language_420pack")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shading_language_include()
-{
+#ifdef define_GL_ARB_shading_language_include
 	if(!glelp::checkAvailable("GL_ARB_shading_language_include")) return false;
 	glNamedStringARB = (PFNGLNAMEDSTRINGARBPROC)wglGetProcAddress("glNamedStringARB");
 	glDeleteNamedStringARB = (PFNGLDELETENAMEDSTRINGARBPROC)wglGetProcAddress("glDeleteNamedStringARB");
@@ -2051,266 +2338,193 @@ bool glelp::init_GL_ARB_shading_language_include()
 	glGetNamedStringARB = (PFNGLGETNAMEDSTRINGARBPROC)wglGetProcAddress("glGetNamedStringARB");
 	glGetNamedStringivARB = (PFNGLGETNAMEDSTRINGIVARBPROC)wglGetProcAddress("glGetNamedStringivARB");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_shading_language_packing()
-{
+#ifdef define_GL_ARB_shading_language_packing
 	if(!glelp::checkAvailable("GL_ARB_shading_language_packing")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_sparse_texture()
-{
+#ifdef define_GL_ARB_sparse_texture
 	if(!glelp::checkAvailable("GL_ARB_sparse_texture")) return false;
 	glTexPageCommitmentARB = (PFNGLTEXPAGECOMMITMENTARBPROC)wglGetProcAddress("glTexPageCommitmentARB");
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_stencil_texturing()
-{
+#ifdef define_GL_ARB_stencil_texturing
 	if(!glelp::checkAvailable("GL_ARB_stencil_texturing")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_sync()
-{
+#ifdef define_GL_ARB_sync
 	if(!glelp::checkAvailable("GL_ARB_sync")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_tessellation_shader()
-{
+#ifdef define_GL_ARB_tessellation_shader
 	if(!glelp::checkAvailable("GL_ARB_tessellation_shader")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_buffer_object_rgb32()
-{
+#ifdef define_GL_ARB_texture_buffer_object_rgb32
 	if(!glelp::checkAvailable("GL_ARB_texture_buffer_object_rgb32")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_buffer_range()
-{
+#ifdef define_GL_ARB_texture_buffer_range
 	if(!glelp::checkAvailable("GL_ARB_texture_buffer_range")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_compression_bptc()
-{
+#ifdef define_GL_ARB_texture_compression_bptc
 	if(!glelp::checkAvailable("GL_ARB_texture_compression_bptc")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_compression_rgtc()
-{
+#ifdef define_GL_ARB_texture_compression_rgtc
 	if(!glelp::checkAvailable("GL_ARB_texture_compression_rgtc")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_cube_map_array()
-{
+#ifdef define_GL_ARB_texture_cube_map_array
 	if(!glelp::checkAvailable("GL_ARB_texture_cube_map_array")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_gather()
-{
+#ifdef define_GL_ARB_texture_gather
 	if(!glelp::checkAvailable("GL_ARB_texture_gather")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_mirror_clamp_to_edge()
-{
+#ifdef define_GL_ARB_texture_mirror_clamp_to_edge
 	if(!glelp::checkAvailable("GL_ARB_texture_mirror_clamp_to_edge")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_multisample()
-{
+#ifdef define_GL_ARB_texture_multisample
 	if(!glelp::checkAvailable("GL_ARB_texture_multisample")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_query_levels()
-{
+#ifdef define_GL_ARB_texture_query_levels
 	if(!glelp::checkAvailable("GL_ARB_texture_query_levels")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_query_lod()
-{
+#ifdef define_GL_ARB_texture_query_lod
 	if(!glelp::checkAvailable("GL_ARB_texture_query_lod")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_rg()
-{
+#ifdef define_GL_ARB_texture_rg
 	if(!glelp::checkAvailable("GL_ARB_texture_rg")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_rgb10_a2ui()
-{
+#ifdef define_GL_ARB_texture_rgb10_a2ui
 	if(!glelp::checkAvailable("GL_ARB_texture_rgb10_a2ui")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_stencil8()
-{
+#ifdef define_GL_ARB_texture_stencil8
 	if(!glelp::checkAvailable("GL_ARB_texture_stencil8")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_storage()
-{
+#ifdef define_GL_ARB_texture_storage
 	if(!glelp::checkAvailable("GL_ARB_texture_storage")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_storage_multisample()
-{
+#ifdef define_GL_ARB_texture_storage_multisample
 	if(!glelp::checkAvailable("GL_ARB_texture_storage_multisample")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_swizzle()
-{
+#ifdef define_GL_ARB_texture_swizzle
 	if(!glelp::checkAvailable("GL_ARB_texture_swizzle")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_texture_view()
-{
+#ifdef define_GL_ARB_texture_view
 	if(!glelp::checkAvailable("GL_ARB_texture_view")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_timer_query()
-{
+#ifdef define_GL_ARB_timer_query
 	if(!glelp::checkAvailable("GL_ARB_timer_query")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_transform_feedback2()
-{
+#ifdef define_GL_ARB_transform_feedback2
 	if(!glelp::checkAvailable("GL_ARB_transform_feedback2")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_transform_feedback3()
-{
+#ifdef define_GL_ARB_transform_feedback3
 	if(!glelp::checkAvailable("GL_ARB_transform_feedback3")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_transform_feedback_instanced()
-{
+#ifdef define_GL_ARB_transform_feedback_instanced
 	if(!glelp::checkAvailable("GL_ARB_transform_feedback_instanced")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_uniform_buffer_object()
-{
+#ifdef define_GL_ARB_uniform_buffer_object
 	if(!glelp::checkAvailable("GL_ARB_uniform_buffer_object")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_vertex_array_bgra()
-{
+#ifdef define_GL_ARB_vertex_array_bgra
 	if(!glelp::checkAvailable("GL_ARB_vertex_array_bgra")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_vertex_array_object()
-{
+#ifdef define_GL_ARB_vertex_array_object
 	if(!glelp::checkAvailable("GL_ARB_vertex_array_object")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_vertex_attrib_64bit()
-{
+#ifdef define_GL_ARB_vertex_attrib_64bit
 	if(!glelp::checkAvailable("GL_ARB_vertex_attrib_64bit")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_vertex_attrib_binding()
-{
+#ifdef define_GL_ARB_vertex_attrib_binding
 	if(!glelp::checkAvailable("GL_ARB_vertex_attrib_binding")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_vertex_type_10f_11f_11f_rev()
-{
+#ifdef define_GL_ARB_vertex_type_10f_11f_11f_rev
 	if(!glelp::checkAvailable("GL_ARB_vertex_type_10f_11f_11f_rev")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_vertex_type_2_10_10_10_rev()
-{
+#ifdef define_GL_ARB_vertex_type_2_10_10_10_rev
 	if(!glelp::checkAvailable("GL_ARB_vertex_type_2_10_10_10_rev")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_ARB_viewport_array()
-{
+#ifdef define_GL_ARB_viewport_array
 	if(!glelp::checkAvailable("GL_ARB_viewport_array")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_KHR_debug()
-{
+#ifdef define_GL_KHR_debug
 	if(!glelp::checkAvailable("GL_KHR_debug")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_KHR_texture_compression_astc_hdr()
-{
+#ifdef define_GL_KHR_texture_compression_astc_hdr
 	if(!glelp::checkAvailable("GL_KHR_texture_compression_astc_hdr")) return false;
 
-	return true;
-}
+#endif
 
-bool glelp::init_GL_KHR_texture_compression_astc_ldr()
-{
+#ifdef define_GL_KHR_texture_compression_astc_ldr
 	if(!glelp::checkAvailable("GL_KHR_texture_compression_astc_ldr")) return false;
 
+#endif
+
 	return true;
 }
-

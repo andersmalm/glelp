@@ -5,132 +5,13 @@
 
 namespace glelp
 {
-	bool init_1_0();
-	bool init_1_1();
-	bool init_1_2();
-	bool init_1_3();
-	bool init_1_4();
-	bool init_1_5();
-	bool init_2_0();
-	bool init_2_1();
-	bool init_3_0();
-	bool init_3_1();
-	bool init_3_2();
-	bool init_3_3();
-	bool init_4_0();
-	bool init_4_1();
-	bool init_4_2();
-	bool init_4_3();
-	bool init_4_4();
-	bool init_GL_ARB_ES2_compatibility();
-	bool init_GL_ARB_ES3_compatibility();
-	bool init_GL_ARB_arrays_of_arrays();
-	bool init_GL_ARB_base_instance();
-	bool init_GL_ARB_bindless_texture();
-	bool init_GL_ARB_blend_func_extended();
-	bool init_GL_ARB_buffer_storage();
-	bool init_GL_ARB_cl_event();
-	bool init_GL_ARB_clear_buffer_object();
-	bool init_GL_ARB_clear_texture();
-	bool init_GL_ARB_compressed_texture_pixel_storage();
-	bool init_GL_ARB_compute_shader();
-	bool init_GL_ARB_compute_variable_group_size();
-	bool init_GL_ARB_conservative_depth();
-	bool init_GL_ARB_copy_buffer();
-	bool init_GL_ARB_copy_image();
-	bool init_GL_ARB_debug_output();
-	bool init_GL_ARB_depth_buffer_float();
-	bool init_GL_ARB_depth_clamp();
-	bool init_GL_ARB_draw_buffers_blend();
-	bool init_GL_ARB_draw_elements_base_vertex();
-	bool init_GL_ARB_draw_indirect();
-	bool init_GL_ARB_enhanced_layouts();
-	bool init_GL_ARB_explicit_attrib_location();
-	bool init_GL_ARB_explicit_uniform_location();
-	bool init_GL_ARB_fragment_coord_conventions();
-	bool init_GL_ARB_fragment_layer_viewport();
-	bool init_GL_ARB_framebuffer_no_attachments();
-	bool init_GL_ARB_framebuffer_object();
-	bool init_GL_ARB_framebuffer_sRGB();
-	bool init_GL_ARB_get_program_binary();
-	bool init_GL_ARB_gpu_shader5();
-	bool init_GL_ARB_gpu_shader_fp64();
-	bool init_GL_ARB_half_float_vertex();
-	bool init_GL_ARB_imaging();
-	bool init_GL_ARB_indirect_parameters();
-	bool init_GL_ARB_internalformat_query();
-	bool init_GL_ARB_internalformat_query2();
-	bool init_GL_ARB_invalidate_subdata();
-	bool init_GL_ARB_map_buffer_alignment();
-	bool init_GL_ARB_map_buffer_range();
-	bool init_GL_ARB_multi_bind();
-	bool init_GL_ARB_multi_draw_indirect();
-	bool init_GL_ARB_occlusion_query2();
-	bool init_GL_ARB_program_interface_query();
-	bool init_GL_ARB_provoking_vertex();
-	bool init_GL_ARB_query_buffer_object();
-	bool init_GL_ARB_robust_buffer_access_behavior();
-	bool init_GL_ARB_robustness();
-	bool init_GL_ARB_robustness_isolation();
-	bool init_GL_ARB_sample_shading();
-	bool init_GL_ARB_sampler_objects();
-	bool init_GL_ARB_seamless_cube_map();
-	bool init_GL_ARB_seamless_cubemap_per_texture();
-	bool init_GL_ARB_separate_shader_objects();
-	bool init_GL_ARB_shader_atomic_counters();
-	bool init_GL_ARB_shader_bit_encoding();
-	bool init_GL_ARB_shader_draw_parameters();
-	bool init_GL_ARB_shader_group_vote();
-	bool init_GL_ARB_shader_image_load_store();
-	bool init_GL_ARB_shader_image_size();
-	bool init_GL_ARB_shader_precision();
-	bool init_GL_ARB_shader_stencil_export();
-	bool init_GL_ARB_shader_storage_buffer_object();
-	bool init_GL_ARB_shader_subroutine();
-	bool init_GL_ARB_shading_language_420pack();
-	bool init_GL_ARB_shading_language_include();
-	bool init_GL_ARB_shading_language_packing();
-	bool init_GL_ARB_sparse_texture();
-	bool init_GL_ARB_stencil_texturing();
-	bool init_GL_ARB_sync();
-	bool init_GL_ARB_tessellation_shader();
-	bool init_GL_ARB_texture_buffer_object_rgb32();
-	bool init_GL_ARB_texture_buffer_range();
-	bool init_GL_ARB_texture_compression_bptc();
-	bool init_GL_ARB_texture_compression_rgtc();
-	bool init_GL_ARB_texture_cube_map_array();
-	bool init_GL_ARB_texture_gather();
-	bool init_GL_ARB_texture_mirror_clamp_to_edge();
-	bool init_GL_ARB_texture_multisample();
-	bool init_GL_ARB_texture_query_levels();
-	bool init_GL_ARB_texture_query_lod();
-	bool init_GL_ARB_texture_rg();
-	bool init_GL_ARB_texture_rgb10_a2ui();
-	bool init_GL_ARB_texture_stencil8();
-	bool init_GL_ARB_texture_storage();
-	bool init_GL_ARB_texture_storage_multisample();
-	bool init_GL_ARB_texture_swizzle();
-	bool init_GL_ARB_texture_view();
-	bool init_GL_ARB_timer_query();
-	bool init_GL_ARB_transform_feedback2();
-	bool init_GL_ARB_transform_feedback3();
-	bool init_GL_ARB_transform_feedback_instanced();
-	bool init_GL_ARB_uniform_buffer_object();
-	bool init_GL_ARB_vertex_array_bgra();
-	bool init_GL_ARB_vertex_array_object();
-	bool init_GL_ARB_vertex_attrib_64bit();
-	bool init_GL_ARB_vertex_attrib_binding();
-	bool init_GL_ARB_vertex_type_10f_11f_11f_rev();
-	bool init_GL_ARB_vertex_type_2_10_10_10_rev();
-	bool init_GL_ARB_viewport_array();
-	bool init_GL_KHR_debug();
-	bool init_GL_KHR_texture_compression_astc_hdr();
-	bool init_GL_KHR_texture_compression_astc_ldr();
+	bool initExtensions();
 
 }
 
 
-//init_1_0
+//
+#ifdef define_core_1_0
 extern PFNGLCULLFACEPROC glCullFace;
 extern PFNGLFRONTFACEPROC glFrontFace;
 extern PFNGLHINTPROC glHint;
@@ -180,7 +61,11 @@ extern PFNGLISENABLEDPROC glIsEnabled;
 extern PFNGLDEPTHRANGEPROC glDepthRange;
 extern PFNGLVIEWPORTPROC glViewport;
 
-//init_1_1
+#endif
+
+
+//
+#ifdef define_core_1_1
 extern PFNGLDRAWARRAYSPROC glDrawArrays;
 extern PFNGLDRAWELEMENTSPROC glDrawElements;
 extern PFNGLGETPOINTERVPROC glGetPointerv;
@@ -196,13 +81,21 @@ extern PFNGLDELETETEXTURESPROC glDeleteTextures;
 extern PFNGLGENTEXTURESPROC glGenTextures;
 extern PFNGLISTEXTUREPROC glIsTexture;
 
-//init_1_2
+#endif
+
+
+//
+#ifdef define_core_1_2
 extern PFNGLDRAWRANGEELEMENTSPROC glDrawRangeElements;
 extern PFNGLTEXIMAGE3DPROC glTexImage3D;
 extern PFNGLTEXSUBIMAGE3DPROC glTexSubImage3D;
 extern PFNGLCOPYTEXSUBIMAGE3DPROC glCopyTexSubImage3D;
 
-//init_1_3
+#endif
+
+
+//
+#ifdef define_core_1_3
 extern PFNGLACTIVETEXTUREPROC glActiveTexture;
 extern PFNGLSAMPLECOVERAGEPROC glSampleCoverage;
 extern PFNGLCOMPRESSEDTEXIMAGE3DPROC glCompressedTexImage3D;
@@ -213,7 +106,11 @@ extern PFNGLCOMPRESSEDTEXSUBIMAGE2DPROC glCompressedTexSubImage2D;
 extern PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC glCompressedTexSubImage1D;
 extern PFNGLGETCOMPRESSEDTEXIMAGEPROC glGetCompressedTexImage;
 
-//init_1_4
+#endif
+
+
+//
+#ifdef define_core_1_4
 extern PFNGLBLENDFUNCSEPARATEPROC glBlendFuncSeparate;
 extern PFNGLMULTIDRAWARRAYSPROC glMultiDrawArrays;
 extern PFNGLMULTIDRAWELEMENTSPROC glMultiDrawElements;
@@ -224,7 +121,11 @@ extern PFNGLPOINTPARAMETERIVPROC glPointParameteriv;
 extern PFNGLBLENDCOLORPROC glBlendColor;
 extern PFNGLBLENDEQUATIONPROC glBlendEquation;
 
-//init_1_5
+#endif
+
+
+//
+#ifdef define_core_1_5
 extern PFNGLGENQUERIESPROC glGenQueries;
 extern PFNGLDELETEQUERIESPROC glDeleteQueries;
 extern PFNGLISQUERYPROC glIsQuery;
@@ -245,7 +146,11 @@ extern PFNGLUNMAPBUFFERPROC glUnmapBuffer;
 extern PFNGLGETBUFFERPARAMETERIVPROC glGetBufferParameteriv;
 extern PFNGLGETBUFFERPOINTERVPROC glGetBufferPointerv;
 
-//init_2_0
+#endif
+
+
+//
+#ifdef define_core_2_0
 extern PFNGLBLENDEQUATIONSEPARATEPROC glBlendEquationSeparate;
 extern PFNGLDRAWBUFFERSPROC glDrawBuffers;
 extern PFNGLSTENCILOPSEPARATEPROC glStencilOpSeparate;
@@ -340,7 +245,11 @@ extern PFNGLVERTEXATTRIB4UIVPROC glVertexAttrib4uiv;
 extern PFNGLVERTEXATTRIB4USVPROC glVertexAttrib4usv;
 extern PFNGLVERTEXATTRIBPOINTERPROC glVertexAttribPointer;
 
-//init_2_1
+#endif
+
+
+//
+#ifdef define_core_2_1
 extern PFNGLUNIFORMMATRIX2X3FVPROC glUniformMatrix2x3fv;
 extern PFNGLUNIFORMMATRIX3X2FVPROC glUniformMatrix3x2fv;
 extern PFNGLUNIFORMMATRIX2X4FVPROC glUniformMatrix2x4fv;
@@ -348,7 +257,11 @@ extern PFNGLUNIFORMMATRIX4X2FVPROC glUniformMatrix4x2fv;
 extern PFNGLUNIFORMMATRIX3X4FVPROC glUniformMatrix3x4fv;
 extern PFNGLUNIFORMMATRIX4X3FVPROC glUniformMatrix4x3fv;
 
-//init_3_0
+#endif
+
+
+//
+#ifdef define_core_3_0
 extern PFNGLCOLORMASKIPROC glColorMaski;
 extern PFNGLGETBOOLEANI_VPROC glGetBooleani_v;
 extern PFNGLGETINTEGERI_VPROC glGetIntegeri_v;
@@ -434,7 +347,11 @@ extern PFNGLDELETEVERTEXARRAYSPROC glDeleteVertexArrays;
 extern PFNGLGENVERTEXARRAYSPROC glGenVertexArrays;
 extern PFNGLISVERTEXARRAYPROC glIsVertexArray;
 
-//init_3_1
+#endif
+
+
+//
+#ifdef define_core_3_1
 extern PFNGLDRAWARRAYSINSTANCEDPROC glDrawArraysInstanced;
 extern PFNGLDRAWELEMENTSINSTANCEDPROC glDrawElementsInstanced;
 extern PFNGLTEXBUFFERPROC glTexBuffer;
@@ -448,7 +365,11 @@ extern PFNGLGETACTIVEUNIFORMBLOCKIVPROC glGetActiveUniformBlockiv;
 extern PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC glGetActiveUniformBlockName;
 extern PFNGLUNIFORMBLOCKBINDINGPROC glUniformBlockBinding;
 
-//init_3_2
+#endif
+
+
+//
+#ifdef define_core_3_2
 extern PFNGLDRAWELEMENTSBASEVERTEXPROC glDrawElementsBaseVertex;
 extern PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC glDrawRangeElementsBaseVertex;
 extern PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC glDrawElementsInstancedBaseVertex;
@@ -469,7 +390,11 @@ extern PFNGLTEXIMAGE3DMULTISAMPLEPROC glTexImage3DMultisample;
 extern PFNGLGETMULTISAMPLEFVPROC glGetMultisamplefv;
 extern PFNGLSAMPLEMASKIPROC glSampleMaski;
 
-//init_3_3
+#endif
+
+
+//
+#ifdef define_core_3_3
 extern PFNGLBINDFRAGDATALOCATIONINDEXEDPROC glBindFragDataLocationIndexed;
 extern PFNGLGETFRAGDATAINDEXPROC glGetFragDataIndex;
 extern PFNGLGENSAMPLERSPROC glGenSamplers;
@@ -499,7 +424,11 @@ extern PFNGLVERTEXATTRIBP3UIVPROC glVertexAttribP3uiv;
 extern PFNGLVERTEXATTRIBP4UIPROC glVertexAttribP4ui;
 extern PFNGLVERTEXATTRIBP4UIVPROC glVertexAttribP4uiv;
 
-//init_4_0
+#endif
+
+
+//
+#ifdef define_core_4_0
 extern PFNGLMINSAMPLESHADINGPROC glMinSampleShading;
 extern PFNGLBLENDEQUATIONIPROC glBlendEquationi;
 extern PFNGLBLENDEQUATIONSEPARATEIPROC glBlendEquationSeparatei;
@@ -547,7 +476,11 @@ extern PFNGLBEGINQUERYINDEXEDPROC glBeginQueryIndexed;
 extern PFNGLENDQUERYINDEXEDPROC glEndQueryIndexed;
 extern PFNGLGETQUERYINDEXEDIVPROC glGetQueryIndexediv;
 
-//init_4_1
+#endif
+
+
+//
+#ifdef define_core_4_1
 extern PFNGLRELEASESHADERCOMPILERPROC glReleaseShaderCompiler;
 extern PFNGLSHADERBINARYPROC glShaderBinary;
 extern PFNGLGETSHADERPRECISIONFORMATPROC glGetShaderPrecisionFormat;
@@ -637,7 +570,11 @@ extern PFNGLDEPTHRANGEINDEXEDPROC glDepthRangeIndexed;
 extern PFNGLGETFLOATI_VPROC glGetFloati_v;
 extern PFNGLGETDOUBLEI_VPROC glGetDoublei_v;
 
-//init_4_2
+#endif
+
+
+//
+#ifdef define_core_4_2
 extern PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC glDrawArraysInstancedBaseInstance;
 extern PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC glDrawElementsInstancedBaseInstance;
 extern PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC glDrawElementsInstancedBaseVertexBaseInstance;
@@ -651,7 +588,11 @@ extern PFNGLTEXSTORAGE3DPROC glTexStorage3D;
 extern PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC glDrawTransformFeedbackInstanced;
 extern PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC glDrawTransformFeedbackStreamInstanced;
 
-//init_4_3
+#endif
+
+
+//
+#ifdef define_core_4_3
 extern PFNGLCLEARBUFFERDATAPROC glClearBufferData;
 extern PFNGLCLEARBUFFERSUBDATAPROC glClearBufferSubData;
 extern PFNGLDISPATCHCOMPUTEPROC glDispatchCompute;
@@ -696,7 +637,11 @@ extern PFNGLGETOBJECTLABELPROC glGetObjectLabel;
 extern PFNGLOBJECTPTRLABELPROC glObjectPtrLabel;
 extern PFNGLGETOBJECTPTRLABELPROC glGetObjectPtrLabel;
 
-//init_4_4
+#endif
+
+
+//
+#ifdef define_core_4_4
 extern PFNGLBUFFERSTORAGEPROC glBufferStorage;
 extern PFNGLCLEARTEXIMAGEPROC glClearTexImage;
 extern PFNGLCLEARTEXSUBIMAGEPROC glClearTexSubImage;
@@ -707,15 +652,35 @@ extern PFNGLBINDSAMPLERSPROC glBindSamplers;
 extern PFNGLBINDIMAGETEXTURESPROC glBindImageTextures;
 extern PFNGLBINDVERTEXBUFFERSPROC glBindVertexBuffers;
 
-//init_GL_ARB_ES2_compatibility
+#endif
 
-//init_GL_ARB_ES3_compatibility
 
-//init_GL_ARB_arrays_of_arrays
+//
+#ifdef define_GL_ARB_ES2_compatibility
 
-//init_GL_ARB_base_instance
+#endif
 
-//init_GL_ARB_bindless_texture
+
+//
+#ifdef define_GL_ARB_ES3_compatibility
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_arrays_of_arrays
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_base_instance
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_bindless_texture
 extern PFNGLGETTEXTUREHANDLEARBPROC glGetTextureHandleARB;
 extern PFNGLGETTEXTURESAMPLERHANDLEARBPROC glGetTextureSamplerHandleARB;
 extern PFNGLMAKETEXTUREHANDLERESIDENTARBPROC glMakeTextureHandleResidentARB;
@@ -733,105 +698,281 @@ extern PFNGLVERTEXATTRIBL1UI64ARBPROC glVertexAttribL1ui64ARB;
 extern PFNGLVERTEXATTRIBL1UI64VARBPROC glVertexAttribL1ui64vARB;
 extern PFNGLGETVERTEXATTRIBLUI64VARBPROC glGetVertexAttribLui64vARB;
 
-//init_GL_ARB_blend_func_extended
+#endif
 
-//init_GL_ARB_buffer_storage
 
-//init_GL_ARB_cl_event
+//
+#ifdef define_GL_ARB_blend_func_extended
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_buffer_storage
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_cl_event
 extern PFNGLCREATESYNCFROMCLEVENTARBPROC glCreateSyncFromCLeventARB;
 
-//init_GL_ARB_clear_buffer_object
+#endif
 
-//init_GL_ARB_clear_texture
 
-//init_GL_ARB_compressed_texture_pixel_storage
+//
+#ifdef define_GL_ARB_clear_buffer_object
 
-//init_GL_ARB_compute_shader
+#endif
 
-//init_GL_ARB_compute_variable_group_size
+
+//
+#ifdef define_GL_ARB_clear_texture
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_compressed_texture_pixel_storage
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_compute_shader
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_compute_variable_group_size
 extern PFNGLDISPATCHCOMPUTEGROUPSIZEARBPROC glDispatchComputeGroupSizeARB;
 
-//init_GL_ARB_conservative_depth
+#endif
 
-//init_GL_ARB_copy_buffer
 
-//init_GL_ARB_copy_image
+//
+#ifdef define_GL_ARB_conservative_depth
 
-//init_GL_ARB_debug_output
+#endif
+
+
+//
+#ifdef define_GL_ARB_copy_buffer
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_copy_image
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_debug_output
 extern PFNGLDEBUGMESSAGECONTROLARBPROC glDebugMessageControlARB;
 extern PFNGLDEBUGMESSAGEINSERTARBPROC glDebugMessageInsertARB;
 extern PFNGLDEBUGMESSAGECALLBACKARBPROC glDebugMessageCallbackARB;
 extern PFNGLGETDEBUGMESSAGELOGARBPROC glGetDebugMessageLogARB;
 
-//init_GL_ARB_depth_buffer_float
+#endif
 
-//init_GL_ARB_depth_clamp
 
-//init_GL_ARB_draw_buffers_blend
+//
+#ifdef define_GL_ARB_depth_buffer_float
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_depth_clamp
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_draw_buffers_blend
 extern PFNGLBLENDEQUATIONIARBPROC glBlendEquationiARB;
 extern PFNGLBLENDEQUATIONSEPARATEIARBPROC glBlendEquationSeparateiARB;
 extern PFNGLBLENDFUNCIARBPROC glBlendFunciARB;
 extern PFNGLBLENDFUNCSEPARATEIARBPROC glBlendFuncSeparateiARB;
 
-//init_GL_ARB_draw_elements_base_vertex
+#endif
 
-//init_GL_ARB_draw_indirect
 
-//init_GL_ARB_enhanced_layouts
+//
+#ifdef define_GL_ARB_draw_elements_base_vertex
 
-//init_GL_ARB_explicit_attrib_location
+#endif
 
-//init_GL_ARB_explicit_uniform_location
 
-//init_GL_ARB_fragment_coord_conventions
+//
+#ifdef define_GL_ARB_draw_indirect
 
-//init_GL_ARB_fragment_layer_viewport
+#endif
 
-//init_GL_ARB_framebuffer_no_attachments
 
-//init_GL_ARB_framebuffer_object
+//
+#ifdef define_GL_ARB_enhanced_layouts
 
-//init_GL_ARB_framebuffer_sRGB
+#endif
 
-//init_GL_ARB_get_program_binary
 
-//init_GL_ARB_gpu_shader5
+//
+#ifdef define_GL_ARB_explicit_attrib_location
 
-//init_GL_ARB_gpu_shader_fp64
+#endif
 
-//init_GL_ARB_half_float_vertex
 
-//init_GL_ARB_imaging
+//
+#ifdef define_GL_ARB_explicit_uniform_location
 
-//init_GL_ARB_indirect_parameters
+#endif
+
+
+//
+#ifdef define_GL_ARB_fragment_coord_conventions
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_fragment_layer_viewport
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_framebuffer_no_attachments
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_framebuffer_object
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_framebuffer_sRGB
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_get_program_binary
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_gpu_shader5
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_gpu_shader_fp64
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_half_float_vertex
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_imaging
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_indirect_parameters
 extern PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC glMultiDrawArraysIndirectCountARB;
 extern PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC glMultiDrawElementsIndirectCountARB;
 
-//init_GL_ARB_internalformat_query
+#endif
 
-//init_GL_ARB_internalformat_query2
 
-//init_GL_ARB_invalidate_subdata
+//
+#ifdef define_GL_ARB_internalformat_query
 
-//init_GL_ARB_map_buffer_alignment
+#endif
 
-//init_GL_ARB_map_buffer_range
 
-//init_GL_ARB_multi_bind
+//
+#ifdef define_GL_ARB_internalformat_query2
 
-//init_GL_ARB_multi_draw_indirect
+#endif
 
-//init_GL_ARB_occlusion_query2
 
-//init_GL_ARB_program_interface_query
+//
+#ifdef define_GL_ARB_invalidate_subdata
 
-//init_GL_ARB_provoking_vertex
+#endif
 
-//init_GL_ARB_query_buffer_object
 
-//init_GL_ARB_robust_buffer_access_behavior
+//
+#ifdef define_GL_ARB_map_buffer_alignment
 
-//init_GL_ARB_robustness
+#endif
+
+
+//
+#ifdef define_GL_ARB_map_buffer_range
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_multi_bind
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_multi_draw_indirect
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_occlusion_query2
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_program_interface_query
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_provoking_vertex
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_query_buffer_object
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_robust_buffer_access_behavior
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_robustness
 extern PFNGLGETGRAPHICSRESETSTATUSARBPROC glGetGraphicsResetStatusARB;
 extern PFNGLGETNTEXIMAGEARBPROC glGetnTexImageARB;
 extern PFNGLREADNPIXELSARBPROC glReadnPixelsARB;
@@ -841,42 +982,114 @@ extern PFNGLGETNUNIFORMIVARBPROC glGetnUniformivARB;
 extern PFNGLGETNUNIFORMUIVARBPROC glGetnUniformuivARB;
 extern PFNGLGETNUNIFORMDVARBPROC glGetnUniformdvARB;
 
-//init_GL_ARB_robustness_isolation
+#endif
 
-//init_GL_ARB_sample_shading
+
+//
+#ifdef define_GL_ARB_robustness_isolation
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_sample_shading
 extern PFNGLMINSAMPLESHADINGARBPROC glMinSampleShadingARB;
 
-//init_GL_ARB_sampler_objects
+#endif
 
-//init_GL_ARB_seamless_cube_map
 
-//init_GL_ARB_seamless_cubemap_per_texture
+//
+#ifdef define_GL_ARB_sampler_objects
 
-//init_GL_ARB_separate_shader_objects
+#endif
 
-//init_GL_ARB_shader_atomic_counters
 
-//init_GL_ARB_shader_bit_encoding
+//
+#ifdef define_GL_ARB_seamless_cube_map
 
-//init_GL_ARB_shader_draw_parameters
+#endif
 
-//init_GL_ARB_shader_group_vote
 
-//init_GL_ARB_shader_image_load_store
+//
+#ifdef define_GL_ARB_seamless_cubemap_per_texture
 
-//init_GL_ARB_shader_image_size
+#endif
 
-//init_GL_ARB_shader_precision
 
-//init_GL_ARB_shader_stencil_export
+//
+#ifdef define_GL_ARB_separate_shader_objects
 
-//init_GL_ARB_shader_storage_buffer_object
+#endif
 
-//init_GL_ARB_shader_subroutine
 
-//init_GL_ARB_shading_language_420pack
+//
+#ifdef define_GL_ARB_shader_atomic_counters
 
-//init_GL_ARB_shading_language_include
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_bit_encoding
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_draw_parameters
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_group_vote
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_image_load_store
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_image_size
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_precision
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_stencil_export
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_storage_buffer_object
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shader_subroutine
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shading_language_420pack
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_shading_language_include
 extern PFNGLNAMEDSTRINGARBPROC glNamedStringARB;
 extern PFNGLDELETENAMEDSTRINGARBPROC glDeleteNamedStringARB;
 extern PFNGLCOMPILESHADERINCLUDEARBPROC glCompileShaderIncludeARB;
@@ -884,79 +1097,230 @@ extern PFNGLISNAMEDSTRINGARBPROC glIsNamedStringARB;
 extern PFNGLGETNAMEDSTRINGARBPROC glGetNamedStringARB;
 extern PFNGLGETNAMEDSTRINGIVARBPROC glGetNamedStringivARB;
 
-//init_GL_ARB_shading_language_packing
+#endif
 
-//init_GL_ARB_sparse_texture
+
+//
+#ifdef define_GL_ARB_shading_language_packing
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_sparse_texture
 extern PFNGLTEXPAGECOMMITMENTARBPROC glTexPageCommitmentARB;
 
-//init_GL_ARB_stencil_texturing
+#endif
 
-//init_GL_ARB_sync
 
-//init_GL_ARB_tessellation_shader
+//
+#ifdef define_GL_ARB_stencil_texturing
 
-//init_GL_ARB_texture_buffer_object_rgb32
+#endif
 
-//init_GL_ARB_texture_buffer_range
 
-//init_GL_ARB_texture_compression_bptc
+//
+#ifdef define_GL_ARB_sync
 
-//init_GL_ARB_texture_compression_rgtc
+#endif
 
-//init_GL_ARB_texture_cube_map_array
 
-//init_GL_ARB_texture_gather
+//
+#ifdef define_GL_ARB_tessellation_shader
 
-//init_GL_ARB_texture_mirror_clamp_to_edge
+#endif
 
-//init_GL_ARB_texture_multisample
 
-//init_GL_ARB_texture_query_levels
+//
+#ifdef define_GL_ARB_texture_buffer_object_rgb32
 
-//init_GL_ARB_texture_query_lod
+#endif
 
-//init_GL_ARB_texture_rg
 
-//init_GL_ARB_texture_rgb10_a2ui
+//
+#ifdef define_GL_ARB_texture_buffer_range
 
-//init_GL_ARB_texture_stencil8
+#endif
 
-//init_GL_ARB_texture_storage
 
-//init_GL_ARB_texture_storage_multisample
+//
+#ifdef define_GL_ARB_texture_compression_bptc
 
-//init_GL_ARB_texture_swizzle
+#endif
 
-//init_GL_ARB_texture_view
 
-//init_GL_ARB_timer_query
+//
+#ifdef define_GL_ARB_texture_compression_rgtc
 
-//init_GL_ARB_transform_feedback2
+#endif
 
-//init_GL_ARB_transform_feedback3
 
-//init_GL_ARB_transform_feedback_instanced
+//
+#ifdef define_GL_ARB_texture_cube_map_array
 
-//init_GL_ARB_uniform_buffer_object
+#endif
 
-//init_GL_ARB_vertex_array_bgra
 
-//init_GL_ARB_vertex_array_object
+//
+#ifdef define_GL_ARB_texture_gather
 
-//init_GL_ARB_vertex_attrib_64bit
+#endif
 
-//init_GL_ARB_vertex_attrib_binding
 
-//init_GL_ARB_vertex_type_10f_11f_11f_rev
+//
+#ifdef define_GL_ARB_texture_mirror_clamp_to_edge
 
-//init_GL_ARB_vertex_type_2_10_10_10_rev
+#endif
 
-//init_GL_ARB_viewport_array
 
-//init_GL_KHR_debug
+//
+#ifdef define_GL_ARB_texture_multisample
 
-//init_GL_KHR_texture_compression_astc_hdr
+#endif
 
-//init_GL_KHR_texture_compression_astc_ldr
+
+//
+#ifdef define_GL_ARB_texture_query_levels
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_query_lod
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_rg
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_rgb10_a2ui
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_stencil8
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_storage
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_storage_multisample
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_swizzle
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_texture_view
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_timer_query
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_transform_feedback2
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_transform_feedback3
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_transform_feedback_instanced
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_uniform_buffer_object
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_array_bgra
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_array_object
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_attrib_64bit
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_attrib_binding
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_type_10f_11f_11f_rev
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_vertex_type_2_10_10_10_rev
+
+#endif
+
+
+//
+#ifdef define_GL_ARB_viewport_array
+
+#endif
+
+
+//
+#ifdef define_GL_KHR_debug
+
+#endif
+
+
+//
+#ifdef define_GL_KHR_texture_compression_astc_hdr
+
+#endif
+
+
+//
+#ifdef define_GL_KHR_texture_compression_astc_ldr
+
+#endif
+
 
 #endif // _GLELP_GLCOREARB_H_

@@ -3,10 +3,20 @@
 * Anders Malm 2012
 */
 
+#define define_WGL_ARB_extensions_string 1
+
 #include "glelp.h"
 
 namespace glelp
 {
+	bool loadExtensions()
+	{
+		if(!initExtensions())
+			return false;
+
+		return initWindowsExtensions();
+	}
+
 	const char* wext;
 	/*
 		Quick hack for comparing two strings so we can live without std libraries
