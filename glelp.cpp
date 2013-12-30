@@ -7,10 +7,7 @@
 
 namespace glelp
 {
-
-	typedef const char * (WINAPI * PFNWGLGETEXTENSIONSSTRINGARBPROC) (HDC hdc);
-	PFNWGLGETEXTENSIONSSTRINGARBPROC wglGetExtensionsStringARB = 0;
-	
+	const char* wext;
 	/*
 		Quick hack for comparing two strings so we can live without std libraries
 	*/
@@ -32,25 +29,30 @@ namespace glelp
 	/*
 		Check each extensiom
 	*/
-	bool findExtension(const char* extension, char* extensions)
+	bool findExtension(const char* extension, const char* extensions)
 	{
-		char *current = extensions;
+		unsigned char ci = 0;
+		char current[256];
 		while(true)
 		{
 			while((*extensions) != ' ')
 			{
 				if((*extensions) == 0)
 					return false;
+				
+				current[ci] = (*extensions);
+
 				extensions++;
+				ci++;
 			}
 
-			(*extensions) = 0;
+			current[ci] = 0;
 
 			if(compare(current, extension))
 				return true;
 
 			extensions++;
-			current = extensions;
+			ci = 0;
 		}
 	}
 
@@ -60,9 +62,27 @@ namespace glelp
 		if(wglGetExtensionsStringARB == 0)
 		{
 			wglGetExtensionsStringARB = (PFNWGLGETEXTENSIONSSTRINGARBPROC)wglGetProcAddress("wglGetExtensionsStringARB");
-		}	
-		
-		if(findExtension(extension, (char*)glGetString(GL_EXTENSIONS)))
+
+			HWND hWnd = GetActiveWindow();
+			HDC hDC = GetDC(hWnd);
+			wext = wglGetExtensionsStringARB(hDC);
+		}
+
+		if(glGetStringi == 0 )
+		{
+			if(findExtension(extension, (char*)glGetString(GL_EXTENSIONS)))
+				return true;
+		}
+		else
+		{
+			int num;
+			glGetIntegerv(GL_NUM_EXTENSIONS, &num);
+
+			for (int i = 0; i < num; i++)
+				if(compare(extension, (const char*)glGetStringi(GL_EXTENSIONS, i)))
+					return true;
+		}
+		if (findExtension(extension, (char*)wext))
 			return true;
 
 		return false;

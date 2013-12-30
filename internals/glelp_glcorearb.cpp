@@ -831,9 +831,9 @@ PFNGLTEXPAGECOMMITMENTARBPROC glTexPageCommitmentARB;
 //init_GL_KHR_texture_compression_astc_hdr
 
 //init_GL_KHR_texture_compression_astc_ldr
+
 bool glelp::init_1_0()
 {
-	if(!glelp::checkVersion(1, 0)) return false;
 
 	glCullFace = (PFNGLCULLFACEPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glCullFace");
 	glFrontFace = (PFNGLFRONTFACEPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glFrontFace");

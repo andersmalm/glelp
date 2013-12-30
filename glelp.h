@@ -7,6 +7,7 @@
 #define _GLELP_H_
 
 #include "internals\glelp_glcorearb.h"
+#include "internals\glelp_wglext.h"
 
 namespace glelp
 {
