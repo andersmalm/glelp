@@ -5,6 +5,9 @@ $root = ARGV[0]
 $knownfiles = Array["cpp", "c"]
 $gldump = Array[]
 
+$additionalExtensions = ARGV[1]
+
+
 if (!File.directory? $root)
 	puts "not a directory.. can't continue"
 	exit
@@ -39,8 +42,7 @@ Find.find($root) do |file|
 	num = str.size
 	fileend = str[num-1]
 	if($knownfiles.include? fileend)
-		#puts "#{str} is a source file"
-
+	
 		source = File.new(file, "r")
 		while (line = source.gets)
 			splits = line.gsub('(', ' ').split(' ')
@@ -94,7 +96,7 @@ defines.push "#define GLELP_GL_MAJOR_VERSION #{major_version}"
 defines.push "#define GLELP_GL_MINOR_VERSION #{minor_version}"
 defines.push ""
 
-# check what we got and generate the file
+# check what we need
 $gldump.each do |ext|
 	if(ext.num != 0)
 		defines.push "#define define_#{ext.base}"
@@ -114,9 +116,28 @@ if(!defines.include? "#define using_glGetString")
 	defines.push "#define using_glGetString"
 end
 
+# add additional extensions if needed
+if($additionalExtensions)
+	addextfile = File.new($additionalExtensions, "r")
+	while (line = addextfile.gets)
+		line = line.strip
+		$gldump.each do |ext|
+			if(line.eql? ext.base)
+				if(ext.num == 0)
+					defines.push "#define using_#{line}"
+				end
+			end
+		end
+	end
+	addextfile.close()
+end
+
 defines.push ""
 defines.push "#endif // _GLELP_DEFINES_H_"
 
+# Save the file
 projectdefines = File.new("#{path}/glelp_defines.h", "w")
 projectdefines.puts defines
 projectdefines.close
+
+puts "GLELP scan finished succesfully, using OpenGL #{major_version}.#{minor_version}"

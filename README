@@ -1,29 +1,40 @@
-GLELP ( opnGL Extensions heLPer )
-2013 Anders Malm, andersmn@gmail.com
+GLELP ( openGL Extensions heLPer )
+2014 Anders Malm, andersmn@gmail.com
 
 Not for all extensions.. only the gl core arb ones!
 
 In the generator folder there is a ruby script called coregen.rb.
 This script have, together with glelp/internals/glcorearb.h created
-the two files glelp_glcorearb.cpp and glelp_glcorearb.h.
+the three files glelp_glcorearb.cpp, glelp_glcorearb.h and gl.dump.
+
 The script is kind of useless since it will only regenerate those files.
+
+In the root folder there is a ruby tool called glelp_scan.rb which is
+scanning your source tree ( cpp and c files ) and figures out which
+core release you are using, which extensions you need and which functions
+which needs to be loaded. 
+Extensions which don't have any functions will not be caught in the same way.
+For these cases a list of extensions can be written in a plain text file, 
+one per line, and they will be added.
+
+ruby glelp_scan.rb [source folder] [additional extensions]
+example: ruby glelp_scan.rb ../project/source ../project/extensions.txt
+
+
+The scanner will generate a file, glelp_defines.h, and when calling
+glelp::loadExtensions all the necessary things will be done.
+
 
 SIMPLE INSTRUCTIONS
 
 Just add the files in glelp/internals and glelp.cpp and glelp.h to your
-project. In your project, just include glelp.h instead of <gl/gl.h> and
-you are on your way!
+project folder.
+In your project, just include glelp.h everywhere instead of <gl/gl.h>.
 
-To do something with this, just:
+To do something with this, just use add glelp_scan as a pre-build step,
+then in your code call glelp::loadExtensions() and everything will be great!
 
-	// Here, load everything needed for a OpenGL 4.4 context if possible.
-	if(!glelp::init_4_4())
-		return;
-
-	if(!glelp::init_GL_ARB_bindless_texture())
-		return;
-
-	// Now you are good to go!
+If glelp::loadExtensions fails it will return false, else true.
 
 LICENSE
 
