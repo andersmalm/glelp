@@ -3,18 +3,81 @@
 * Anders Malm 2012
 */
 
-#define define_WGL_ARB_extensions_string 1
-
 #include "glelp.h"
+
+// UGLY HACK, I just want to use as little windows specific things as possible
+
+// WGL_ARB_pixel_format
+PFNWGLGETPIXELFORMATATTRIBIVARBPROC wglGetPixelFormatAttribivARB;
+PFNWGLGETPIXELFORMATATTRIBFVARBPROC wglGetPixelFormatAttribfvARB;
+PFNWGLCHOOSEPIXELFORMATARBPROC wglChoosePixelFormatARB;
+
+// WGL_ARB_create_context
+PFNWGLCREATECONTEXTATTRIBSARBPROC wglCreateContextAttribsARB;
+
+//WGL_ARB_extensions_string
+PFNWGLGETEXTENSIONSSTRINGARBPROC wglGetExtensionsStringARB;
 
 namespace glelp
 {
-	bool loadExtensions()
+	/*
+	* Checks if the asked for version is less or equal compared
+	* to the version provided by the driver
+	*/
+	bool checkVersion(char major, char minor)
 	{
-		if(!initExtensions())
+		// this might be happening too quickly..
+		if (glGetString == 0)
+		{
+			glGetString = (PFNGLGETSTRINGPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glGetString");
+		}
+
+		const GLubyte* version = glGetString(GL_VERSION);
+		int GLmajor = version[0] - '0';
+		int GLminor = version[2] - '0';
+
+		if(major > GLmajor)
 			return false;
 
-		return initWindowsExtensions();
+		if(minor > GLminor)
+		{
+			if( major < GLmajor)
+				return true;
+			else
+				return false;
+		}
+
+		return true;
+	}
+
+	bool loadHardcodedWindowsExtension()
+	{
+		if(!glelp::checkAvailable("WGL_ARB_pixel_format")) return false;
+			wglGetPixelFormatAttribivARB = (PFNWGLGETPIXELFORMATATTRIBIVARBPROC)wglGetProcAddress("wglGetPixelFormatAttribivARB");
+			wglGetPixelFormatAttribfvARB = (PFNWGLGETPIXELFORMATATTRIBFVARBPROC)wglGetProcAddress("wglGetPixelFormatAttribfvARB");
+			wglChoosePixelFormatARB = (PFNWGLCHOOSEPIXELFORMATARBPROC)wglGetProcAddress("wglChoosePixelFormatARB");
+
+		if(!glelp::checkAvailable("WGL_ARB_create_context")) return false;
+			wglCreateContextAttribsARB = (PFNWGLCREATECONTEXTATTRIBSARBPROC)wglGetProcAddress("wglCreateContextAttribsARB");
+
+
+		if(!checkAvailable("WGL_ARB_extensions_string")) return false;
+			wglGetExtensionsStringARB = (PFNWGLGETEXTENSIONSSTRINGARBPROC)wglGetProcAddress("wglGetExtensionsStringARB");
+	
+		return true;
+	}
+
+	bool loadExtensions()
+	{
+		// Check that we support the minimum version required
+		if(!checkVersion(GLELP_GL_MAJOR_VERSION, GLELP_GL_MINOR_VERSION))
+			return false;
+		
+		// load hard coded windows extensions needed
+		if(!loadHardcodedWindowsExtension())
+			return false;
+
+		return initExtensions();
 	}
 
 	const char* wext;
@@ -68,7 +131,7 @@ namespace glelp
 
 	bool checkAvailable(const char* extension)
 	{
-		// Needed on windows
+		// Check windows extensions
 		if(wglGetExtensionsStringARB == 0)
 		{
 			wglGetExtensionsStringARB = (PFNWGLGETEXTENSIONSSTRINGARBPROC)wglGetProcAddress("wglGetExtensionsStringARB");
@@ -78,54 +141,13 @@ namespace glelp
 			wext = wglGetExtensionsStringARB(hDC);
 		}
 
-		if(glGetStringi == 0 )
-		{
-			if(findExtension(extension, (char*)glGetString(GL_EXTENSIONS)))
-				return true;
-		}
-		else
-		{
-			int num;
-			glGetIntegerv(GL_NUM_EXTENSIONS, &num);
+		if(findExtension(extension, (char*)glGetString(GL_EXTENSIONS)))
+			return true;
 
-			for (int i = 0; i < num; i++)
-				if(compare(extension, (const char*)glGetStringi(GL_EXTENSIONS, i)))
-					return true;
-		}
 		if (findExtension(extension, (char*)wext))
 			return true;
 
 		return false;
-	}
-
-	/*
-	* Checks if the asked for version is less or equal compared
-	* to the version provided by the driver
-	*/
-	bool checkVersion(char major, char minor)
-	{
-		// this might be happening too quickly..
-		if (glGetString == 0)
-		{
-			glGetString = (PFNGLGETSTRINGPROC)GetProcAddress(GetModuleHandle(TEXT("opengl32.dll")), "glGetString");
-		}
-
-		const GLubyte* version = glGetString(GL_VERSION);
-		int GLmajor = version[0] - '0';
-		int GLminor = version[2] - '0';
-
-		if(major > GLmajor)
-			return false;
-
-		if(minor > GLminor)
-		{
-			if( major < GLmajor)
-				return true;
-			else
-				return false;
-		}
-
-		return true;
 	}
 
 }
