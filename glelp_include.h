@@ -1,17 +1,13 @@
-#ifndef _GLELP_GLCOREARB_H_
-#define _GLELP_GLCOREARB_H_
+#pragma once
 
 #include "glcorearb.h"
+#include "glelp_defines.h"
 
 namespace glelp
 {
-	bool initExtensions();
-
+ bool initExtensions();
 }
-
-
-//
-#ifdef define_core_1_0
+// GL_VERSION_1_0
 #ifdef using_glCullFace
 extern PFNGLCULLFACEPROC glCullFace;
 #endif
@@ -156,12 +152,7 @@ extern PFNGLDEPTHRANGEPROC glDepthRange;
 #ifdef using_glViewport
 extern PFNGLVIEWPORTPROC glViewport;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_1_1
+// GL_VERSION_1_1
 #ifdef using_glDrawArrays
 extern PFNGLDRAWARRAYSPROC glDrawArrays;
 #endif
@@ -204,12 +195,7 @@ extern PFNGLGENTEXTURESPROC glGenTextures;
 #ifdef using_glIsTexture
 extern PFNGLISTEXTUREPROC glIsTexture;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_1_2
+// GL_VERSION_1_2
 #ifdef using_glDrawRangeElements
 extern PFNGLDRAWRANGEELEMENTSPROC glDrawRangeElements;
 #endif
@@ -222,12 +208,7 @@ extern PFNGLTEXSUBIMAGE3DPROC glTexSubImage3D;
 #ifdef using_glCopyTexSubImage3D
 extern PFNGLCOPYTEXSUBIMAGE3DPROC glCopyTexSubImage3D;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_1_3
+// GL_VERSION_1_3
 #ifdef using_glActiveTexture
 extern PFNGLACTIVETEXTUREPROC glActiveTexture;
 #endif
@@ -255,12 +236,7 @@ extern PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC glCompressedTexSubImage1D;
 #ifdef using_glGetCompressedTexImage
 extern PFNGLGETCOMPRESSEDTEXIMAGEPROC glGetCompressedTexImage;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_1_4
+// GL_VERSION_1_4
 #ifdef using_glBlendFuncSeparate
 extern PFNGLBLENDFUNCSEPARATEPROC glBlendFuncSeparate;
 #endif
@@ -288,12 +264,7 @@ extern PFNGLBLENDCOLORPROC glBlendColor;
 #ifdef using_glBlendEquation
 extern PFNGLBLENDEQUATIONPROC glBlendEquation;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_1_5
+// GL_VERSION_1_5
 #ifdef using_glGenQueries
 extern PFNGLGENQUERIESPROC glGenQueries;
 #endif
@@ -351,12 +322,7 @@ extern PFNGLGETBUFFERPARAMETERIVPROC glGetBufferParameteriv;
 #ifdef using_glGetBufferPointerv
 extern PFNGLGETBUFFERPOINTERVPROC glGetBufferPointerv;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_2_0
+// GL_VERSION_2_0
 #ifdef using_glBlendEquationSeparate
 extern PFNGLBLENDEQUATIONSEPARATEPROC glBlendEquationSeparate;
 #endif
@@ -636,12 +602,7 @@ extern PFNGLVERTEXATTRIB4USVPROC glVertexAttrib4usv;
 #ifdef using_glVertexAttribPointer
 extern PFNGLVERTEXATTRIBPOINTERPROC glVertexAttribPointer;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_2_1
+// GL_VERSION_2_1
 #ifdef using_glUniformMatrix2x3fv
 extern PFNGLUNIFORMMATRIX2X3FVPROC glUniformMatrix2x3fv;
 #endif
@@ -660,12 +621,7 @@ extern PFNGLUNIFORMMATRIX3X4FVPROC glUniformMatrix3x4fv;
 #ifdef using_glUniformMatrix4x3fv
 extern PFNGLUNIFORMMATRIX4X3FVPROC glUniformMatrix4x3fv;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_3_0
+// GL_VERSION_3_0
 #ifdef using_glColorMaski
 extern PFNGLCOLORMASKIPROC glColorMaski;
 #endif
@@ -918,12 +874,7 @@ extern PFNGLGENVERTEXARRAYSPROC glGenVertexArrays;
 #ifdef using_glIsVertexArray
 extern PFNGLISVERTEXARRAYPROC glIsVertexArray;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_3_1
+// GL_VERSION_3_1
 #ifdef using_glDrawArraysInstanced
 extern PFNGLDRAWARRAYSINSTANCEDPROC glDrawArraysInstanced;
 #endif
@@ -960,12 +911,7 @@ extern PFNGLGETACTIVEUNIFORMBLOCKNAMEPROC glGetActiveUniformBlockName;
 #ifdef using_glUniformBlockBinding
 extern PFNGLUNIFORMBLOCKBINDINGPROC glUniformBlockBinding;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_3_2
+// GL_VERSION_3_2
 #ifdef using_glDrawElementsBaseVertex
 extern PFNGLDRAWELEMENTSBASEVERTEXPROC glDrawElementsBaseVertex;
 #endif
@@ -1023,12 +969,7 @@ extern PFNGLGETMULTISAMPLEFVPROC glGetMultisamplefv;
 #ifdef using_glSampleMaski
 extern PFNGLSAMPLEMASKIPROC glSampleMaski;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_3_3
+// GL_VERSION_3_3
 #ifdef using_glBindFragDataLocationIndexed
 extern PFNGLBINDFRAGDATALOCATIONINDEXEDPROC glBindFragDataLocationIndexed;
 #endif
@@ -1113,12 +1054,7 @@ extern PFNGLVERTEXATTRIBP4UIPROC glVertexAttribP4ui;
 #ifdef using_glVertexAttribP4uiv
 extern PFNGLVERTEXATTRIBP4UIVPROC glVertexAttribP4uiv;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_4_0
+// GL_VERSION_4_0
 #ifdef using_glMinSampleShading
 extern PFNGLMINSAMPLESHADINGPROC glMinSampleShading;
 #endif
@@ -1257,12 +1193,7 @@ extern PFNGLENDQUERYINDEXEDPROC glEndQueryIndexed;
 #ifdef using_glGetQueryIndexediv
 extern PFNGLGETQUERYINDEXEDIVPROC glGetQueryIndexediv;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_4_1
+// GL_VERSION_4_1
 #ifdef using_glReleaseShaderCompiler
 extern PFNGLRELEASESHADERCOMPILERPROC glReleaseShaderCompiler;
 #endif
@@ -1527,12 +1458,7 @@ extern PFNGLGETFLOATI_VPROC glGetFloati_v;
 #ifdef using_glGetDoublei_v
 extern PFNGLGETDOUBLEI_VPROC glGetDoublei_v;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_4_2
+// GL_VERSION_4_2
 #ifdef using_glDrawArraysInstancedBaseInstance
 extern PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC glDrawArraysInstancedBaseInstance;
 #endif
@@ -1569,12 +1495,7 @@ extern PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC glDrawTransformFeedbackInstanced;
 #ifdef using_glDrawTransformFeedbackStreamInstanced
 extern PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC glDrawTransformFeedbackStreamInstanced;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_4_3
+// GL_VERSION_4_3
 #ifdef using_glClearBufferData
 extern PFNGLCLEARBUFFERDATAPROC glClearBufferData;
 #endif
@@ -1704,12 +1625,7 @@ extern PFNGLOBJECTPTRLABELPROC glObjectPtrLabel;
 #ifdef using_glGetObjectPtrLabel
 extern PFNGLGETOBJECTPTRLABELPROC glGetObjectPtrLabel;
 #endif
-
-#endif
-
-
-//
-#ifdef define_core_4_4
+// GL_VERSION_4_4
 #ifdef using_glBufferStorage
 extern PFNGLBUFFERSTORAGEPROC glBufferStorage;
 #endif
@@ -1737,36 +1653,343 @@ extern PFNGLBINDIMAGETEXTURESPROC glBindImageTextures;
 #ifdef using_glBindVertexBuffers
 extern PFNGLBINDVERTEXBUFFERSPROC glBindVertexBuffers;
 #endif
-
+// GL_VERSION_4_5
+#ifdef using_glClipControl
+extern PFNGLCLIPCONTROLPROC glClipControl;
 #endif
-
-
-//
-#ifdef define_GL_ARB_ES2_compatibility
-
+#ifdef using_glCreateTransformFeedbacks
+extern PFNGLCREATETRANSFORMFEEDBACKSPROC glCreateTransformFeedbacks;
 #endif
-
-
-//
-#ifdef define_GL_ARB_ES3_compatibility
-
+#ifdef using_glTransformFeedbackBufferBase
+extern PFNGLTRANSFORMFEEDBACKBUFFERBASEPROC glTransformFeedbackBufferBase;
 #endif
-
-
-//
-#ifdef define_GL_ARB_arrays_of_arrays
-
+#ifdef using_glTransformFeedbackBufferRange
+extern PFNGLTRANSFORMFEEDBACKBUFFERRANGEPROC glTransformFeedbackBufferRange;
 #endif
-
-
-//
-#ifdef define_GL_ARB_base_instance
-
+#ifdef using_glGetTransformFeedbackiv
+extern PFNGLGETTRANSFORMFEEDBACKIVPROC glGetTransformFeedbackiv;
 #endif
-
-
-//
-#ifdef define_GL_ARB_bindless_texture
+#ifdef using_glGetTransformFeedbacki_v
+extern PFNGLGETTRANSFORMFEEDBACKI_VPROC glGetTransformFeedbacki_v;
+#endif
+#ifdef using_glGetTransformFeedbacki64_v
+extern PFNGLGETTRANSFORMFEEDBACKI64_VPROC glGetTransformFeedbacki64_v;
+#endif
+#ifdef using_glCreateBuffers
+extern PFNGLCREATEBUFFERSPROC glCreateBuffers;
+#endif
+#ifdef using_glNamedBufferStorage
+extern PFNGLNAMEDBUFFERSTORAGEPROC glNamedBufferStorage;
+#endif
+#ifdef using_glNamedBufferData
+extern PFNGLNAMEDBUFFERDATAPROC glNamedBufferData;
+#endif
+#ifdef using_glNamedBufferSubData
+extern PFNGLNAMEDBUFFERSUBDATAPROC glNamedBufferSubData;
+#endif
+#ifdef using_glCopyNamedBufferSubData
+extern PFNGLCOPYNAMEDBUFFERSUBDATAPROC glCopyNamedBufferSubData;
+#endif
+#ifdef using_glClearNamedBufferData
+extern PFNGLCLEARNAMEDBUFFERDATAPROC glClearNamedBufferData;
+#endif
+#ifdef using_glClearNamedBufferSubData
+extern PFNGLCLEARNAMEDBUFFERSUBDATAPROC glClearNamedBufferSubData;
+#endif
+#ifdef using_glMapNamedBuffer
+extern PFNGLMAPNAMEDBUFFERPROC glMapNamedBuffer;
+#endif
+#ifdef using_glMapNamedBufferRange
+extern PFNGLMAPNAMEDBUFFERRANGEPROC glMapNamedBufferRange;
+#endif
+#ifdef using_glUnmapNamedBuffer
+extern PFNGLUNMAPNAMEDBUFFERPROC glUnmapNamedBuffer;
+#endif
+#ifdef using_glFlushMappedNamedBufferRange
+extern PFNGLFLUSHMAPPEDNAMEDBUFFERRANGEPROC glFlushMappedNamedBufferRange;
+#endif
+#ifdef using_glGetNamedBufferParameteriv
+extern PFNGLGETNAMEDBUFFERPARAMETERIVPROC glGetNamedBufferParameteriv;
+#endif
+#ifdef using_glGetNamedBufferParameteri64v
+extern PFNGLGETNAMEDBUFFERPARAMETERI64VPROC glGetNamedBufferParameteri64v;
+#endif
+#ifdef using_glGetNamedBufferPointerv
+extern PFNGLGETNAMEDBUFFERPOINTERVPROC glGetNamedBufferPointerv;
+#endif
+#ifdef using_glGetNamedBufferSubData
+extern PFNGLGETNAMEDBUFFERSUBDATAPROC glGetNamedBufferSubData;
+#endif
+#ifdef using_glCreateFramebuffers
+extern PFNGLCREATEFRAMEBUFFERSPROC glCreateFramebuffers;
+#endif
+#ifdef using_glNamedFramebufferRenderbuffer
+extern PFNGLNAMEDFRAMEBUFFERRENDERBUFFERPROC glNamedFramebufferRenderbuffer;
+#endif
+#ifdef using_glNamedFramebufferParameteri
+extern PFNGLNAMEDFRAMEBUFFERPARAMETERIPROC glNamedFramebufferParameteri;
+#endif
+#ifdef using_glNamedFramebufferTexture
+extern PFNGLNAMEDFRAMEBUFFERTEXTUREPROC glNamedFramebufferTexture;
+#endif
+#ifdef using_glNamedFramebufferTextureLayer
+extern PFNGLNAMEDFRAMEBUFFERTEXTURELAYERPROC glNamedFramebufferTextureLayer;
+#endif
+#ifdef using_glNamedFramebufferDrawBuffer
+extern PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC glNamedFramebufferDrawBuffer;
+#endif
+#ifdef using_glNamedFramebufferDrawBuffers
+extern PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC glNamedFramebufferDrawBuffers;
+#endif
+#ifdef using_glNamedFramebufferReadBuffer
+extern PFNGLNAMEDFRAMEBUFFERREADBUFFERPROC glNamedFramebufferReadBuffer;
+#endif
+#ifdef using_glInvalidateNamedFramebufferData
+extern PFNGLINVALIDATENAMEDFRAMEBUFFERDATAPROC glInvalidateNamedFramebufferData;
+#endif
+#ifdef using_glInvalidateNamedFramebufferSubData
+extern PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC glInvalidateNamedFramebufferSubData;
+#endif
+#ifdef using_glClearNamedFramebufferiv
+extern PFNGLCLEARNAMEDFRAMEBUFFERIVPROC glClearNamedFramebufferiv;
+#endif
+#ifdef using_glClearNamedFramebufferuiv
+extern PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC glClearNamedFramebufferuiv;
+#endif
+#ifdef using_glClearNamedFramebufferfv
+extern PFNGLCLEARNAMEDFRAMEBUFFERFVPROC glClearNamedFramebufferfv;
+#endif
+#ifdef using_glClearNamedFramebufferfi
+extern PFNGLCLEARNAMEDFRAMEBUFFERFIPROC glClearNamedFramebufferfi;
+#endif
+#ifdef using_glBlitNamedFramebuffer
+extern PFNGLBLITNAMEDFRAMEBUFFERPROC glBlitNamedFramebuffer;
+#endif
+#ifdef using_glCheckNamedFramebufferStatus
+extern PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC glCheckNamedFramebufferStatus;
+#endif
+#ifdef using_glGetNamedFramebufferParameteriv
+extern PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC glGetNamedFramebufferParameteriv;
+#endif
+#ifdef using_glGetNamedFramebufferAttachmentParameteriv
+extern PFNGLGETNAMEDFRAMEBUFFERATTACHMENTPARAMETERIVPROC glGetNamedFramebufferAttachmentParameteriv;
+#endif
+#ifdef using_glCreateRenderbuffers
+extern PFNGLCREATERENDERBUFFERSPROC glCreateRenderbuffers;
+#endif
+#ifdef using_glNamedRenderbufferStorage
+extern PFNGLNAMEDRENDERBUFFERSTORAGEPROC glNamedRenderbufferStorage;
+#endif
+#ifdef using_glNamedRenderbufferStorageMultisample
+extern PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEPROC glNamedRenderbufferStorageMultisample;
+#endif
+#ifdef using_glGetNamedRenderbufferParameteriv
+extern PFNGLGETNAMEDRENDERBUFFERPARAMETERIVPROC glGetNamedRenderbufferParameteriv;
+#endif
+#ifdef using_glCreateTextures
+extern PFNGLCREATETEXTURESPROC glCreateTextures;
+#endif
+#ifdef using_glTextureBuffer
+extern PFNGLTEXTUREBUFFERPROC glTextureBuffer;
+#endif
+#ifdef using_glTextureBufferRange
+extern PFNGLTEXTUREBUFFERRANGEPROC glTextureBufferRange;
+#endif
+#ifdef using_glTextureStorage1D
+extern PFNGLTEXTURESTORAGE1DPROC glTextureStorage1D;
+#endif
+#ifdef using_glTextureStorage2D
+extern PFNGLTEXTURESTORAGE2DPROC glTextureStorage2D;
+#endif
+#ifdef using_glTextureStorage3D
+extern PFNGLTEXTURESTORAGE3DPROC glTextureStorage3D;
+#endif
+#ifdef using_glTextureStorage2DMultisample
+extern PFNGLTEXTURESTORAGE2DMULTISAMPLEPROC glTextureStorage2DMultisample;
+#endif
+#ifdef using_glTextureStorage3DMultisample
+extern PFNGLTEXTURESTORAGE3DMULTISAMPLEPROC glTextureStorage3DMultisample;
+#endif
+#ifdef using_glTextureSubImage1D
+extern PFNGLTEXTURESUBIMAGE1DPROC glTextureSubImage1D;
+#endif
+#ifdef using_glTextureSubImage2D
+extern PFNGLTEXTURESUBIMAGE2DPROC glTextureSubImage2D;
+#endif
+#ifdef using_glTextureSubImage3D
+extern PFNGLTEXTURESUBIMAGE3DPROC glTextureSubImage3D;
+#endif
+#ifdef using_glCompressedTextureSubImage1D
+extern PFNGLCOMPRESSEDTEXTURESUBIMAGE1DPROC glCompressedTextureSubImage1D;
+#endif
+#ifdef using_glCompressedTextureSubImage2D
+extern PFNGLCOMPRESSEDTEXTURESUBIMAGE2DPROC glCompressedTextureSubImage2D;
+#endif
+#ifdef using_glCompressedTextureSubImage3D
+extern PFNGLCOMPRESSEDTEXTURESUBIMAGE3DPROC glCompressedTextureSubImage3D;
+#endif
+#ifdef using_glCopyTextureSubImage1D
+extern PFNGLCOPYTEXTURESUBIMAGE1DPROC glCopyTextureSubImage1D;
+#endif
+#ifdef using_glCopyTextureSubImage2D
+extern PFNGLCOPYTEXTURESUBIMAGE2DPROC glCopyTextureSubImage2D;
+#endif
+#ifdef using_glCopyTextureSubImage3D
+extern PFNGLCOPYTEXTURESUBIMAGE3DPROC glCopyTextureSubImage3D;
+#endif
+#ifdef using_glTextureParameterf
+extern PFNGLTEXTUREPARAMETERFPROC glTextureParameterf;
+#endif
+#ifdef using_glTextureParameterfv
+extern PFNGLTEXTUREPARAMETERFVPROC glTextureParameterfv;
+#endif
+#ifdef using_glTextureParameteri
+extern PFNGLTEXTUREPARAMETERIPROC glTextureParameteri;
+#endif
+#ifdef using_glTextureParameterIiv
+extern PFNGLTEXTUREPARAMETERIIVPROC glTextureParameterIiv;
+#endif
+#ifdef using_glTextureParameterIuiv
+extern PFNGLTEXTUREPARAMETERIUIVPROC glTextureParameterIuiv;
+#endif
+#ifdef using_glTextureParameteriv
+extern PFNGLTEXTUREPARAMETERIVPROC glTextureParameteriv;
+#endif
+#ifdef using_glGenerateTextureMipmap
+extern PFNGLGENERATETEXTUREMIPMAPPROC glGenerateTextureMipmap;
+#endif
+#ifdef using_glBindTextureUnit
+extern PFNGLBINDTEXTUREUNITPROC glBindTextureUnit;
+#endif
+#ifdef using_glGetTextureImage
+extern PFNGLGETTEXTUREIMAGEPROC glGetTextureImage;
+#endif
+#ifdef using_glGetCompressedTextureImage
+extern PFNGLGETCOMPRESSEDTEXTUREIMAGEPROC glGetCompressedTextureImage;
+#endif
+#ifdef using_glGetTextureLevelParameterfv
+extern PFNGLGETTEXTURELEVELPARAMETERFVPROC glGetTextureLevelParameterfv;
+#endif
+#ifdef using_glGetTextureLevelParameteriv
+extern PFNGLGETTEXTURELEVELPARAMETERIVPROC glGetTextureLevelParameteriv;
+#endif
+#ifdef using_glGetTextureParameterfv
+extern PFNGLGETTEXTUREPARAMETERFVPROC glGetTextureParameterfv;
+#endif
+#ifdef using_glGetTextureParameterIiv
+extern PFNGLGETTEXTUREPARAMETERIIVPROC glGetTextureParameterIiv;
+#endif
+#ifdef using_glGetTextureParameterIuiv
+extern PFNGLGETTEXTUREPARAMETERIUIVPROC glGetTextureParameterIuiv;
+#endif
+#ifdef using_glGetTextureParameteriv
+extern PFNGLGETTEXTUREPARAMETERIVPROC glGetTextureParameteriv;
+#endif
+#ifdef using_glCreateVertexArrays
+extern PFNGLCREATEVERTEXARRAYSPROC glCreateVertexArrays;
+#endif
+#ifdef using_glDisableVertexArrayAttrib
+extern PFNGLDISABLEVERTEXARRAYATTRIBPROC glDisableVertexArrayAttrib;
+#endif
+#ifdef using_glEnableVertexArrayAttrib
+extern PFNGLENABLEVERTEXARRAYATTRIBPROC glEnableVertexArrayAttrib;
+#endif
+#ifdef using_glVertexArrayElementBuffer
+extern PFNGLVERTEXARRAYELEMENTBUFFERPROC glVertexArrayElementBuffer;
+#endif
+#ifdef using_glVertexArrayVertexBuffer
+extern PFNGLVERTEXARRAYVERTEXBUFFERPROC glVertexArrayVertexBuffer;
+#endif
+#ifdef using_glVertexArrayVertexBuffers
+extern PFNGLVERTEXARRAYVERTEXBUFFERSPROC glVertexArrayVertexBuffers;
+#endif
+#ifdef using_glVertexArrayAttribBinding
+extern PFNGLVERTEXARRAYATTRIBBINDINGPROC glVertexArrayAttribBinding;
+#endif
+#ifdef using_glVertexArrayAttribFormat
+extern PFNGLVERTEXARRAYATTRIBFORMATPROC glVertexArrayAttribFormat;
+#endif
+#ifdef using_glVertexArrayAttribIFormat
+extern PFNGLVERTEXARRAYATTRIBIFORMATPROC glVertexArrayAttribIFormat;
+#endif
+#ifdef using_glVertexArrayAttribLFormat
+extern PFNGLVERTEXARRAYATTRIBLFORMATPROC glVertexArrayAttribLFormat;
+#endif
+#ifdef using_glVertexArrayBindingDivisor
+extern PFNGLVERTEXARRAYBINDINGDIVISORPROC glVertexArrayBindingDivisor;
+#endif
+#ifdef using_glGetVertexArrayiv
+extern PFNGLGETVERTEXARRAYIVPROC glGetVertexArrayiv;
+#endif
+#ifdef using_glGetVertexArrayIndexediv
+extern PFNGLGETVERTEXARRAYINDEXEDIVPROC glGetVertexArrayIndexediv;
+#endif
+#ifdef using_glGetVertexArrayIndexed64iv
+extern PFNGLGETVERTEXARRAYINDEXED64IVPROC glGetVertexArrayIndexed64iv;
+#endif
+#ifdef using_glCreateSamplers
+extern PFNGLCREATESAMPLERSPROC glCreateSamplers;
+#endif
+#ifdef using_glCreateProgramPipelines
+extern PFNGLCREATEPROGRAMPIPELINESPROC glCreateProgramPipelines;
+#endif
+#ifdef using_glCreateQueries
+extern PFNGLCREATEQUERIESPROC glCreateQueries;
+#endif
+#ifdef using_glGetQueryBufferObjecti64v
+extern PFNGLGETQUERYBUFFEROBJECTI64VPROC glGetQueryBufferObjecti64v;
+#endif
+#ifdef using_glGetQueryBufferObjectiv
+extern PFNGLGETQUERYBUFFEROBJECTIVPROC glGetQueryBufferObjectiv;
+#endif
+#ifdef using_glGetQueryBufferObjectui64v
+extern PFNGLGETQUERYBUFFEROBJECTUI64VPROC glGetQueryBufferObjectui64v;
+#endif
+#ifdef using_glGetQueryBufferObjectuiv
+extern PFNGLGETQUERYBUFFEROBJECTUIVPROC glGetQueryBufferObjectuiv;
+#endif
+#ifdef using_glMemoryBarrierByRegion
+extern PFNGLMEMORYBARRIERBYREGIONPROC glMemoryBarrierByRegion;
+#endif
+#ifdef using_glGetTextureSubImage
+extern PFNGLGETTEXTURESUBIMAGEPROC glGetTextureSubImage;
+#endif
+#ifdef using_glGetCompressedTextureSubImage
+extern PFNGLGETCOMPRESSEDTEXTURESUBIMAGEPROC glGetCompressedTextureSubImage;
+#endif
+#ifdef using_glGetGraphicsResetStatus
+extern PFNGLGETGRAPHICSRESETSTATUSPROC glGetGraphicsResetStatus;
+#endif
+#ifdef using_glGetnCompressedTexImage
+extern PFNGLGETNCOMPRESSEDTEXIMAGEPROC glGetnCompressedTexImage;
+#endif
+#ifdef using_glGetnTexImage
+extern PFNGLGETNTEXIMAGEPROC glGetnTexImage;
+#endif
+#ifdef using_glGetnUniformdv
+extern PFNGLGETNUNIFORMDVPROC glGetnUniformdv;
+#endif
+#ifdef using_glGetnUniformfv
+extern PFNGLGETNUNIFORMFVPROC glGetnUniformfv;
+#endif
+#ifdef using_glGetnUniformiv
+extern PFNGLGETNUNIFORMIVPROC glGetnUniformiv;
+#endif
+#ifdef using_glGetnUniformuiv
+extern PFNGLGETNUNIFORMUIVPROC glGetnUniformuiv;
+#endif
+#ifdef using_glReadnPixels
+extern PFNGLREADNPIXELSPROC glReadnPixels;
+#endif
+#ifdef using_glTextureBarrier
+extern PFNGLTEXTUREBARRIERPROC glTextureBarrier;
+#endif
+// GL_ARB_ES2_compatibility
+// GL_ARB_ES3_1_compatibility
+// GL_ARB_ES3_compatibility
+// GL_ARB_arrays_of_arrays
+// GL_ARB_base_instance
+// GL_ARB_bindless_texture
 #ifdef using_glGetTextureHandleARB
 extern PFNGLGETTEXTUREHANDLEARBPROC glGetTextureHandleARB;
 #endif
@@ -1815,84 +2038,27 @@ extern PFNGLVERTEXATTRIBL1UI64VARBPROC glVertexAttribL1ui64vARB;
 #ifdef using_glGetVertexAttribLui64vARB
 extern PFNGLGETVERTEXATTRIBLUI64VARBPROC glGetVertexAttribLui64vARB;
 #endif
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_blend_func_extended
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_buffer_storage
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_cl_event
+// GL_ARB_blend_func_extended
+// GL_ARB_buffer_storage
+// GL_ARB_cl_event
 #ifdef using_glCreateSyncFromCLeventARB
 extern PFNGLCREATESYNCFROMCLEVENTARBPROC glCreateSyncFromCLeventARB;
 #endif
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_clear_buffer_object
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_clear_texture
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_compressed_texture_pixel_storage
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_compute_shader
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_compute_variable_group_size
+// GL_ARB_clear_buffer_object
+// GL_ARB_clear_texture
+// GL_ARB_clip_control
+// GL_ARB_compressed_texture_pixel_storage
+// GL_ARB_compute_shader
+// GL_ARB_compute_variable_group_size
 #ifdef using_glDispatchComputeGroupSizeARB
 extern PFNGLDISPATCHCOMPUTEGROUPSIZEARBPROC glDispatchComputeGroupSizeARB;
 #endif
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_conservative_depth
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_copy_buffer
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_copy_image
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_debug_output
+// GL_ARB_conditional_render_inverted
+// GL_ARB_conservative_depth
+// GL_ARB_copy_buffer
+// GL_ARB_copy_image
+// GL_ARB_cull_distance
+// GL_ARB_debug_output
 #ifdef using_glDebugMessageControlARB
 extern PFNGLDEBUGMESSAGECONTROLARBPROC glDebugMessageControlARB;
 #endif
@@ -1905,24 +2071,11 @@ extern PFNGLDEBUGMESSAGECALLBACKARBPROC glDebugMessageCallbackARB;
 #ifdef using_glGetDebugMessageLogARB
 extern PFNGLGETDEBUGMESSAGELOGARBPROC glGetDebugMessageLogARB;
 #endif
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_depth_buffer_float
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_depth_clamp
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_draw_buffers_blend
+// GL_ARB_depth_buffer_float
+// GL_ARB_depth_clamp
+// GL_ARB_derivative_control
+// GL_ARB_direct_state_access
+// GL_ARB_draw_buffers_blend
 #ifdef using_glBlendEquationiARB
 extern PFNGLBLENDEQUATIONIARBPROC glBlendEquationiARB;
 #endif
@@ -1935,186 +2088,43 @@ extern PFNGLBLENDFUNCIARBPROC glBlendFunciARB;
 #ifdef using_glBlendFuncSeparateiARB
 extern PFNGLBLENDFUNCSEPARATEIARBPROC glBlendFuncSeparateiARB;
 #endif
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_draw_elements_base_vertex
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_draw_indirect
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_enhanced_layouts
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_explicit_attrib_location
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_explicit_uniform_location
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_fragment_coord_conventions
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_fragment_layer_viewport
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_framebuffer_no_attachments
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_framebuffer_object
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_framebuffer_sRGB
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_get_program_binary
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_gpu_shader5
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_gpu_shader_fp64
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_half_float_vertex
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_imaging
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_indirect_parameters
+// GL_ARB_draw_elements_base_vertex
+// GL_ARB_draw_indirect
+// GL_ARB_enhanced_layouts
+// GL_ARB_explicit_attrib_location
+// GL_ARB_explicit_uniform_location
+// GL_ARB_fragment_coord_conventions
+// GL_ARB_fragment_layer_viewport
+// GL_ARB_framebuffer_no_attachments
+// GL_ARB_framebuffer_object
+// GL_ARB_framebuffer_sRGB
+// GL_ARB_get_program_binary
+// GL_ARB_get_texture_sub_image
+// GL_ARB_gpu_shader5
+// GL_ARB_gpu_shader_fp64
+// GL_ARB_half_float_vertex
+// GL_ARB_imaging
+// GL_ARB_indirect_parameters
 #ifdef using_glMultiDrawArraysIndirectCountARB
 extern PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC glMultiDrawArraysIndirectCountARB;
 #endif
 #ifdef using_glMultiDrawElementsIndirectCountARB
 extern PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC glMultiDrawElementsIndirectCountARB;
 #endif
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_internalformat_query
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_internalformat_query2
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_invalidate_subdata
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_map_buffer_alignment
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_map_buffer_range
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_multi_bind
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_multi_draw_indirect
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_occlusion_query2
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_program_interface_query
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_provoking_vertex
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_query_buffer_object
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_robust_buffer_access_behavior
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_robustness
+// GL_ARB_internalformat_query
+// GL_ARB_internalformat_query2
+// GL_ARB_invalidate_subdata
+// GL_ARB_map_buffer_alignment
+// GL_ARB_map_buffer_range
+// GL_ARB_multi_bind
+// GL_ARB_multi_draw_indirect
+// GL_ARB_occlusion_query2
+// GL_ARB_pipeline_statistics_query
+// GL_ARB_program_interface_query
+// GL_ARB_provoking_vertex
+// GL_ARB_query_buffer_object
+// GL_ARB_robust_buffer_access_behavior
+// GL_ARB_robustness
 #ifdef using_glGetGraphicsResetStatusARB
 extern PFNGLGETGRAPHICSRESETSTATUSARBPROC glGetGraphicsResetStatusARB;
 #endif
@@ -2139,117 +2149,28 @@ extern PFNGLGETNUNIFORMUIVARBPROC glGetnUniformuivARB;
 #ifdef using_glGetnUniformdvARB
 extern PFNGLGETNUNIFORMDVARBPROC glGetnUniformdvARB;
 #endif
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_robustness_isolation
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_sample_shading
+// GL_ARB_robustness_isolation
+// GL_ARB_sample_shading
 #ifdef using_glMinSampleShadingARB
 extern PFNGLMINSAMPLESHADINGARBPROC glMinSampleShadingARB;
 #endif
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_sampler_objects
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_seamless_cube_map
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_seamless_cubemap_per_texture
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_separate_shader_objects
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shader_atomic_counters
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shader_bit_encoding
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shader_draw_parameters
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shader_group_vote
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shader_image_load_store
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shader_image_size
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shader_precision
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shader_stencil_export
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shader_storage_buffer_object
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shader_subroutine
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shading_language_420pack
-
-#endif
-
-
-//
-#ifdef define_GL_ARB_shading_language_include
+// GL_ARB_sampler_objects
+// GL_ARB_seamless_cube_map
+// GL_ARB_seamless_cubemap_per_texture
+// GL_ARB_separate_shader_objects
+// GL_ARB_shader_atomic_counters
+// GL_ARB_shader_bit_encoding
+// GL_ARB_shader_draw_parameters
+// GL_ARB_shader_group_vote
+// GL_ARB_shader_image_load_store
+// GL_ARB_shader_image_size
+// GL_ARB_shader_precision
+// GL_ARB_shader_stencil_export
+// GL_ARB_shader_storage_buffer_object
+// GL_ARB_shader_subroutine
+// GL_ARB_shader_texture_image_samples
+// GL_ARB_shading_language_420pack
+// GL_ARB_shading_language_include
 #ifdef using_glNamedStringARB
 extern PFNGLNAMEDSTRINGARBPROC glNamedStringARB;
 #endif
@@ -2268,233 +2189,567 @@ extern PFNGLGETNAMEDSTRINGARBPROC glGetNamedStringARB;
 #ifdef using_glGetNamedStringivARB
 extern PFNGLGETNAMEDSTRINGIVARBPROC glGetNamedStringivARB;
 #endif
-
+// GL_ARB_shading_language_packing
+// GL_ARB_sparse_buffer
+#ifdef using_glBufferPageCommitmentARB
+extern PFNGLBUFFERPAGECOMMITMENTARBPROC glBufferPageCommitmentARB;
 #endif
-
-
-//
-#ifdef define_GL_ARB_shading_language_packing
-
+#ifdef using_glNamedBufferPageCommitmentEXT
+extern PFNGLNAMEDBUFFERPAGECOMMITMENTEXTPROC glNamedBufferPageCommitmentEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_sparse_texture
+#ifdef using_glNamedBufferPageCommitmentARB
+extern PFNGLNAMEDBUFFERPAGECOMMITMENTARBPROC glNamedBufferPageCommitmentARB;
+#endif
+// GL_ARB_sparse_texture
 #ifdef using_glTexPageCommitmentARB
 extern PFNGLTEXPAGECOMMITMENTARBPROC glTexPageCommitmentARB;
 #endif
-
+// GL_ARB_sparse_texture2
+// GL_ARB_stencil_texturing
+// GL_ARB_sync
+// GL_ARB_tessellation_shader
+// GL_ARB_texture_barrier
+// GL_ARB_texture_buffer_object_rgb32
+// GL_ARB_texture_buffer_range
+// GL_ARB_texture_compression_bptc
+// GL_ARB_texture_compression_rgtc
+// GL_ARB_texture_cube_map_array
+// GL_ARB_texture_gather
+// GL_ARB_texture_mirror_clamp_to_edge
+// GL_ARB_texture_multisample
+// GL_ARB_texture_query_levels
+// GL_ARB_texture_query_lod
+// GL_ARB_texture_rg
+// GL_ARB_texture_rgb10_a2ui
+// GL_ARB_texture_stencil8
+// GL_ARB_texture_storage
+// GL_ARB_texture_storage_multisample
+// GL_ARB_texture_swizzle
+// GL_ARB_texture_view
+// GL_ARB_timer_query
+// GL_ARB_transform_feedback2
+// GL_ARB_transform_feedback3
+// GL_ARB_transform_feedback_instanced
+// GL_ARB_transform_feedback_overflow_query
+// GL_ARB_uniform_buffer_object
+// GL_ARB_vertex_array_bgra
+// GL_ARB_vertex_array_object
+// GL_ARB_vertex_attrib_64bit
+// GL_ARB_vertex_attrib_binding
+// GL_ARB_vertex_type_10f_11f_11f_rev
+// GL_ARB_vertex_type_2_10_10_10_rev
+// GL_ARB_viewport_array
+// GL_KHR_blend_equation_advanced
+#ifdef using_glBlendBarrierKHR
+extern PFNGLBLENDBARRIERKHRPROC glBlendBarrierKHR;
 #endif
-
-
-//
-#ifdef define_GL_ARB_stencil_texturing
-
+// GL_KHR_blend_equation_advanced_coherent
+// GL_KHR_context_flush_control
+// GL_KHR_debug
+// GL_KHR_no_error
+// GL_KHR_robust_buffer_access_behavior
+// GL_KHR_robustness
+// GL_KHR_texture_compression_astc_hdr
+// GL_KHR_texture_compression_astc_ldr
+// GL_KHR_texture_compression_astc_sliced_3d
+// GL_AMD_performance_monitor
+#ifdef using_glGetPerfMonitorGroupsAMD
+extern PFNGLGETPERFMONITORGROUPSAMDPROC glGetPerfMonitorGroupsAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_sync
-
+#ifdef using_glGetPerfMonitorCountersAMD
+extern PFNGLGETPERFMONITORCOUNTERSAMDPROC glGetPerfMonitorCountersAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_tessellation_shader
-
+#ifdef using_glGetPerfMonitorGroupStringAMD
+extern PFNGLGETPERFMONITORGROUPSTRINGAMDPROC glGetPerfMonitorGroupStringAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_buffer_object_rgb32
-
+#ifdef using_glGetPerfMonitorCounterStringAMD
+extern PFNGLGETPERFMONITORCOUNTERSTRINGAMDPROC glGetPerfMonitorCounterStringAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_buffer_range
-
+#ifdef using_glGetPerfMonitorCounterInfoAMD
+extern PFNGLGETPERFMONITORCOUNTERINFOAMDPROC glGetPerfMonitorCounterInfoAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_compression_bptc
-
+#ifdef using_glGenPerfMonitorsAMD
+extern PFNGLGENPERFMONITORSAMDPROC glGenPerfMonitorsAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_compression_rgtc
-
+#ifdef using_glDeletePerfMonitorsAMD
+extern PFNGLDELETEPERFMONITORSAMDPROC glDeletePerfMonitorsAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_cube_map_array
-
+#ifdef using_glSelectPerfMonitorCountersAMD
+extern PFNGLSELECTPERFMONITORCOUNTERSAMDPROC glSelectPerfMonitorCountersAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_gather
-
+#ifdef using_glBeginPerfMonitorAMD
+extern PFNGLBEGINPERFMONITORAMDPROC glBeginPerfMonitorAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_mirror_clamp_to_edge
-
+#ifdef using_glEndPerfMonitorAMD
+extern PFNGLENDPERFMONITORAMDPROC glEndPerfMonitorAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_multisample
-
+#ifdef using_glGetPerfMonitorCounterDataAMD
+extern PFNGLGETPERFMONITORCOUNTERDATAAMDPROC glGetPerfMonitorCounterDataAMD;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_query_levels
-
+// GL_APPLE_rgb_422
+// GL_EXT_debug_label
+#ifdef using_glLabelObjectEXT
+extern PFNGLLABELOBJECTEXTPROC glLabelObjectEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_query_lod
-
+#ifdef using_glGetObjectLabelEXT
+extern PFNGLGETOBJECTLABELEXTPROC glGetObjectLabelEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_rg
-
+// GL_EXT_debug_marker
+#ifdef using_glInsertEventMarkerEXT
+extern PFNGLINSERTEVENTMARKEREXTPROC glInsertEventMarkerEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_rgb10_a2ui
-
+#ifdef using_glPushGroupMarkerEXT
+extern PFNGLPUSHGROUPMARKEREXTPROC glPushGroupMarkerEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_stencil8
-
+#ifdef using_glPopGroupMarkerEXT
+extern PFNGLPOPGROUPMARKEREXTPROC glPopGroupMarkerEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_storage
-
+// GL_EXT_draw_instanced
+#ifdef using_glDrawArraysInstancedEXT
+extern PFNGLDRAWARRAYSINSTANCEDEXTPROC glDrawArraysInstancedEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_storage_multisample
-
+#ifdef using_glDrawElementsInstancedEXT
+extern PFNGLDRAWELEMENTSINSTANCEDEXTPROC glDrawElementsInstancedEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_swizzle
-
+// GL_EXT_polygon_offset_clamp
+#ifdef using_glPolygonOffsetClampEXT
+extern PFNGLPOLYGONOFFSETCLAMPEXTPROC glPolygonOffsetClampEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_texture_view
-
+// GL_EXT_post_depth_coverage
+// GL_EXT_raster_multisample
+#ifdef using_glRasterSamplesEXT
+extern PFNGLRASTERSAMPLESEXTPROC glRasterSamplesEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_timer_query
-
+// GL_EXT_separate_shader_objects
+#ifdef using_glUseShaderProgramEXT
+extern PFNGLUSESHADERPROGRAMEXTPROC glUseShaderProgramEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_transform_feedback2
-
+#ifdef using_glActiveProgramEXT
+extern PFNGLACTIVEPROGRAMEXTPROC glActiveProgramEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_transform_feedback3
-
+#ifdef using_glCreateShaderProgramEXT
+extern PFNGLCREATESHADERPROGRAMEXTPROC glCreateShaderProgramEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_transform_feedback_instanced
-
+// GL_EXT_shader_integer_mix
+// GL_EXT_texture_compression_s3tc
+// GL_EXT_texture_filter_minmax
+// GL_EXT_texture_sRGB_decode
+// GL_EXT_window_rectangles
+#ifdef using_glWindowRectanglesEXT
+extern PFNGLWINDOWRECTANGLESEXTPROC glWindowRectanglesEXT;
 #endif
-
-
-//
-#ifdef define_GL_ARB_uniform_buffer_object
-
+// GL_INTEL_conservative_rasterization
+// GL_INTEL_framebuffer_CMAA
+#ifdef using_glApplyFramebufferAttachmentCMAAINTEL
+extern PFNGLAPPLYFRAMEBUFFERATTACHMENTCMAAINTELPROC glApplyFramebufferAttachmentCMAAINTEL;
 #endif
-
-
-//
-#ifdef define_GL_ARB_vertex_array_bgra
-
+// GL_INTEL_performance_query
+#ifdef using_glBeginPerfQueryINTEL
+extern PFNGLBEGINPERFQUERYINTELPROC glBeginPerfQueryINTEL;
 #endif
-
-
-//
-#ifdef define_GL_ARB_vertex_array_object
-
+#ifdef using_glCreatePerfQueryINTEL
+extern PFNGLCREATEPERFQUERYINTELPROC glCreatePerfQueryINTEL;
 #endif
-
-
-//
-#ifdef define_GL_ARB_vertex_attrib_64bit
-
+#ifdef using_glDeletePerfQueryINTEL
+extern PFNGLDELETEPERFQUERYINTELPROC glDeletePerfQueryINTEL;
 #endif
-
-
-//
-#ifdef define_GL_ARB_vertex_attrib_binding
-
+#ifdef using_glEndPerfQueryINTEL
+extern PFNGLENDPERFQUERYINTELPROC glEndPerfQueryINTEL;
 #endif
-
-
-//
-#ifdef define_GL_ARB_vertex_type_10f_11f_11f_rev
-
+#ifdef using_glGetFirstPerfQueryIdINTEL
+extern PFNGLGETFIRSTPERFQUERYIDINTELPROC glGetFirstPerfQueryIdINTEL;
 #endif
-
-
-//
-#ifdef define_GL_ARB_vertex_type_2_10_10_10_rev
-
+#ifdef using_glGetNextPerfQueryIdINTEL
+extern PFNGLGETNEXTPERFQUERYIDINTELPROC glGetNextPerfQueryIdINTEL;
 #endif
-
-
-//
-#ifdef define_GL_ARB_viewport_array
-
+#ifdef using_glGetPerfCounterInfoINTEL
+extern PFNGLGETPERFCOUNTERINFOINTELPROC glGetPerfCounterInfoINTEL;
 #endif
-
-
-//
-#ifdef define_GL_KHR_debug
-
+#ifdef using_glGetPerfQueryDataINTEL
+extern PFNGLGETPERFQUERYDATAINTELPROC glGetPerfQueryDataINTEL;
 #endif
-
-
-//
-#ifdef define_GL_KHR_texture_compression_astc_hdr
-
+#ifdef using_glGetPerfQueryIdByNameINTEL
+extern PFNGLGETPERFQUERYIDBYNAMEINTELPROC glGetPerfQueryIdByNameINTEL;
 #endif
-
-
-//
-#ifdef define_GL_KHR_texture_compression_astc_ldr
-
+#ifdef using_glGetPerfQueryInfoINTEL
+extern PFNGLGETPERFQUERYINFOINTELPROC glGetPerfQueryInfoINTEL;
 #endif
-
-
-#endif // _GLELP_GLCOREARB_H_
+// GL_NV_bindless_texture
+#ifdef using_glGetTextureHandleNV
+extern PFNGLGETTEXTUREHANDLENVPROC glGetTextureHandleNV;
+#endif
+#ifdef using_glGetTextureSamplerHandleNV
+extern PFNGLGETTEXTURESAMPLERHANDLENVPROC glGetTextureSamplerHandleNV;
+#endif
+#ifdef using_glMakeTextureHandleResidentNV
+extern PFNGLMAKETEXTUREHANDLERESIDENTNVPROC glMakeTextureHandleResidentNV;
+#endif
+#ifdef using_glMakeTextureHandleNonResidentNV
+extern PFNGLMAKETEXTUREHANDLENONRESIDENTNVPROC glMakeTextureHandleNonResidentNV;
+#endif
+#ifdef using_glGetImageHandleNV
+extern PFNGLGETIMAGEHANDLENVPROC glGetImageHandleNV;
+#endif
+#ifdef using_glMakeImageHandleResidentNV
+extern PFNGLMAKEIMAGEHANDLERESIDENTNVPROC glMakeImageHandleResidentNV;
+#endif
+#ifdef using_glMakeImageHandleNonResidentNV
+extern PFNGLMAKEIMAGEHANDLENONRESIDENTNVPROC glMakeImageHandleNonResidentNV;
+#endif
+#ifdef using_glUniformHandleui64NV
+extern PFNGLUNIFORMHANDLEUI64NVPROC glUniformHandleui64NV;
+#endif
+#ifdef using_glUniformHandleui64vNV
+extern PFNGLUNIFORMHANDLEUI64VNVPROC glUniformHandleui64vNV;
+#endif
+#ifdef using_glProgramUniformHandleui64NV
+extern PFNGLPROGRAMUNIFORMHANDLEUI64NVPROC glProgramUniformHandleui64NV;
+#endif
+#ifdef using_glProgramUniformHandleui64vNV
+extern PFNGLPROGRAMUNIFORMHANDLEUI64VNVPROC glProgramUniformHandleui64vNV;
+#endif
+#ifdef using_glIsTextureHandleResidentNV
+extern PFNGLISTEXTUREHANDLERESIDENTNVPROC glIsTextureHandleResidentNV;
+#endif
+#ifdef using_glIsImageHandleResidentNV
+extern PFNGLISIMAGEHANDLERESIDENTNVPROC glIsImageHandleResidentNV;
+#endif
+// GL_NV_blend_equation_advanced
+#ifdef using_glBlendParameteriNV
+extern PFNGLBLENDPARAMETERINVPROC glBlendParameteriNV;
+#endif
+#ifdef using_glBlendBarrierNV
+extern PFNGLBLENDBARRIERNVPROC glBlendBarrierNV;
+#endif
+// GL_NV_blend_equation_advanced_coherent
+// GL_NV_conditional_render
+#ifdef using_glBeginConditionalRenderNV
+extern PFNGLBEGINCONDITIONALRENDERNVPROC glBeginConditionalRenderNV;
+#endif
+#ifdef using_glEndConditionalRenderNV
+extern PFNGLENDCONDITIONALRENDERNVPROC glEndConditionalRenderNV;
+#endif
+// GL_NV_conservative_raster
+#ifdef using_glSubpixelPrecisionBiasNV
+extern PFNGLSUBPIXELPRECISIONBIASNVPROC glSubpixelPrecisionBiasNV;
+#endif
+// GL_NV_conservative_raster_pre_snap_triangles
+#ifdef using_glConservativeRasterParameteriNV
+extern PFNGLCONSERVATIVERASTERPARAMETERINVPROC glConservativeRasterParameteriNV;
+#endif
+// GL_NV_fill_rectangle
+// GL_NV_fragment_coverage_to_color
+#ifdef using_glFragmentCoverageColorNV
+extern PFNGLFRAGMENTCOVERAGECOLORNVPROC glFragmentCoverageColorNV;
+#endif
+// GL_NV_fragment_shader_interlock
+// GL_NV_framebuffer_mixed_samples
+#ifdef using_glCoverageModulationTableNV
+extern PFNGLCOVERAGEMODULATIONTABLENVPROC glCoverageModulationTableNV;
+#endif
+#ifdef using_glGetCoverageModulationTableNV
+extern PFNGLGETCOVERAGEMODULATIONTABLENVPROC glGetCoverageModulationTableNV;
+#endif
+#ifdef using_glCoverageModulationNV
+extern PFNGLCOVERAGEMODULATIONNVPROC glCoverageModulationNV;
+#endif
+// GL_NV_geometry_shader_passthrough
+// GL_NV_gpu_shader5
+#ifdef using_glUniform1i64NV
+extern PFNGLUNIFORM1I64NVPROC glUniform1i64NV;
+#endif
+#ifdef using_glUniform2i64NV
+extern PFNGLUNIFORM2I64NVPROC glUniform2i64NV;
+#endif
+#ifdef using_glUniform3i64NV
+extern PFNGLUNIFORM3I64NVPROC glUniform3i64NV;
+#endif
+#ifdef using_glUniform4i64NV
+extern PFNGLUNIFORM4I64NVPROC glUniform4i64NV;
+#endif
+#ifdef using_glUniform1i64vNV
+extern PFNGLUNIFORM1I64VNVPROC glUniform1i64vNV;
+#endif
+#ifdef using_glUniform2i64vNV
+extern PFNGLUNIFORM2I64VNVPROC glUniform2i64vNV;
+#endif
+#ifdef using_glUniform3i64vNV
+extern PFNGLUNIFORM3I64VNVPROC glUniform3i64vNV;
+#endif
+#ifdef using_glUniform4i64vNV
+extern PFNGLUNIFORM4I64VNVPROC glUniform4i64vNV;
+#endif
+#ifdef using_glUniform1ui64NV
+extern PFNGLUNIFORM1UI64NVPROC glUniform1ui64NV;
+#endif
+#ifdef using_glUniform2ui64NV
+extern PFNGLUNIFORM2UI64NVPROC glUniform2ui64NV;
+#endif
+#ifdef using_glUniform3ui64NV
+extern PFNGLUNIFORM3UI64NVPROC glUniform3ui64NV;
+#endif
+#ifdef using_glUniform4ui64NV
+extern PFNGLUNIFORM4UI64NVPROC glUniform4ui64NV;
+#endif
+#ifdef using_glUniform1ui64vNV
+extern PFNGLUNIFORM1UI64VNVPROC glUniform1ui64vNV;
+#endif
+#ifdef using_glUniform2ui64vNV
+extern PFNGLUNIFORM2UI64VNVPROC glUniform2ui64vNV;
+#endif
+#ifdef using_glUniform3ui64vNV
+extern PFNGLUNIFORM3UI64VNVPROC glUniform3ui64vNV;
+#endif
+#ifdef using_glUniform4ui64vNV
+extern PFNGLUNIFORM4UI64VNVPROC glUniform4ui64vNV;
+#endif
+#ifdef using_glGetUniformi64vNV
+extern PFNGLGETUNIFORMI64VNVPROC glGetUniformi64vNV;
+#endif
+#ifdef using_glProgramUniform1i64NV
+extern PFNGLPROGRAMUNIFORM1I64NVPROC glProgramUniform1i64NV;
+#endif
+#ifdef using_glProgramUniform2i64NV
+extern PFNGLPROGRAMUNIFORM2I64NVPROC glProgramUniform2i64NV;
+#endif
+#ifdef using_glProgramUniform3i64NV
+extern PFNGLPROGRAMUNIFORM3I64NVPROC glProgramUniform3i64NV;
+#endif
+#ifdef using_glProgramUniform4i64NV
+extern PFNGLPROGRAMUNIFORM4I64NVPROC glProgramUniform4i64NV;
+#endif
+#ifdef using_glProgramUniform1i64vNV
+extern PFNGLPROGRAMUNIFORM1I64VNVPROC glProgramUniform1i64vNV;
+#endif
+#ifdef using_glProgramUniform2i64vNV
+extern PFNGLPROGRAMUNIFORM2I64VNVPROC glProgramUniform2i64vNV;
+#endif
+#ifdef using_glProgramUniform3i64vNV
+extern PFNGLPROGRAMUNIFORM3I64VNVPROC glProgramUniform3i64vNV;
+#endif
+#ifdef using_glProgramUniform4i64vNV
+extern PFNGLPROGRAMUNIFORM4I64VNVPROC glProgramUniform4i64vNV;
+#endif
+#ifdef using_glProgramUniform1ui64NV
+extern PFNGLPROGRAMUNIFORM1UI64NVPROC glProgramUniform1ui64NV;
+#endif
+#ifdef using_glProgramUniform2ui64NV
+extern PFNGLPROGRAMUNIFORM2UI64NVPROC glProgramUniform2ui64NV;
+#endif
+#ifdef using_glProgramUniform3ui64NV
+extern PFNGLPROGRAMUNIFORM3UI64NVPROC glProgramUniform3ui64NV;
+#endif
+#ifdef using_glProgramUniform4ui64NV
+extern PFNGLPROGRAMUNIFORM4UI64NVPROC glProgramUniform4ui64NV;
+#endif
+#ifdef using_glProgramUniform1ui64vNV
+extern PFNGLPROGRAMUNIFORM1UI64VNVPROC glProgramUniform1ui64vNV;
+#endif
+#ifdef using_glProgramUniform2ui64vNV
+extern PFNGLPROGRAMUNIFORM2UI64VNVPROC glProgramUniform2ui64vNV;
+#endif
+#ifdef using_glProgramUniform3ui64vNV
+extern PFNGLPROGRAMUNIFORM3UI64VNVPROC glProgramUniform3ui64vNV;
+#endif
+#ifdef using_glProgramUniform4ui64vNV
+extern PFNGLPROGRAMUNIFORM4UI64VNVPROC glProgramUniform4ui64vNV;
+#endif
+// GL_NV_internalformat_sample_query
+#ifdef using_glGetInternalformatSampleivNV
+extern PFNGLGETINTERNALFORMATSAMPLEIVNVPROC glGetInternalformatSampleivNV;
+#endif
+// GL_NV_path_rendering
+#ifdef using_glGenPathsNV
+extern PFNGLGENPATHSNVPROC glGenPathsNV;
+#endif
+#ifdef using_glDeletePathsNV
+extern PFNGLDELETEPATHSNVPROC glDeletePathsNV;
+#endif
+#ifdef using_glIsPathNV
+extern PFNGLISPATHNVPROC glIsPathNV;
+#endif
+#ifdef using_glPathCommandsNV
+extern PFNGLPATHCOMMANDSNVPROC glPathCommandsNV;
+#endif
+#ifdef using_glPathCoordsNV
+extern PFNGLPATHCOORDSNVPROC glPathCoordsNV;
+#endif
+#ifdef using_glPathSubCommandsNV
+extern PFNGLPATHSUBCOMMANDSNVPROC glPathSubCommandsNV;
+#endif
+#ifdef using_glPathSubCoordsNV
+extern PFNGLPATHSUBCOORDSNVPROC glPathSubCoordsNV;
+#endif
+#ifdef using_glPathStringNV
+extern PFNGLPATHSTRINGNVPROC glPathStringNV;
+#endif
+#ifdef using_glPathGlyphsNV
+extern PFNGLPATHGLYPHSNVPROC glPathGlyphsNV;
+#endif
+#ifdef using_glPathGlyphRangeNV
+extern PFNGLPATHGLYPHRANGENVPROC glPathGlyphRangeNV;
+#endif
+#ifdef using_glWeightPathsNV
+extern PFNGLWEIGHTPATHSNVPROC glWeightPathsNV;
+#endif
+#ifdef using_glCopyPathNV
+extern PFNGLCOPYPATHNVPROC glCopyPathNV;
+#endif
+#ifdef using_glInterpolatePathsNV
+extern PFNGLINTERPOLATEPATHSNVPROC glInterpolatePathsNV;
+#endif
+#ifdef using_glTransformPathNV
+extern PFNGLTRANSFORMPATHNVPROC glTransformPathNV;
+#endif
+#ifdef using_glPathParameterivNV
+extern PFNGLPATHPARAMETERIVNVPROC glPathParameterivNV;
+#endif
+#ifdef using_glPathParameteriNV
+extern PFNGLPATHPARAMETERINVPROC glPathParameteriNV;
+#endif
+#ifdef using_glPathParameterfvNV
+extern PFNGLPATHPARAMETERFVNVPROC glPathParameterfvNV;
+#endif
+#ifdef using_glPathParameterfNV
+extern PFNGLPATHPARAMETERFNVPROC glPathParameterfNV;
+#endif
+#ifdef using_glPathDashArrayNV
+extern PFNGLPATHDASHARRAYNVPROC glPathDashArrayNV;
+#endif
+#ifdef using_glPathStencilFuncNV
+extern PFNGLPATHSTENCILFUNCNVPROC glPathStencilFuncNV;
+#endif
+#ifdef using_glPathStencilDepthOffsetNV
+extern PFNGLPATHSTENCILDEPTHOFFSETNVPROC glPathStencilDepthOffsetNV;
+#endif
+#ifdef using_glStencilFillPathNV
+extern PFNGLSTENCILFILLPATHNVPROC glStencilFillPathNV;
+#endif
+#ifdef using_glStencilStrokePathNV
+extern PFNGLSTENCILSTROKEPATHNVPROC glStencilStrokePathNV;
+#endif
+#ifdef using_glStencilFillPathInstancedNV
+extern PFNGLSTENCILFILLPATHINSTANCEDNVPROC glStencilFillPathInstancedNV;
+#endif
+#ifdef using_glStencilStrokePathInstancedNV
+extern PFNGLSTENCILSTROKEPATHINSTANCEDNVPROC glStencilStrokePathInstancedNV;
+#endif
+#ifdef using_glPathCoverDepthFuncNV
+extern PFNGLPATHCOVERDEPTHFUNCNVPROC glPathCoverDepthFuncNV;
+#endif
+#ifdef using_glCoverFillPathNV
+extern PFNGLCOVERFILLPATHNVPROC glCoverFillPathNV;
+#endif
+#ifdef using_glCoverStrokePathNV
+extern PFNGLCOVERSTROKEPATHNVPROC glCoverStrokePathNV;
+#endif
+#ifdef using_glCoverFillPathInstancedNV
+extern PFNGLCOVERFILLPATHINSTANCEDNVPROC glCoverFillPathInstancedNV;
+#endif
+#ifdef using_glCoverStrokePathInstancedNV
+extern PFNGLCOVERSTROKEPATHINSTANCEDNVPROC glCoverStrokePathInstancedNV;
+#endif
+#ifdef using_glGetPathParameterivNV
+extern PFNGLGETPATHPARAMETERIVNVPROC glGetPathParameterivNV;
+#endif
+#ifdef using_glGetPathParameterfvNV
+extern PFNGLGETPATHPARAMETERFVNVPROC glGetPathParameterfvNV;
+#endif
+#ifdef using_glGetPathCommandsNV
+extern PFNGLGETPATHCOMMANDSNVPROC glGetPathCommandsNV;
+#endif
+#ifdef using_glGetPathCoordsNV
+extern PFNGLGETPATHCOORDSNVPROC glGetPathCoordsNV;
+#endif
+#ifdef using_glGetPathDashArrayNV
+extern PFNGLGETPATHDASHARRAYNVPROC glGetPathDashArrayNV;
+#endif
+#ifdef using_glGetPathMetricsNV
+extern PFNGLGETPATHMETRICSNVPROC glGetPathMetricsNV;
+#endif
+#ifdef using_glGetPathMetricRangeNV
+extern PFNGLGETPATHMETRICRANGENVPROC glGetPathMetricRangeNV;
+#endif
+#ifdef using_glGetPathSpacingNV
+extern PFNGLGETPATHSPACINGNVPROC glGetPathSpacingNV;
+#endif
+#ifdef using_glIsPointInFillPathNV
+extern PFNGLISPOINTINFILLPATHNVPROC glIsPointInFillPathNV;
+#endif
+#ifdef using_glIsPointInStrokePathNV
+extern PFNGLISPOINTINSTROKEPATHNVPROC glIsPointInStrokePathNV;
+#endif
+#ifdef using_glGetPathLengthNV
+extern PFNGLGETPATHLENGTHNVPROC glGetPathLengthNV;
+#endif
+#ifdef using_glPointAlongPathNV
+extern PFNGLPOINTALONGPATHNVPROC glPointAlongPathNV;
+#endif
+#ifdef using_glMatrixLoad3x2fNV
+extern PFNGLMATRIXLOAD3X2FNVPROC glMatrixLoad3x2fNV;
+#endif
+#ifdef using_glMatrixLoad3x3fNV
+extern PFNGLMATRIXLOAD3X3FNVPROC glMatrixLoad3x3fNV;
+#endif
+#ifdef using_glMatrixLoadTranspose3x3fNV
+extern PFNGLMATRIXLOADTRANSPOSE3X3FNVPROC glMatrixLoadTranspose3x3fNV;
+#endif
+#ifdef using_glMatrixMult3x2fNV
+extern PFNGLMATRIXMULT3X2FNVPROC glMatrixMult3x2fNV;
+#endif
+#ifdef using_glMatrixMult3x3fNV
+extern PFNGLMATRIXMULT3X3FNVPROC glMatrixMult3x3fNV;
+#endif
+#ifdef using_glMatrixMultTranspose3x3fNV
+extern PFNGLMATRIXMULTTRANSPOSE3X3FNVPROC glMatrixMultTranspose3x3fNV;
+#endif
+#ifdef using_glStencilThenCoverFillPathNV
+extern PFNGLSTENCILTHENCOVERFILLPATHNVPROC glStencilThenCoverFillPathNV;
+#endif
+#ifdef using_glStencilThenCoverStrokePathNV
+extern PFNGLSTENCILTHENCOVERSTROKEPATHNVPROC glStencilThenCoverStrokePathNV;
+#endif
+#ifdef using_glStencilThenCoverFillPathInstancedNV
+extern PFNGLSTENCILTHENCOVERFILLPATHINSTANCEDNVPROC glStencilThenCoverFillPathInstancedNV;
+#endif
+#ifdef using_glStencilThenCoverStrokePathInstancedNV
+extern PFNGLSTENCILTHENCOVERSTROKEPATHINSTANCEDNVPROC glStencilThenCoverStrokePathInstancedNV;
+#endif
+#ifdef using_glPathGlyphIndexRangeNV
+extern PFNGLPATHGLYPHINDEXRANGENVPROC glPathGlyphIndexRangeNV;
+#endif
+#ifdef using_glPathGlyphIndexArrayNV
+extern PFNGLPATHGLYPHINDEXARRAYNVPROC glPathGlyphIndexArrayNV;
+#endif
+#ifdef using_glPathMemoryGlyphIndexArrayNV
+extern PFNGLPATHMEMORYGLYPHINDEXARRAYNVPROC glPathMemoryGlyphIndexArrayNV;
+#endif
+#ifdef using_glProgramPathFragmentInputGenNV
+extern PFNGLPROGRAMPATHFRAGMENTINPUTGENNVPROC glProgramPathFragmentInputGenNV;
+#endif
+#ifdef using_glGetProgramResourcefvNV
+extern PFNGLGETPROGRAMRESOURCEFVNVPROC glGetProgramResourcefvNV;
+#endif
+// GL_NV_path_rendering_shared_edge
+// GL_NV_sample_locations
+#ifdef using_glFramebufferSampleLocationsfvNV
+extern PFNGLFRAMEBUFFERSAMPLELOCATIONSFVNVPROC glFramebufferSampleLocationsfvNV;
+#endif
+#ifdef using_glNamedFramebufferSampleLocationsfvNV
+extern PFNGLNAMEDFRAMEBUFFERSAMPLELOCATIONSFVNVPROC glNamedFramebufferSampleLocationsfvNV;
+#endif
+#ifdef using_glResolveDepthValuesNV
+extern PFNGLRESOLVEDEPTHVALUESNVPROC glResolveDepthValuesNV;
+#endif
+// GL_NV_sample_mask_override_coverage
+// GL_NV_shader_atomic_fp16_vector
+// GL_NV_viewport_array2
+// GL_NV_viewport_swizzle
+#ifdef using_glViewportSwizzleNV
+extern PFNGLVIEWPORTSWIZZLENVPROC glViewportSwizzleNV;
+#endif
+// GL_OVR_multiview
+#ifdef using_glFramebufferTextureMultiviewOVR
+extern PFNGLFRAMEBUFFERTEXTUREMULTIVIEWOVRPROC glFramebufferTextureMultiviewOVR;
+#endif
+// GL_OVR_multiview2

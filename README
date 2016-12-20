@@ -1,42 +1,21 @@
-GLELP ( openGL Extensions heLPer )
-2014 Anders Malm, andersmn@gmail.com
+GLELP ( OpenGL Extensions Helper )
+Copyright (c) 2016 Anders Malm - Ekoli / Odious ^ S/N ^ Censor <andersmn@gmail.com>
 
-Not for all extensions.. only the gl core arb ones!
+What?
+This is a small tool for helping loading GL core arb versions and extensions.
 
-In the generator folder there is a ruby script called coregen.rb.
-This script have, together with glelp/internals/glcorearb.h created
-the three files glelp_glcorearb.cpp, glelp_glcorearb.h and gl.dump.
+How?
+It scans the folder you want to, and all the sub folders, and goes through all the source files.
+If it finds any gl calls, it will make sure that the extension get loaded.
+It will ignore all comments.
 
-The script is kind of useless since it will only regenerate those files.
+If you have the binary, just run "glelp.exe -dir <dir with shaders>"
 
-In the root folder there is a ruby tool called glelp_scan.rb which is
-scanning your source tree ( cpp and c files ) and figures out which
-core release you are using, which extensions you need and which functions
-which needs to be loaded. 
-Extensions which don't have any functions will not be caught in the same way.
-For these cases a list of extensions can be written in a plain text file, 
-one per line, and they will be added.
+Include glelp.cpp and glelp.h to your project and call glelp::loadExtensions().
+If all wen't well you get a true back.
 
-ruby glelp_scan.rb [source folder] [additional extensions]
-example: ruby glelp_scan.rb ../project/source ../project/extensions.txt
+If you need to update to get new extensions, download the latest glcorearb.h from
+Khronos, and run "glelp.exe -init" to generate new extension files.
 
-
-The scanner will generate a file, glelp_defines.h, and when calling
-glelp::loadExtensions all the necessary things will be done.
-
-
-SIMPLE INSTRUCTIONS
-
-Just add the files in glelp/internals and glelp.cpp and glelp.h to your
-project folder.
-In your project, just include glelp.h everywhere instead of <gl/gl.h>.
-
-To do something with this, just use add glelp_scan as a pre-build step,
-then in your code call glelp::loadExtensions() and everything will be great!
-
-If glelp::loadExtensions fails it will return false, else true.
-
-LICENSE
-
-GLELP is released under the Apache 2.0 license except as otherwise noted.
-http://www.apache.org/licenses/LICENSE-2.0
+Disclaimer:
+Seems to work, but I haven't tried on all the code in the world

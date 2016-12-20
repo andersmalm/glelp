@@ -1,0 +1,82 @@
+#ifndef _GLELP_DEFINES_H_
+#define _GLELP_DEFINES_H_
+
+#define GLELP_GL_MAJOR_VERSION 4
+#define GLELP_GL_MINOR_VERSION 3
+
+#define using_glActiveTexture
+#define using_glAttachShader
+#define using_glBeginTransformFeedback
+#define using_glBindAttribLocation
+#define using_glBindBuffer
+#define using_glBindBufferBase
+#define using_glBindFramebuffer
+#define using_glBindImageTexture
+#define using_glBindRenderbuffer
+#define using_glBindTexture
+#define using_glBindVertexArray
+#define using_glBlendFunc
+#define using_glBufferData
+#define using_glCheckFramebufferStatus
+#define using_glClear
+#define using_glClearColor
+#define using_glClearDepth
+#define using_glCompileShader
+#define using_glCreateProgram
+#define using_glCreateShader
+#define using_glCullFace
+#define using_glDeleteBuffers
+#define using_glDeleteFramebuffers
+#define using_glDeleteRenderbuffers
+#define using_glDeleteShader
+#define using_glDeleteTextures
+#define using_glDeleteVertexArrays
+#define using_glDetachShader
+#define using_glDisable
+#define using_glDisableVertexAttribArray
+#define using_glDispatchCompute
+#define using_glDrawArrays
+#define using_glEnable
+#define using_glEnableVertexAttribArray
+#define using_glEndTransformFeedback
+#define using_glFramebufferRenderbuffer
+#define using_glFramebufferTexture
+#define using_glFrontFace
+#define using_glGenBuffers
+#define using_glGenFramebuffers
+#define using_glGenRenderbuffers
+#define using_glGenTextures
+#define using_glGenVertexArrays
+#define using_glGetError
+#define using_glGetIntegeri_v
+#define using_glGetIntegerv
+#define using_glGetProgramInfoLog
+#define using_glGetProgramiv
+#define using_glGetShaderInfoLog
+#define using_glGetShaderiv
+#define using_glGetString
+#define using_glGetUniformLocation
+#define using_glLinkProgram
+#define using_glMapBufferRange
+#define using_glMemoryBarrier
+#define using_glPointSize
+#define using_glRenderbufferStorage
+#define using_glShaderSource
+#define using_glTexImage1D
+#define using_glTexImage2D
+#define using_glTexImage3D
+#define using_glTexParameteri
+#define using_glTexStorage2D
+#define using_glTransformFeedbackVaryings
+#define using_glUniform1f
+#define using_glUniform1i
+#define using_glUniform3f
+#define using_glUniform4fv
+#define using_glUniformMatrix4fv
+#define using_glUnmapBuffer
+#define using_glUseProgram
+#define using_glVertexAttribPointer
+#define using_glViewport
+
+#endif // _GLELP_DEFINES_H_
+

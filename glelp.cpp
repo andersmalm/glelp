@@ -1,7 +1,5 @@
-/*
-* GLELP
-* Anders Malm 2012
-*/
+// GLELP 0.1 - OpenGL Extenstions Helper
+// copyright (c) 2016 Anders Malm - Ekoli / Odious ^ S/N ^ Censor
 
 #include "glelp.h"
 

@@ -1,15 +1,12 @@
-/*
-* GLELP
-* Anders Malm 2014
-*/
+#pragma once
 
-#ifndef _GLELP_H_
-#define _GLELP_H_
+// GLELP 0.1 - OpenGL Extenstions Helper
+// copyright (c) 2016 Anders Malm - Ekoli / Odious ^ S/N ^ Censor
 
 #include "glelp_defines.h"
 
-#include "internals\glelp_glcorearb.h"
-#include "internals\wglext.h"
+#include "glelp_include.h"
+#include "wglext.h"
 
 // UGLY HACK, I just want to use as little windows specific things as possible
 // Windows specific things
@@ -31,4 +28,3 @@ namespace glelp
 
 	bool checkAvailable(const char* extension);
 }
-#endif // _GLELP_H_
